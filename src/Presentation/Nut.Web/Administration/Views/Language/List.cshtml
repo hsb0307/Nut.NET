@@ -1,0 +1,129 @@
+﻿@{
+    var defaultGridPageSize = 20;
+    var gridPageSizes = 20;
+
+    //page title
+    ViewBag.Title = T("Admin.Configuration.Languages").Text;
+}
+
+<h3>
+    <!-- Breadcrumb right aligned-->
+    <ol class="breadcrumb pull-right">
+        <li>
+            <a href="#">@T("Admin.Home")</a>
+        </li>
+        <li class="active">
+            @T("Admin.Configuration")
+        </li>
+    </ol>
+    @T("Admin.Configuration.Languages")
+    <!-- Small text for title-->
+    @*<span class="text-sm hidden-xs">this is online Users.</span>*@
+    <!-- Breadcrumb below title-->
+</h3>
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-info">@T("Admin.Common.AddNew")</a>
+</p>
+<!-- START table-responsive-->
+<div class="table-responsive b0">
+    <div id="Languages-grid"></div>
+
+</div>
+<!-- END table-responsive -->
+<script>
+    function deleteLanguage(id){
+        swal({
+            title : "Are you sure?",
+            text : "You will not be Delete Language!",
+            type : "warning",
+            showCancelButton : true,
+            confirmButtonColor : "#DD6B55",
+            confirmButtonText : "Yes, delete it!",
+            closeOnConfirm : false
+        },
+        function () {
+            $.ajax({
+                type: "POST",
+                dataType: "text",
+                url: '@(Url.Action("Delete", "Language"))',
+                data: { "id": id },
+                success: function (d) {
+                    var da=eval('(' + d + ')');
+                    if(da.success==true){
+                        swal("Deleted!", da.message, "success");
+                        location.href = "/admin/Language/list";
+                    }
+                    else{
+                        swal("Deleted!", da.message, "error");
+                    }
+                }
+            })
+
+        });
+    }
+
+    $(function () {
+        $("#Languages-grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: "@Html.Raw(Url.Action("List", "Language"))",
+                        type: "POST",
+                        dataType: "json"
+                    }
+                },
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    errors: "Errors"
+                },
+                error: function(e) {
+                    display_kendoui_grid_error(e);
+                    // Cancel the changes
+                    this.cancelChanges();
+                },
+                pageSize: @(defaultGridPageSize),
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true
+            },
+            pageable: {
+                refresh: true,
+                pageSizes: [@(gridPageSizes)]
+            },
+            editable: {
+                confirmation: false,
+                mode: "inline"
+            },
+            scrollable: false,
+            columns: [ {
+                field: "Name",
+                title: "@T("Admin.Configuration.Languages.Fields.Name")",
+                width: 200
+            },
+             {
+                 field: "LanguageCulture",
+                 title: "@T("Admin.Configuration.Languages.Fields.LanguageCulture")"
+             } ,{
+                 data: "Id",
+                 title:"@T("Admin.Configuration.Languages.Resources.View")",
+                 template:'<a href="@Url.Content("~/Admin/Language/Resources")?languageId=#=Id#">@T("Admin.Configuration.Languages.Resources.View")</a>'
+             }, {
+                 field: "DisplayOrder",
+                 title: "@T("Admin.Configuration.Languages.Fields.DisplayOrder")",
+                 width: 100
+             }, {
+                 field: "Published",
+                 title: "@T("Admin.Configuration.Languages.Fields.Published")",
+                 width: 100,
+                 template: '<img src="@Url.Content("~/Administration/Content/images/")active-#=Published#.gif" />'
+             },{
+                 field: "Id",
+                 title: "@T("Admin.Common.Edit")",
+                 width: 150,
+                 template: '<a class="btn btn-sm btn-default" href="Edit/#=Id#">@T("Admin.Common.Edit")</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-sm btn-default" href="javascript:void(0);" onclick="deleteLanguage(#=Id#)">@T("Admin.Common.Delete")</a>'
+             }]
+        });
+    });
+</script>

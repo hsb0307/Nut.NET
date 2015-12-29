@@ -1,0 +1,105 @@
+﻿@{
+    var defaultGridPageSize = 20;
+    var gridPageSizes = 20;
+
+    //page title
+    ViewBag.Title = T("Admin.Configuration.Plugins").Text;
+}
+
+<h3>
+    <!-- Breadcrumb right aligned-->
+    <ol class="breadcrumb pull-right">
+        <li>
+            <a href="#">@T("Admin.Home")</a>
+        </li>
+        <li class="active">
+            @T("Admin.Configuration")
+        </li>
+    </ol>
+    @T("Admin.Configuration.Plugins")
+    <!-- Small text for title-->
+    @*<span class="text-sm hidden-xs">this is online Users.</span>*@
+    <!-- Breadcrumb below title-->
+</h3>
+<p>
+    <a href="@Url.Action("ReloadList")" class="btn btn-info">@T("Admin.Configuration.Plugins.ReloadList")</a>&nbsp;
+</p>
+<!-- START table-responsive-->
+<div class="table-responsive b0">
+    <div id="plugins-grid"></div>
+</div>
+<!-- END table-responsive -->
+<script>
+
+
+    $(function () {
+        $("#plugins-grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: "@Html.Raw(Url.Action("ListSelect", "Plugin"))",
+                        type: "POST",
+                        dataType: "json"
+                    }
+                },
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    errors: "Errors"
+                },
+                error: function (e) {
+                    display_kendoui_grid_error(e);
+                    // Cancel the changes
+                    this.cancelChanges();
+                },
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true
+            },
+            pageable: {
+                refresh: true,
+                numeric: false,
+                previousNext: false,
+                info: false
+            },
+            editable: {
+                confirmation: false,
+                mode: "inline"
+            },
+            scrollable: false,
+            columns: [
+                {
+                    field: "Group",
+                    title: "@T("Admin.Configuration.Plugins.Fields.Group")"
+                }, {
+                    field: "LogoUrl",
+                    title: "@T("Admin.Configuration.Plugins.Fields.Logo")",
+                    width: 100,
+                    template: '<img src="#=LogoUrl#" />',
+                    headerAttributes: { style: "text-align:center" },
+                    attributes: { style: "text-align:center" }
+                }, {
+                    field: "FriendlyName",
+                    title: "@T("Admin.Configuration.Plugins.Info")",
+                    template: '<b>#:FriendlyName#</b>' +
+                        '<br />@T("Admin.Configuration.Plugins.Fields.Version"): #:Version#' +
+                        '<br />@T("Admin.Configuration.Plugins.Fields.Author"): #:Author#' +
+                        '<br />@T("Admin.Configuration.Plugins.Fields.SystemName"): #:SystemName#' +
+                        '<br />@T("Admin.Configuration.Plugins.Fields.DisplayOrder"): #:DisplayOrder#' +
+                        '<br />@T("Admin.Configuration.Plugins.Fields.Installed"): <img src="@Url.Content("~/Administration/Content/images/")active-#=Installed#.gif" />' +
+                        '# if(CanChangeEnabled) {# <br />@T("Admin.Configuration.Plugins.Fields.IsEnabled"): <img src="@Url.Content("~/Administration/Content/images/")active-#=IsEnabled#.gif" /> #} #' +
+                    //allow configuration only when a plugin has a configuration URL specified
+                        '<br /># if(ConfigurationUrl && ConfigurationUrl.length > 0) {# <a class="plugin-button plugin-button-configure" href="#=ConfigurationUrl#">@T("Admin.Configuration.Plugins.Fields.Configure")</a>&nbsp;&nbsp;&nbsp; #} #' +
+                        '<a class="plugin-button plugin-button-edit" href="javascript:OpenWindow(\'@Url.Content("~/Admin/Plugin/EditPopup")?systemName=#=SystemName#&btnId=btnRefresh&formId=plugins-form\', 800, 300, true);">@T("Admin.Common.Edit")</a>'
+                }, {
+                    field: "Installed",
+                    title: "@T("Admin.Configuration.Plugins.Fields.Installation")",
+                    template: '# if(Installed) {# <input type="submit" name="uninstall-plugin-link-#=SystemName#" class="plugin-button uninstall-plugin-link" value="@T("Admin.Configuration.Plugins.Fields.Uninstall")" /> #} else {#  <input type="submit" name="install-plugin-link-#=SystemName#" class="plugin-button install-plugin-link" value="@T("Admin.Configuration.Plugins.Fields.Install")" /> #} #',
+                    headerAttributes: { style: "text-align:center" },
+                    attributes: { style: "text-align:center" }
+                }
+            ]
+        });
+    });
+</script>
