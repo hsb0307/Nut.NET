@@ -1,0 +1,79 @@
+﻿@using Nut.Core.Domain.Common;
+@using Nut.Core.Infrastructure;
+@{
+    Html.AppendScriptParts(ResourceLocation.Foot, "~/Scripts/bootstrap-table-locale-all.min.js");
+    Html.AppendScriptParts(ResourceLocation.Foot, "~/Scripts/bootstrap-table.min.js");
+    Html.AppendScriptParts(ResourceLocation.Foot, "~/Scripts/bootstrap.min.js");
+
+  
+}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html  class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@Html.NopTitle(true)</title>
+    <meta name="description" content="@(Html.NopMetaDescription())" />
+    <meta name="keywords" content="@(Html.NopMetaKeywords())" />
+    <meta name="generator" content="hushibo" />
+    <meta name="viewport" content="width=device-width">
+
+    @Html.NopHeadCustom()
+    @*This is used so that themes can inject content into the header*@
+    @Html.Partial("Head")
+    
+    @Html.NopCssFiles(this.Url, ResourceLocation.Head)
+  
+    @Html.NopCanonicalUrls()
+
+   <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+    <!--[if lte IE 8]>
+    <script src="/Scripts/html5shiv.min.js"></script>
+    <script src="/Scripts/respond.min.js"></script>
+    <![endif]-->
+    <!--[if !IE]> -->
+    <script src="/Scripts/jquery.2.1.1.min.js"></script>
+    <!-- <![endif]-->
+    <!--[if IE]>
+    <script src="/Scripts/jquery.1.11.1.min.js"></script>
+    <![endif]-->
+    <!--[if !IE]> -->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='/Scripts/jquery.min.js'>" + "<" + "/script>");
+    </script>
+
+    <!-- <![endif]-->
+    <!--[if IE]>
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='/Scripts/jquery1x.min.js'>"+"<"+"/script>");
+    </script>
+    <![endif]-->
+
+    @Html.NopScripts(this.Url, ResourceLocation.Head)
+
+    <style type="text/css">
+        body { min-height: 600px;}
+    </style>
+
+    @RenderSection("styles", required: false)
+
+</head>
+<body>
+    <!--[if lt IE 7]>
+           <p class="chromeframe">Out了，不要用IE8以下的浏览器了， <a href="http://browsehappy.com/">升级一下</a>吧，绝对提高您的冲浪体验。</p>
+    <![endif]-->
+    @RenderBody()
+
+    @Html.NopCssFiles(this.Url, ResourceLocation.Foot)
+    @Html.NopScripts(this.Url, ResourceLocation.Foot)
+    @Html.Partial("Foot")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

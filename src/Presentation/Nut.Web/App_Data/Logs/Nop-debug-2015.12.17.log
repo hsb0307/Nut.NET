@@ -1,0 +1,30 @@
+2015-12-17 13:57:07,833 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 13:59:28,481 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 14:00:32,929 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 14:31:39,706 [14] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 17:27:37,149 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 17:28:58,534 [15] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 17:38:52,952 [15] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 17:39:57,146 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 17:43:42,285 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 17:44:26,519 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 17:44:35,613 [6] Nut.Web.Framework.Logging.LoggingModule - The parameters dictionary contains a null entry for parameter 'captchaValid' of non-nullable type 'System.Boolean' for method 'System.Web.Mvc.ActionResult Login(Nut.Web.Models.User.LoginModel, System.String, Boolean)' in 'Nut.Web.Controllers.UserController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+2015-12-17 17:45:36,364 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 17:53:02,579 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 18:01:21,822 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 18:01:55,169 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\Presentation\Nut.Web\Themes\DefaultClean\Views\Shared\_Root.Head.cshtml(4): error CS0234: The type or namespace name 'Core' does not exist in the namespace 'Nop' (are you missing an assembly reference?)
+2015-12-17 18:02:18,702 [8] Nut.Web.Framework.Logging.LoggingModule - The partial view 'LanguageAttributes' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Themes/DefaultClean/Views/User/LanguageAttributes.cshtml
+~/Themes/DefaultClean/Views/Shared/LanguageAttributes.cshtml
+~/Views/User/LanguageAttributes.cshtml
+~/Views/Shared/LanguageAttributes.cshtml
+~/Administration/Views/User/LanguageAttributes.cshtml
+~/Administration/Views/Shared/LanguageAttributes.cshtml
+2015-12-17 18:02:33,593 [16] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\Presentation\Nut.Web\Themes\DefaultClean\Views\Shared\Head.cshtml(14): error CS0103: The name 'supportResponsive' does not exist in the current context
+2015-12-17 18:03:26,715 [6] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\Presentation\Nut.Web\Themes\DefaultClean\Views\Shared\Head.cshtml(23): error CS0103: The name 'supportRtl' does not exist in the current context
+2015-12-17 18:03:37,684 [8] Nut.Web.Framework.Logging.LoggingModule - Execution of the child request failed. Please examine the InnerException for more information.
+2015-12-17 18:04:47,542 [6] Nut.Web.Framework.Logging.LoggingModule - Execution of the child request failed. Please examine the InnerException for more information.
+2015-12-17 18:05:44,730 [19] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 18:09:18,106 [19] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-17 18:09:22,448 [8] Nut.Services.Localization.LocalizationService - Resource string (nut .net) is not found. Language ID = 1

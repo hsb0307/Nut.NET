@@ -1,0 +1,24 @@
+2015-12-28 11:33:36,672 [21] Nut.Web.Framework.Logging.LoggingModule - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Administration/Views/Shared/Create.cshtml
+~/Administration/Views/UserRole/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/UserRole/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Areas/Admin/Views/UserRole/Create.cshtml
+~/Areas/Admin/Views/Shared/Create.cshtml
+~/Themes/DefaultClean/Views/UserRole/Create.cshtml
+~/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Views/UserRole/Create.cshtml
+~/Views/Shared/Create.cshtml
+2015-12-28 11:33:36,691 [21] Nut.Web.Framework.Logging.LoggingModule - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Administration/Views/Shared/Create.cshtml
+~/Administration/Views/UserRole/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/UserRole/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Areas/Admin/Views/UserRole/Create.cshtml
+~/Areas/Admin/Views/Shared/Create.cshtml
+~/Themes/DefaultClean/Views/UserRole/Create.cshtml
+~/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Views/UserRole/Create.cshtml
+~/Views/Shared/Create.cshtml
+2015-12-28 11:46:04,051 [43] Nut.Web.Framework.Logging.LoggingModule - D:\Users\lanfengqi\AppData\Local\Temp\Temporary ASP.NET Files\vs\4657eeb9\a14329f3\App_Web_create.cshtml.b8679816.obhhlkuf.0.cs(33): error CS0246: The type or namespace name 'Angle' could not be found (are you missing a using directive or an assembly reference?)
+2015-12-28 11:46:04,068 [43] Nut.Web.Framework.Logging.LoggingModule - D:\Users\lanfengqi\AppData\Local\Temp\Temporary ASP.NET Files\vs\4657eeb9\a14329f3\App_Web_create.cshtml.b8679816.obhhlkuf.0.cs(33): error CS0246: The type or namespace name 'Angle' could not be found (are you missing a using directive or an assembly reference?)

@@ -1,0 +1,36 @@
+2015-12-19 09:30:49,233 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-19 09:45:32,490 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-19 09:50:43,592 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-19 09:59:04,470 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-19 10:03:05,280 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-19 10:03:55,304 [7] Nut.Web.Framework.Logging.LoggingModule - D:\Users\lanfengqi\AppData\Local\Temp\Temporary ASP.NET Files\root\4657eeb9\a14329f3\App_Web_index.cshtml.29ebb7d1.egkltzpr.0.cs(29): error CS0426: The type name 'WebViewPage<dynamic>' does not exist in the type 'WebViewPage'
+2015-12-19 10:03:55,343 [7] Nut.Web.Framework.Logging.LoggingModule - D:\Users\lanfengqi\AppData\Local\Temp\Temporary ASP.NET Files\root\4657eeb9\a14329f3\App_Web_index.cshtml.29ebb7d1.egkltzpr.0.cs(29): error CS0426: The type name 'WebViewPage<dynamic>' does not exist in the type 'WebViewPage'
+2015-12-19 10:05:03,569 [7] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-19 10:05:16,528 [5] Nut.Web.Framework.Logging.LoggingModule - The layout page "~/Administration/Views/Shared/_AdminLayout.cshtml" could not be found at the following path: "~/Administration/Views/Shared/_AdminLayout.cshtml".
+2015-12-19 10:05:16,576 [5] Nut.Web.Framework.Logging.LoggingModule - The layout page "~/Administration/Views/Shared/_AdminLayout.cshtml" could not be found at the following path: "~/Administration/Views/Shared/_AdminLayout.cshtml".
+2015-12-19 10:06:06,176 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-19 10:16:06,525 [13] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-19 11:20:55,112 [42] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-19 11:28:05,435 [23] Nut.Web.Framework.Logging.LoggingModule - The partial view 'Notifications' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Administration/Views/Shared/Notifications.cshtml
+~/Administration/Views/Home/Notifications.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Home/Notifications.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Shared/Notifications.cshtml
+~/Areas/Admin/Views/Home/Notifications.cshtml
+~/Areas/Admin/Views/Shared/Notifications.cshtml
+~/Themes/DefaultClean/Views/Home/Notifications.cshtml
+~/Themes/DefaultClean/Views/Shared/Notifications.cshtml
+~/Views/Home/Notifications.cshtml
+~/Views/Shared/Notifications.cshtml
+2015-12-19 11:28:05,458 [23] Nut.Web.Framework.Logging.LoggingModule - The partial view 'Notifications' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Administration/Views/Shared/Notifications.cshtml
+~/Administration/Views/Home/Notifications.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Home/Notifications.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Shared/Notifications.cshtml
+~/Areas/Admin/Views/Home/Notifications.cshtml
+~/Areas/Admin/Views/Shared/Notifications.cshtml
+~/Themes/DefaultClean/Views/Home/Notifications.cshtml
+~/Themes/DefaultClean/Views/Shared/Notifications.cshtml
+~/Views/Home/Notifications.cshtml
+~/Views/Shared/Notifications.cshtml
+2015-12-19 11:30:41,303 [44] Nut.Web.Framework.Logging.LoggingModule - Application started

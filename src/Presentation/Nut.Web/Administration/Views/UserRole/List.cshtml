@@ -1,0 +1,131 @@
+﻿@{
+    var defaultGridPageSize = 20;
+    var gridPageSizes = 20;
+
+    //page title
+    ViewBag.Title = T("Admin.Users.UserRoles").Text;
+}
+
+<h3>
+    <!-- Breadcrumb right aligned-->
+    <ol class="breadcrumb pull-right">
+        <li>
+            <a href="#">@T("Admin.Home")</a>
+        </li>
+        <li class="active">
+            @T("Admin.Users")
+        </li>
+    </ol>
+    @T("Admin.Users.UserRoles")
+    <!-- Small text for title-->
+    @*<span class="text-sm hidden-xs">this is online Users.</span>*@
+    <!-- Breadcrumb below title-->
+</h3>
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-info">@T("Admin.Common.AddNew")</a>
+</p>
+<!-- START table-responsive-->
+<div class="table-responsive b0">
+    <div id="userRoles-grid"></div>
+
+</div>
+<!-- END table-responsive -->
+<script>
+    function deleteUserRole(id){
+        swal({
+            title : "Are you sure?",
+            text : "You will not be Delete User Role!",
+            type : "warning",
+            showCancelButton : true,
+            confirmButtonColor : "#DD6B55",
+            confirmButtonText : "Yes, delete it!",
+            closeOnConfirm : false
+        },
+        function () {
+            $.ajax({
+                type: "POST",
+                dataType: "text",
+                url: '@(Url.Action("Delete", "UserRole"))',
+                data: { "id": id },
+                success: function (d) {
+                    var da=eval('(' + d + ')');
+                    if(da.success==true){
+                        swal("Deleted!", da.message, "success");
+                        location.href = "/admin/UserRole/list";
+                    }
+                    else{
+                        swal("Deleted!", da.message, "error");
+                    }
+                }
+            })
+
+        });
+    }
+
+    $(function () {
+        $("#userRoles-grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: "@Html.Raw(Url.Action("List", "UserRole"))",
+                        type: "POST",
+                        dataType: "json"
+                    }
+                },
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    errors: "Errors"
+                },
+                error: function(e) {
+                    display_kendoui_grid_error(e);
+                    // Cancel the changes
+                    this.cancelChanges();
+                },
+                pageSize: @(defaultGridPageSize),
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true
+            },
+            pageable: {
+                refresh: true,
+                pageSizes: [@(gridPageSizes)]
+            },
+            editable: {
+                confirmation: false,
+                mode: "inline"
+            },
+            scrollable: false,
+            columns: [{
+                field: "Id",
+                title: "",
+                width: 50
+            }, {
+                field: "Name",
+                title: "@T("Admin.Users.UserRoles.Fields.Name")",
+                width: 200
+            },
+             {
+                 field: "Active",
+                 title: "@T("Admin.Users.UserRoles.Fields.Active")",
+                 width: 70,
+                 headerAttributes: { style: "text-align:center" },
+                 attributes: { style: "text-align:center" },
+                 template: '<img src="@Url.Content("~/Administration/Content/images/")active-#=Active#.gif" />'
+             }, {
+                 field: "IsSystemRole",
+                 title: "@T("Admin.Users.UserRoles.Fields.IsSystemRole")",
+                 width: 200,
+                 template: '<img src="@Url.Content("~/Administration/Content/images/")active-#=IsSystemRole#.gif" />'
+             },{
+                 field: "Id",
+                 title: "@T("Admin.Common.Edit")",
+                 width: 150,
+                 template: '<a class="btn btn-sm btn-default" href="Edit/#=Id#">@T("Admin.Common.Edit")</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-sm btn-default" href="javascript:void(0);" onclick="deleteUserRole(#=Id#)">@T("Admin.Common.Delete")</a>'
+             }]
+        });
+    });
+</script>
+
+

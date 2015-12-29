@@ -1,0 +1,72 @@
+﻿
+
+.header-links{float:right;padding:0px;margin:10px 0;display:inline-table;}
+.header-links ul{padding:0;margin:0;float:left;}
+.header-links ul li{list-style:none outside none;display:inline;padding-right:2px;margin-left:10px;float:left;}
+.header-links a{color:#AF0304;text-decoration:none;float:left;}
+.header-links a:hover{color:#AF0304;text-decoration:underline;}
+.header-links a.account{color:#AF0304;padding-left:10px;padding-bottom:5px;}
+
+
+
+
+/*body { background-color: #e4e4e4; }*/
+.addpage-container{ width:100%; height:100%; position: relative; }
+.addpage-top { width: 100%; height: 60px; background-color: #333645; }
+.addpage-logo img { height: 34px; margin-top: 12px; padding-left: 10px; }
+.addpage-left { width:80%; height:100%; border-right: 1px solid #dbdbdb; float: left; position: absolute; top: 60px; height: 30px; } 
+.addpage-tab { width: 100%; height: 40px; line-height: 40px; text-align: right; color: #fff; background-color: #60ade8; font-size: 15px; font-family:"微软雅黑"; }
+.addpage-tab2 { width: 100%; height: 60px; line-height: 32px; text-align: center; color: #4d4d4d; background-color: #fff; font-size: 15px; font-family:"微软雅黑"; padding-top: 15px; }
+
+/**/
+.addpage-tab2 input { border: none; background-color: #f1f1f1; width: 300px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; height: 32px; margin: 0 10px; }
+
+
+
+.addpage-tab2 .green { color: #7ac44b; }
+.addpage-tab2 .red { color: #ff4630; }
+.addpage-left .add-table { position: relative; width: 100%; height: 500px; }
+.addpage-left .add-table-1 { height: 30px; position: absolute; top: 0; left: 0; z-index: 99; }
+
+
+.add-table-1 { height: 30px; z-index: 99; }
+.add-table-1 th { text-align: center; color: #fff;}
+ .add-table-3 {
+width: 100%;
+height: 36px;
+/*position: absolute;
+bottom: 0;
+left: 0;*/
+z-index: 99;
+background-color: #7dcb4b;
+}
+
+
+.addpage-left .add-table-2 { width: 100%; height: 440px; position: absolute; top: 30px; left: 0; overflow-y: auto; overflow-x: hidden; z-index: 98; }
+.addpage-left .add-table-2 table { margin-top: 5px; color: #818181; }
+.add-table-2 tr:hover { background-color: #333645; color: #7dcb4b; }
+.addpage-left .add-table-3 { width: 100%; height: 30px; position: absolute; bottom: 0; left: 0; z-index: 99; background-color:#7dcb4b; }
+.addpage-left th { text-align: center; color: #fff; }
+.addpage-left td { padding: 0 10px; }
+.addpage-left .bggreen { background-color: #70be3f; }
+.addpage-total { float: right; margin: 0; margin-right: 30px; height: 30px; line-height: 30px; color: #fff; font-size: 15px; font-family:"微软雅黑"; padding:0;  }
+.addpage-total span { padding: 0 10px; margin: 0 5px; display: inline-block; background-color: #70be3f; height: 30px;  }
+.addpage-tab3 { width: 100%; text-align: center; line-height: 24px; padding:5px 0;}
+.addpage-tab3 button { padding: 0 15px; background: none; border-width: 1px; border-radius: 5px; line-height: 24px; margin: 5px 3px; }
+.addpage-tab3 font { text-decoration: underline; }
+.add-button-a { border-color: #e59f17; color: #e59f17;}
+.add-button-b { border-color: #ec4646; color: #ec4646;}
+.add-button-c { border-color: #333645; color: #333645;}
+.add-button-d { border-color: #e869c6; color: #e869c6;}
+.add-button-e { border-color: #60ade8; color: #60ade8;}
+.add-button-f { border-color: #70be3f; color: #70be3f;}
+.add-button-g { border-color: #b1b1b1; color: #b1b1b1;}
+.addpage-tab4 { width: 70%; padding: 10px 0; line-height: 24px; color: #b1b1b1; margin: 0 auto; }
+.addpage-right{ width: 19%; height:100%; border-left: 1px solid #f9f9f9; float: left; position: absolute; top: 60px; height: 30px; }
+.addpage-right-title { width: 60%; height: 30px; border-radius: 15px; margin: 20px auto; background-color:#333645; color: #fff; line-height: 30px; text-align: center; font-size: 15px; font-family:"微软雅黑";  }
+.addpage-right-ul { background-color: #f7f7f7; margin: 0 auto; width: 80%; list-style: none; box-shadow: 0 0 3px #ccc; line-height: 40px;  padding:0;  }
+.addpage-right-ul li { padding-left: 10px; list-style: 0; }
+.addpage-right-b { background-color: #fff; }
+.addpage-right-ul button { line-height: 18px; background: none; border-width: 1px; border-radius: 5px; }
+.addpage-down { width: 100%; height: 40px; background-color: #333645; line-height: 40px; text-align: right; color: #b3b3b3; font-size: 15px;font-family:"微软雅黑"; }
+.addpage-down span { margin: 0 50px; }

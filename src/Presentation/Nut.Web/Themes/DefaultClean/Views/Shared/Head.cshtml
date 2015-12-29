@@ -1,0 +1,40 @@
+﻿
+@using Nut.Core;
+@using Nut.Core.Domain
+@using Nut.Core.Infrastructure
+@using Nut.Web.Framework.Themes
+
+@{
+    var supportRtl = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Rtl;
+    var themeName = EngineContext.Current.Resolve<IThemeContext>().WorkingThemeName;
+
+    //add browser specific CSS files
+    //var browser = Request.Browser;
+    //if (browser.Browser == "IE" && browser.MajorVersion == 6)
+    //{
+    //    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/ie6.css", themeName));
+    //}
+    //else if (browser.Browser == "IE" && browser.MajorVersion == 7)
+    //{
+    //    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/ie7.css", themeName));
+    //}
+    //responsive design
+
+    //add main CSS file
+    if (supportRtl)
+    {
+        Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/styles.rtl.css", themeName));
+    }
+    else
+    {
+        Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/templatemo-style.css", themeName));
+    }
+
+
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/custom.css", themeName));
+}
+
+<!-- bootstrap & fontawesome -->
+<link rel="stylesheet" href="/Content/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="/Content/font-awesome/4.2.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/Content/bootstrap/bootstrap-table.min.css" />

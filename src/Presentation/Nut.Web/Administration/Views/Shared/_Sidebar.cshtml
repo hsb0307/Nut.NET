@@ -1,0 +1,127 @@
+@using Nut.Services.Security;
+@using Nut.Core.Infrastructure;
+@using Nut.Web.Framework.Menu;
+@using Nut.Core.Infrastructure;
+
+@{
+    var currentUser = this.WorkContext.CurrentUser;
+    var canManageMaintenance = EngineContext.Current.Resolve<IPermissionService>()
+        .Authorize(StandardPermissionProvider.ManageMaintenance);
+
+    //load sitemap
+    var siteMap = new Nut.Web.Framework.Menu.XmlSiteMap();
+    siteMap.LoadFrom("~/Administration/sitemap.config");
+}
+
+
+@helper RenderMenuItem(Nut.Web.Framework.Menu.SiteMapNode item) {
+
+    <li class="@Html.isActive(controller:item.ControllerName)">
+
+        <a href="#@item.SystemName" title="@item.SystemName" data-toggle="collapse">
+            <em class="icon-@item.Icon"></em>
+            <span>@item.Title</span>
+        </a>
+
+        @{
+            var childNodes = item.ChildNodes.Where(x => x.Visible).ToList();
+        }
+        @if (childNodes.Any()) {
+            <ul id="@item.SystemName" class="nav sidebar-subnav collapse">
+                <li class="sidebar-subnav-header">@item.Title</li>
+
+                @foreach (var childItem in childNodes) {
+                    @RenderMenuItem2(childItem)
+                }
+            </ul>
+        }
+    </li>
+}
+@helper RenderMenuItem2(Nut.Web.Framework.Menu.SiteMapNode item) {
+string url = null;
+if (!string.IsNullOrEmpty(item.ControllerName) && !string.IsNullOrEmpty(item.ActionName)) {
+    url = Url.Action(item.ActionName, item.ControllerName, item.RouteValues, null, null);
+} else if (!string.IsNullOrEmpty(item.Url)) {
+    url = item.Url.StartsWith("~/", StringComparison.Ordinal) ? Url.Content(item.Url) : item.Url;
+}
+
+    <li class="@Html.isActive(item.ControllerName, item.ActionName)">
+        <a href="@url" title="@item.SystemName">
+            <span>@item.Title</span>
+        </a>
+    </li>
+
+}
+
+<!-- START Sidebar (left)-->
+<div class="aside-inner">
+    <nav class="sidebar">
+        <!-- START sidebar nav-->
+        <ul class="nav">
+            <!-- START user info-->
+            <li class="has-user-block">
+                <div id="user-block" class="collapse">
+                    <div class="item user-block">
+                        <!-- User picture-->
+                        <div class="user-block-picture">
+                            <div class="user-block-status">
+                                <img src="~/Content/Images/user/02.jpg" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle" />
+                                <div class="circle circle-success circle-lg"></div>
+                            </div>
+                        </div>
+                        <!-- Name and Job-->
+                        <div class="user-block-info">
+                            <span class="user-block-name">@T("Admin.Common.Welcome"), @currentUser.Username</span>
+                            <span class="user-block-status"><a href="/Admin/User/ChangePassword">@T("Admin.Users.ChangePassword")</a></span>
+                            @if (canManageMaintenance) {
+                                <span class="user-block-role"><a href="/Admin/Common/RestartApplication">@T("Admin.Header.RestartApplication")</a></span>
+                            }
+                            <span class="user-block-role"><a href="@Html.Raw(Url.Action("Logout","User",new { area="" }))">@T("Admin.Users.Logout")</a></span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- END user info-->
+            <!-- Iterates over all sidebar items-->
+
+            <li class="nav-heading">
+                <span>@T("Menu")</span>
+            </li>
+            <li class="@Html.isActive(controller: "Home")">
+                <a href="@Url.Action("Index", "Home")" title="SingleView">
+                    <em class="icon-speedometer"></em>
+                    <span>@T("Common.Home")</span>
+                </a>
+            </li>
+
+            @foreach (var item in siteMap.RootNode.ChildNodes.Where(x => x.Visible)) {
+                @RenderMenuItem(item)
+            }
+
+            <!-- START plugins menu -->
+            @{
+                var pluginSiteMap = new Nut.Web.Framework.Menu.XmlSiteMap();
+                var pluginNode = pluginSiteMap.RootNode;
+                var adminMenuPlugins = EngineContext.Current.Resolve<Nut.Core.Plugins.IPluginFinder>()
+                    .GetPlugins<IAdminMenuPlugin>()
+                    .ToList();
+                foreach (var adminMenuPlugin in adminMenuPlugins) {
+                    adminMenuPlugin.ManageSiteMap(pluginNode);
+                }
+            }
+
+            @if (pluginNode.ChildNodes.Any(x => x.Visible)) {
+                <li class="nav-heading">
+                    <span>@T("Admin.Plugins")</span>
+                </li>
+            }
+
+            @foreach (var item in pluginNode.ChildNodes.Where(x => x.Visible)) {
+                @RenderMenuItem(item)
+            }
+            <!-- END plugins menu -->
+        </ul>
+        <!-- END sidebar nav-->
+    </nav>
+</div>
+<!-- END Sidebar (left)-->

@@ -1,0 +1,49 @@
+2015-12-24 13:14:21,332 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:14:35,667 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\Presentation\Nut.Web\Administration\Views\Shared\_Layout.cshtml(10): error CS0103: The name 'Styles' does not exist in the current context
+2015-12-24 13:14:35,698 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\Presentation\Nut.Web\Administration\Views\Shared\_Layout.cshtml(10): error CS0103: The name 'Styles' does not exist in the current context
+2015-12-24 13:17:10,426 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\Presentation\Nut.Web\Administration\Views\Shared\_Sidebar.cshtml(11): error CS1061: 'HtmlHelper<dynamic>' does not contain a definition for 'isActive' and no extension method 'isActive' accepting a first argument of type 'HtmlHelper<dynamic>' could be found (are you missing a using directive or an assembly reference?)
+2015-12-24 13:17:10,441 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\Presentation\Nut.Web\Administration\Views\Shared\_Sidebar.cshtml(11): error CS1061: 'HtmlHelper<dynamic>' does not contain a definition for 'isActive' and no extension method 'isActive' accepting a first argument of type 'HtmlHelper<dynamic>' could be found (are you missing a using directive or an assembly reference?)
+2015-12-24 13:20:14,148 [10] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:22:45,550 [16] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:27:40,088 [20] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:32:02,785 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:38:01,369 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:41:08,601 [18] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:44:02,628 [16] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:44:49,640 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:46:56,244 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:48:08,414 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:48:20,542 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:49:18,765 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:52:32,964 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 13:58:55,936 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 14:01:54,672 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 14:46:21,888 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 14:46:54,984 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 14:48:13,981 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 14:54:16,936 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 15:02:18,194 [25] Nut.Services.Localization.LocalizationService - Resource string (admin.settings) is not found. Language ID = 1
+2015-12-24 15:18:12,553 [30] Nut.Services.Localization.LocalizationService - Resource string (admin.mainnavigation) is not found. Language ID = 1
+2015-12-24 15:18:32,117 [30] Nut.Services.Localization.LocalizationService - Resource string (admin.mainnavigation) is not found. Language ID = 1
+2015-12-24 15:20:24,632 [31] Nut.Services.Localization.LocalizationService - Resource string (admin.mainnavigation) is not found. Language ID = 1
+2015-12-24 15:30:40,713 [31] Nut.Services.Localization.LocalizationService - Resource string (admin.common.welcome) is not found. Language ID = 1
+2015-12-24 15:30:40,737 [31] Nut.Services.Localization.LocalizationService - Resource string (admin.users.changepassword) is not found. Language ID = 1
+2015-12-24 15:30:40,753 [31] Nut.Services.Localization.LocalizationService - Resource string (admin.users.logout) is not found. Language ID = 1
+2015-12-24 15:31:01,163 [28] Nut.Services.Localization.LocalizationService - Resource string (admin.common.welcome) is not found. Language ID = 1
+2015-12-24 15:31:01,177 [28] Nut.Services.Localization.LocalizationService - Resource string (admin.users.changepassword) is not found. Language ID = 1
+2015-12-24 15:31:01,190 [28] Nut.Services.Localization.LocalizationService - Resource string (admin.users.logout) is not found. Language ID = 1
+2015-12-24 15:34:04,808 [24] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 15:52:17,033 [15] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 16:01:04,693 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 16:08:03,608 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 16:12:39,375 [22] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 16:39:05,142 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 16:39:10,043 [14] Nut.Web.Framework.Logging.LoggingModule - Encountered end tag "li" with no matching start tag.  Are your start/end tags properly balanced?
+
+2015-12-24 16:39:10,067 [14] Nut.Web.Framework.Logging.LoggingModule - Encountered end tag "li" with no matching start tag.  Are your start/end tags properly balanced?
+
+2015-12-24 16:40:23,597 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 16:42:47,676 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 16:44:32,848 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 16:48:39,428 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-24 16:49:29,691 [1] Nut.Web.Framework.Logging.LoggingModule - Application started

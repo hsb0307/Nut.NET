@@ -1,0 +1,109 @@
+﻿@model LicenseModel
+@using Nut.Core.Infrastructure;
+@using Nut.Web.Models.License;
+@using Nut.Services.Localization;
+
+@{
+    Layout = null;
+    var ILS = EngineContext.Current.Resolve<ILocalizationService>();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>软件注册-Nut .NET框架</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link href="@Url.Content("~/Content/Install/style.css")" type="text/css" rel="stylesheet" />
+</head>
+<body class="container-main">
+    @using (Html.BeginForm("Index", "License", FormMethod.Post, new { id = "License-form" }))
+    {
+        //Contributor : The orchard project. Thanks a lot!
+        <table border="0" cellpadding="0" cellspacing="0" class="container-installer">
+            <tr class="top">
+                <td class="left">
+                    &nbsp;
+                </td>
+                <td class="center">
+                    &nbsp;
+                </td>
+                <td class="right">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr class="Middle">
+                <td class="left">
+                    &nbsp;
+                </td>
+                <td class="center">
+                    <span class="header-text">软件注册</span><br />
+                    <div class="content">
+                        <table cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;">
+                            <tbody>
+                                <tr style="height: 100%;">
+                                    <td>
+                                        <table class="wizard-step" border="0" cellpadding="0" cellspacing="10">
+                                            <tr>
+                                                <td colspan="2">
+                                                    <p>
+                                                        @ILS.GetResource("License.Tooltip")
+                                                        <br />
+                                                        <div style="color: Red;">
+                                                            @Html.ValidationSummary(false)
+                                                        </div>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td nowrap="nowrap" align="left">
+                                                    <label for="MachineCode">
+                                                        @ILS.GetResource("MachineCode"):
+                                                    </label>
+                                                </td>
+                                                <td width="100%">
+                                                    @Html.ValueFor(x => x.MachineCode)
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td nowrap="nowrap" align="left">
+                                                    <label for="LicenseCode">
+                                                        @ILS.GetResource("LicenseCode"):
+                                                    </label>
+                                                </td>
+                                                <td width="100%">
+                                                    @Html.TextAreaFor(x => x.LicenseCode, new { @style = " height:50px;", @class = "text-box single-line" })
+                                                    @Html.ValidationMessageFor(model => model.LicenseCode)
+                                                </td>
+                                            </tr>
+                                           </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">
+                                        <div style="float: right; padding: 0px 10px 0px 0px;">
+                                            <input type="submit" value="@ILS.GetResource("License")" style="width: 100px;" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+                <td class="right">
+                </td>
+            </tr>
+            <tr class="Bottom">
+                <td class="left">
+                    &nbsp;
+                </td>
+                <td class="center">
+                    &nbsp;
+                </td>
+                <td class="right">
+                    &nbsp;
+                </td>
+            </tr>
+        </table>
+
+    }
+</body>
+</html>

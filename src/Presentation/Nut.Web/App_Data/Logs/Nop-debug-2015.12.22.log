@@ -1,0 +1,92 @@
+2015-12-22 11:15:50,679 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-22 11:15:55,398 [6] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:15:55,523 [6] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:15:55,617 [6] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:15:55,710 [6] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:15:55,820 [6] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:17:14,329 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-22 11:17:56,347 [6] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:17:56,441 [6] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:17:56,644 [6] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:17:56,800 [6] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:17:56,894 [6] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:18:10,828 [8] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:18:10,890 [8] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:18:10,953 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:18:11,015 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:18:11,062 [8] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:18:27,852 [8] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:18:27,931 [8] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:18:27,977 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:18:28,071 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:18:28,149 [8] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:19:07,471 [8] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:19:07,627 [8] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:19:07,799 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:19:07,893 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:19:07,971 [8] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:19:30,875 [8] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:19:31,032 [8] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:19:31,141 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:19:31,188 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:19:31,266 [8] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:21:25,621 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-22 11:22:14,573 [5] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:22:14,666 [5] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:22:14,729 [5] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:22:14,932 [5] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:22:15,026 [5] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:22:43,972 [7] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:22:44,112 [7] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:22:44,222 [7] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:22:44,284 [7] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:22:44,331 [7] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:23:48,600 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-22 11:24:12,333 [6] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:24:12,411 [6] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:24:12,489 [6] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:24:12,661 [6] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:24:12,739 [6] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:24:25,284 [7] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:24:25,441 [7] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:24:25,503 [7] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:24:25,581 [7] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:24:25,644 [7] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:25:41,179 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-22 11:25:47,314 [6] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:25:47,377 [6] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:25:47,470 [6] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:25:47,658 [6] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:25:47,752 [6] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:25:56,887 [8] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 11:25:57,043 [8] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 11:25:57,168 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 11:25:57,262 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 11:25:57,371 [8] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 11:28:15,248 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-22 16:44:36,168 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-22 16:44:41,184 [8] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 16:44:41,278 [8] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 16:44:41,372 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 16:44:41,481 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 16:44:41,591 [8] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 16:44:44,622 [10] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 16:44:44,685 [10] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 16:44:44,731 [10] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 16:44:44,794 [10] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 16:44:44,856 [10] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 16:44:57,989 [10] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 16:44:58,067 [10] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 16:44:58,129 [10] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 16:44:58,192 [10] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 16:44:58,254 [10] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 16:49:52,700 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-22 16:49:59,626 [8] Nut.Services.Localization.LocalizationService - Resource string (license.tooltip) is not found. Language ID = 1
+2015-12-22 16:49:59,735 [8] Nut.Services.Localization.LocalizationService - Resource string (machinecode) is not found. Language ID = 1
+2015-12-22 16:49:59,813 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecode) is not found. Language ID = 1
+2015-12-22 16:50:00,048 [8] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 16:50:00,142 [8] Nut.Services.Localization.LocalizationService - Resource string (license) is not found. Language ID = 1
+2015-12-22 16:50:07,091 [11] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 16:50:07,169 [11] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 16:50:07,232 [11] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1
+2015-12-22 16:50:07,263 [11] Nut.Services.Localization.LocalizationService - Resource string (licensecoderequired) is not found. Language ID = 1

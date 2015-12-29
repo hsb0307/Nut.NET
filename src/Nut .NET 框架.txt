@@ -1,0 +1,50 @@
+命名 Nut .NET 以Nut. 开头
+
+NLayer Architecture  
+
+Module System  Plugins
+
+Common Structures
+	IOC  Autofac
+        Session  IWorkContext
+	Caching   Apollo 
+	Logging   Apollo
+	Setting Management  ISetting
+
+Domain layer BaseEntity
+	Entities
+	Repositories EF
+	Domain Services 
+	Unit Of Work EF
+	Domain Events (EventBus) Apollo
+	Data Filters linq
+
+Application layer
+	Application services 
+	Data Transfer Objects     AutoMapper
+	Validating Data Transfer Objects fluentValidation
+	Authorization  nop
+	Feature Management Plugins
+	Audit Logging CustomerActivity
+
+Presentation layer
+	Dynamic web API layer
+	Javascript API    ajax,notifiaction,message,UI block&busy,logging 
+	Localization nop
+	Navigation nop
+	Handling Exceptions apollo 
+	Embedded Resource Files nop LayoutExtensions
+Infrastructure layer
+	NHibernate Integration
+	EntityFramework Integration OK
+Releases
+	Nuget Packages
+	Change Logs & Releases
+
+Features
+	Tenant Management NOP
+	Edition Management
+	User Management NOP
+	Role Management NOP
+	Permission Management NOP
+	Language Management NOP

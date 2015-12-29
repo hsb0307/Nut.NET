@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+<style>
+    body { font-size:12px; }
+</style>
+<h1>Nut .NET 框架</h1>
+<p>欢迎使用Nut .NET 框架！</p>
+
+<p>
+    在你打开VS以后项目和文件夹都会完整列出来，我们建议你在看此文档的同时也打开你的VS来浏览项目和文件。
+</p>
+
+<p> 绝大多数的项目，目录和文件都顾名思义，你可以从名字就大概知道是做什么的。比如Nut.Plugin.Payments.PayPalStandard这个我都不用看项目代码就能猜到做什么的。</p>
+<p>
+    \Libraries\Nut.Core
+</p>
+<p>
+    Nop.Core项目包含Nut的一系列核心类如缓存，事件，辅助类和业务对象(如用户和权限实体类)
+</p>
+<p>
+    \Libraries\Nut.Data
+</p>
+<p>
+    Nop.Data 项目包含一系列的数据访问类和方法以从数据库或其他数据媒介读取和保存数据。它也有助于把数据访问逻辑和你的业务对象分离。 Nut使用Entity Framework (EF) Code-First方法，允许你在nopcommerce代码中定义实体 (所有的核心实体类都在Nop.Core中定义)，再让EF生成数据库，这就是为什么会叫Code-First。你接下来可以用LINQ来查询对象，它自 己会把查询转换为SQL语句并在数据库里执行。nopcommerce拥有牛B的API让你完全定制持久映射，你可以在这儿和这儿找到Code- First的资料。
+</p>
+<p>
+    \Libraries\Nut.Services
+</p>
+<p>
+    此项目包含一系列的核心服务，业务逻辑，验证，如果有数据的话还有数据的计算方法，也就是传说中的业务访问层（BAL）
+</p>
+<p>
+    \Plugins\ 文件夹中的那些项目
+</p>
+<p>
+    Plugins 是VS的解决方案文件夹，硬盘中它是在你解决方案的根目录下。由于项目在编译时的输入路径是”..\..\Presentation \Nut.Web\Plugins\{Group}.{Name}\”，这样插件的DLL会自动地放到 \Presentation\Nop.Web\Plugins\文件夹中，用来放置已部署插件。这样也能让插件包含静态文件比如CSS或JS，就不用在项 目之间拷贝这些文件了。
+</p>
+<p>
+    \Presentation\Nut.Admin
+</p>
+<p>
+    Nut.Admin是一MVC项目。这是表示层中的管理后台，你可以在 \Presentation\Nut.Web\Administration文件夹中找到它，此项目不能运行。
+</p>
+<p>
+    \Presentation\Nut.Web
+</p>
+<p>
+    Nut.Web也是一MVC项目，前台的表示层，这个才是你真正要跑起来的项目，它也是整个应用程序的起始项目。
+</p>
+<p>
+    \Presentation\Nut.Web.Framework
+</p>
+<p>
+    Nut.Web.Framework是一个表示层的类库项目，包括可以让后台和前台使用的一些共用的展示功能。
+</p>

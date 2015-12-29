@@ -1,0 +1,8 @@
+2015-12-24 13:14:35,667 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\Presentation\Nut.Web\Administration\Views\Shared\_Layout.cshtml(10): error CS0103: The name 'Styles' does not exist in the current context
+2015-12-24 13:14:35,698 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\Presentation\Nut.Web\Administration\Views\Shared\_Layout.cshtml(10): error CS0103: The name 'Styles' does not exist in the current context
+2015-12-24 13:17:10,426 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\Presentation\Nut.Web\Administration\Views\Shared\_Sidebar.cshtml(11): error CS1061: 'HtmlHelper<dynamic>' does not contain a definition for 'isActive' and no extension method 'isActive' accepting a first argument of type 'HtmlHelper<dynamic>' could be found (are you missing a using directive or an assembly reference?)
+2015-12-24 13:17:10,441 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\Presentation\Nut.Web\Administration\Views\Shared\_Sidebar.cshtml(11): error CS1061: 'HtmlHelper<dynamic>' does not contain a definition for 'isActive' and no extension method 'isActive' accepting a first argument of type 'HtmlHelper<dynamic>' could be found (are you missing a using directive or an assembly reference?)
+2015-12-24 16:39:10,043 [14] Nut.Web.Framework.Logging.LoggingModule - Encountered end tag "li" with no matching start tag.  Are your start/end tags properly balanced?
+
+2015-12-24 16:39:10,067 [14] Nut.Web.Framework.Logging.LoggingModule - Encountered end tag "li" with no matching start tag.  Are your start/end tags properly balanced?
+

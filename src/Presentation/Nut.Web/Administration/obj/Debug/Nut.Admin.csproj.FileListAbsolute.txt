@@ -1,0 +1,6 @@
+E:\Nut.NET\Presentation\Nut.Web\bin\Nut.Admin.dll.config
+E:\Nut.NET\Presentation\Nut.Web\bin\Nut.Admin.dll
+E:\Nut.NET\Presentation\Nut.Web\bin\Nut.Admin.pdb
+E:\Nut.NET\Presentation\Nut.Web\Administration\obj\Debug\Nut.Admin.csprojResolveAssemblyReference.cache
+E:\Nut.NET\Presentation\Nut.Web\Administration\obj\Debug\Nut.Admin.dll
+E:\Nut.NET\Presentation\Nut.Web\Administration\obj\Debug\Nut.Admin.pdb
