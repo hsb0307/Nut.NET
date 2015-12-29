@@ -132,6 +132,7 @@
     <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\OnlineUserController.cs" />
     <Compile Include="Controllers\PluginController.cs" />
+    <Compile Include="Controllers\ScheduleTaskController.cs" />
     <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Controllers\UserRoleController.cs" />
     <Compile Include="Extensions\MappingExtension.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Models\Security\PermissionMappingModel.cs" />
     <Compile Include="Models\Security\PermissionRecordModel.cs" />
     <Compile Include="Models\Stores\StoreModel.cs" />
+    <Compile Include="Models\Tasks\ScheduleTaskModel.cs" />
     <Compile Include="Models\Users\OnlineUserModel.cs" />
     <Compile Include="Models\Users\UserRoleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -484,6 +486,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Language\Resources.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\ScheduleTask\List.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
