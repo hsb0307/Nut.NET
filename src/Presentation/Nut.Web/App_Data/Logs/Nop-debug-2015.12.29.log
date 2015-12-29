@@ -36,3 +36,7 @@
 2015-12-29 11:12:34,560 [8] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles.fields.name.required) is not found. Language ID = 1
 2015-12-29 11:12:34,575 [8] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles.fields.name.required) is not found. Language ID = 1
 2015-12-29 11:59:26,405 [42] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 13:38:47,238 [42] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 14:49:04,303 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 14:52:09,240 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 14:52:47,902 [1] Nut.Web.Framework.Logging.LoggingModule - Application started

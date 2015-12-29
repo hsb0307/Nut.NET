@@ -171,14 +171,9 @@
     <Compile Include="NutException.cs" />
     <Compile Include="PagedList.cs" />
     <Compile Include="Plugins\BasePlugin.cs" />
-    <Compile Include="Plugins\IOfficialFeedManager.cs" />
     <Compile Include="Plugins\IPlugin.cs" />
     <Compile Include="Plugins\IPluginFinder.cs" />
     <Compile Include="Plugins\LoadPluginsMode.cs" />
-    <Compile Include="Plugins\OfficialFeedCategory.cs" />
-    <Compile Include="Plugins\OfficialFeedManager.cs" />
-    <Compile Include="Plugins\OfficialFeedPlugin.cs" />
-    <Compile Include="Plugins\OfficialFeedVersion.cs" />
     <Compile Include="Plugins\PluginDescriptor.cs" />
     <Compile Include="Plugins\PluginExtensions.cs" />
     <Compile Include="Plugins\PluginFileParser.cs" />

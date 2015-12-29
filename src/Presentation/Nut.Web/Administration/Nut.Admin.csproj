@@ -130,13 +130,16 @@
     <Compile Include="Controllers\BaseAdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OnlineUserController.cs" />
+    <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Controllers\UserRoleController.cs" />
     <Compile Include="Extensions\MappingExtension.cs" />
     <Compile Include="Infrastructure\AutoMapperStartupTask.cs" />
     <Compile Include="Infrastructure\DependencyRegistrar.cs" />
+    <Compile Include="Models\Plugins\PluginModel.cs" />
     <Compile Include="Models\Security\PermissionMappingModel.cs" />
     <Compile Include="Models\Security\PermissionRecordModel.cs" />
+    <Compile Include="Models\Stores\StoreModel.cs" />
     <Compile Include="Models\Users\OnlineUserModel.cs" />
     <Compile Include="Models\Users\UserRoleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -214,6 +217,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Security\Permissions.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Plugin\List.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

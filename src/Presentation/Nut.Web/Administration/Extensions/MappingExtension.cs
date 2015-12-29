@@ -2,6 +2,10 @@
 using AutoMapper;
 using Nut.Admin.Models.Users;
 using Nut.Core.Domain.Users;
+using Nut.Core.Plugins;
+using Nop.Admin.Models.Plugins;
+using Nut.Core.Domain.Stores;
+using Nut.Admin.Models.Stores;
 
 namespace Nut.Admin.Extensions {
     public static class MappingExtension {
@@ -26,6 +30,30 @@ namespace Nut.Admin.Extensions {
         }
 
         public static UserRole ToEntity(this UserRoleModel model, UserRole destination) {
+            return Mapper.Map(model, destination);
+        }
+
+        #endregion
+
+        #region Plugins
+
+        public static PluginModel ToModel(this PluginDescriptor entity) {
+            return Mapper.Map<PluginDescriptor, PluginModel>(entity);
+        }
+
+        #endregion
+
+        #region Stores
+
+        public static StoreModel ToModel(this Store entity) {
+            return Mapper.Map<Store, StoreModel>(entity);
+        }
+
+        public static Store ToEntity(this StoreModel model) {
+            return Mapper.Map<StoreModel, Store>(model);
+        }
+
+        public static Store ToEntity(this StoreModel model, Store destination) {
             return Mapper.Map(model, destination);
         }
 
