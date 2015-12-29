@@ -1,0 +1,133 @@
+﻿@model Nut.Admin.Models.Localization.LanguageModel
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@Html.HiddenFor(model => model.Id)
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.LanguageCulture, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @{
+            var cultures = System.Globalization.CultureInfo.GetCultures(System.Globalization.CultureTypes.SpecificCultures)
+                .OrderBy(x => x.EnglishName)
+                .Select(x => new SelectListItem() {
+                    Value = x.IetfLanguageTag,
+                    Text = string.Format("{0}. {1}", x.EnglishName, x.IetfLanguageTag)
+                });
+        }
+        @Html.DropDownListFor(model => model.LanguageCulture, cultures)
+        @Html.ValidationMessageFor(model => model.LanguageCulture, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.UniqueSeoCode, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.UniqueSeoCode, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.UniqueSeoCode, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.FlagImageFileName, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.FlagImageFileName)
+        @Html.ValidationMessageFor(model => model.FlagImageFileName, "", new { @class = "text-danger" })
+        <br />
+        <script type="text/javascript">
+            function toggleFlags() {
+                $('#pnlAllFlags').toggle();
+                if ($('#pnlAllFlags').css('display') == 'none') {
+                    $('#displayAllFlags').html('@T("Admin.Common.Show")');
+                }
+                else {
+                    $('#displayAllFlags').html('@T("Admin.Common.Hide")');
+                }
+            }
+        </script>
+        <a id="displayAllFlags" href="javascript:toggleFlags();">@T("Admin.Common.Show")</a>
+        <div id="pnlAllFlags" style="display: none">
+            @foreach (var fileName in Model.FlagFileNames) {
+                <img alt="" src="@Url.Content("~/Administration/Content/Images/flags/" + fileName)" />
+                @fileName
+                <text>, </text>
+            }
+        </div>
+
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Rtl, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Rtl, new { htmlAttributes = new { @class = "needsclick" } })
+        @Html.ValidationMessageFor(model => model.Rtl, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Published, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Published, new { htmlAttributes = new { @class = "needsclick" } })
+        @Html.ValidationMessageFor(model => model.Published, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.DisplayOrder, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.DisplayOrder, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.DisplayOrder, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#@Html.FieldIdFor(model => model.LimitedToStores)").click(toggleStoreMapping);
+
+            toggleStoreMapping();
+        });
+
+
+        function toggleStoreMapping() {
+            if ($('#@Html.FieldIdFor(model => model.LimitedToStores)').is(':checked')) {
+                $('#pnl-available-stores').show();
+            }
+            else {
+                $('#pnl-available-stores').hide();
+            }
+        }
+
+</script>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.LimitedToStores, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.LimitedToStores, new { htmlAttributes = new { @class = "needsclick" } })
+        @Html.ValidationMessageFor(model => model.LimitedToStores, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+
+<div class="form-group" id="pnl-available-stores">
+    @Html.LabelFor(model => model.AvailableStores, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @if (Model.AvailableStores != null && Model.AvailableStores.Count > 0) {
+            foreach (var store in Model.AvailableStores) {
+                <div>
+                    <input type="checkbox" name="SelectedStoreIds" value="@store.Id" checked="@(Model.SelectedStoreIds != null && Model.SelectedStoreIds.Contains(store.Id))" />@store.Name
+                </div>
+            }
+        } else {
+            <div>No stores defined</div>
+        }
+    </div>
+</div>

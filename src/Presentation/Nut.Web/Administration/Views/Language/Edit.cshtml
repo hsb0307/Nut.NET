@@ -1,0 +1,65 @@
+﻿@model Nut.Admin.Models.Localization.LanguageModel
+
+@{
+    ViewBag.Title = T("Admin.Configuration.Languages.Edit").Text;
+}
+
+<h3>
+    @T("Admin.Configuration.Languages.Edit") - @Model.Name
+    <span class="text-sm hidden-xs"><a href="@Url.Action("List")">@T("Admin.Configuration.Languages.BackToList")</a></span>
+</h3>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>@T("Admin.Users.UserRoles")</h4>
+        <hr />
+
+        @Html.Partial("_CreateOrUpdate", Model)
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" name="save" value="@T("Admin.Common.Save")" class="btn btn-default" />
+                <input type="submit" name="save-continue" value="@T("Admin.Common.SaveContinue")" class="btn btn-default" />
+                <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default">
+                    @T("Admin.Configuration.Languages.Import")
+                </button>
+                <a href="@Url.Action("ExportXml", new { id = Model.Id })" class="btn btn-default">@T("Admin.Configuration.Languages.Export")</a>
+            </div>
+        </div>
+    </div>
+}
+
+@*import resources form*@
+@section BodyArea {
+    <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+        @using (Html.BeginForm("ImportXml", "Language", new { id = Model.Id }, FormMethod.Post, new { enctype = "multipart/form-data" })) {
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 id="myModalLabel" class="modal-title">@T("Admin.Configuration.Languages.Import")</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-sm-9">
+                            @T("Admin.Configuration.Languages.XmlFile"):  <input type="file" id="importxmlfile" name="importxmlfile" />
+                        </div>
+                        <div class="space-4"></div>
+                        <div class="col-sm-9">
+                            <strong>@T("Admin.Configuration.Languages.XmlFile.Note1")</strong>
+                            <br />
+                            <strong>@T("Admin.Configuration.Languages.XmlFile.Note2")</strong>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">@T("Admin.Configuration.Languages.Import")</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+

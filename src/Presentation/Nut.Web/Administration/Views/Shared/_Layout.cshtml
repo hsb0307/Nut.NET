@@ -1,7 +1,7 @@
 ﻿
-@{ 
+@{
     string adminPageTitle = "";
-    if(!string.IsNullOrWhiteSpace(ViewBag.Title)) {
+    if (!string.IsNullOrWhiteSpace(ViewBag.Title)) {
         adminPageTitle = ViewBag.Title + "/";
     }
     adminPageTitle += T("Admin.PageTitle").Text;
@@ -29,8 +29,7 @@
     @Scripts.Render("~/bundles/kendo")
 
     <!-- =============== PAGE VENDOR STYLES =============== -->
-    @if (IsSectionDefined("Styles"))
-        {@RenderSection("Styles", required: false)}
+    @if (IsSectionDefined("Styles")) {@RenderSection("Styles", required: false)}
     <!-- =============== APP STYLES ===============-->
     <link href="@Styles.Url("~/Content/app/css/bootstrap.css")" rel="stylesheet" type="text/css" id="bscss" />
     <!-- =============== APP STYLES ===============-->
@@ -63,8 +62,10 @@
             @Html.Partial("_Footer")
         </footer>
     </div>
+    @if (IsSectionDefined("BodyArea")) {
+        @RenderSection("BodyArea", required: false)
+    }
     <!-- =============== VENDOR SCRIPTS ===============-->
- 
     @Scripts.Render("~/bundles/storage")
     @Scripts.Render("~/bundles/screenfull")
     @Scripts.Render("~/bundles/localize")

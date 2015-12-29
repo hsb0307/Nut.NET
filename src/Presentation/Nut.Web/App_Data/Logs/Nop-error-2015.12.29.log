@@ -1,0 +1,34 @@
+2015-12-29 15:22:00,656 [40] Nut.Web.Framework.Logging.LoggingModule - Could not find a part of the path 'E:\Nut.NET\src\Presentation\Nut.Web\Content\Images\flags'.
+2015-12-29 15:22:00,679 [40] Nut.Web.Framework.Logging.LoggingModule - Could not find a part of the path 'E:\Nut.NET\src\Presentation\Nut.Web\Content\Images\flags'.
+2015-12-29 15:32:41,264 [40] Nut.Web.Framework.Logging.LoggingModule - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Administration/Views/Shared/Create.cshtml
+~/Administration/Views/Language/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Language/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Areas/Admin/Views/Language/Create.cshtml
+~/Areas/Admin/Views/Shared/Create.cshtml
+~/Themes/DefaultClean/Views/Language/Create.cshtml
+~/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Views/Language/Create.cshtml
+~/Views/Shared/Create.cshtml
+2015-12-29 15:32:41,290 [40] Nut.Web.Framework.Logging.LoggingModule - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Administration/Views/Shared/Create.cshtml
+~/Administration/Views/Language/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Language/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Areas/Admin/Views/Language/Create.cshtml
+~/Areas/Admin/Views/Shared/Create.cshtml
+~/Themes/DefaultClean/Views/Language/Create.cshtml
+~/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Views/Language/Create.cshtml
+~/Views/Shared/Create.cshtml
+2015-12-29 15:42:13,259 [41] Nut.Web.Framework.Logging.LoggingModule - The best overloaded method match for 'string.IsNullOrWhiteSpace(string)' has some invalid arguments
+2015-12-29 15:42:13,292 [41] Nut.Web.Framework.Logging.LoggingModule - The best overloaded method match for 'string.IsNullOrWhiteSpace(string)' has some invalid arguments
+2015-12-29 15:49:57,087 [41] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Language\_CreateOrUpdate.cshtml(25): error CS1026: ) expected
+2015-12-29 15:49:57,107 [41] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Language\_CreateOrUpdate.cshtml(25): error CS1026: ) expected
+2015-12-29 15:50:47,932 [32] Nut.Web.Framework.Logging.LoggingModule - The model item passed into the dictionary is of type 'Nut.Admin.Models.Localization.LanguageModel', but this dictionary requires a model item of type 'Nut.Admin.Models.Users.UserRoleModel'.
+2015-12-29 15:50:47,953 [32] Nut.Web.Framework.Logging.LoggingModule - The model item passed into the dictionary is of type 'Nut.Admin.Models.Localization.LanguageModel', but this dictionary requires a model item of type 'Nut.Admin.Models.Users.UserRoleModel'.
+2015-12-29 16:37:19,355 [35] Nut.Web.Framework.Logging.LoggingModule - The following sections have been defined but have not been rendered for the layout page "~/Administration/Views/Shared/_Layout.cshtml": "BodyArea".
+2015-12-29 16:37:19,367 [35] Nut.Web.Framework.Logging.LoggingModule - The following sections have been defined but have not been rendered for the layout page "~/Administration/Views/Shared/_Layout.cshtml": "BodyArea".
+2015-12-29 16:49:56,857 [34] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Language\Resources.cshtml(2): error CS0103: The name 'EngineContext' does not exist in the current context
+2015-12-29 16:49:56,880 [34] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Language\Resources.cshtml(2): error CS0103: The name 'EngineContext' does not exist in the current context

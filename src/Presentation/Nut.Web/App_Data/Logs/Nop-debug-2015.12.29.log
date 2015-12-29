@@ -40,3 +40,313 @@
 2015-12-29 14:49:04,303 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
 2015-12-29 14:52:09,240 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
 2015-12-29 14:52:47,902 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 15:20:04,102 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 15:20:30,682 [38] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.languageculture) is not found. Language ID = 1
+2015-12-29 15:20:30,715 [38] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.displayorder) is not found. Language ID = 1
+2015-12-29 15:20:30,746 [38] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.published) is not found. Language ID = 1
+2015-12-29 15:22:00,656 [40] Nut.Web.Framework.Logging.LoggingModule - Could not find a part of the path 'E:\Nut.NET\src\Presentation\Nut.Web\Content\Images\flags'.
+2015-12-29 15:22:00,679 [40] Nut.Web.Framework.Logging.LoggingModule - Could not find a part of the path 'E:\Nut.NET\src\Presentation\Nut.Web\Content\Images\flags'.
+2015-12-29 15:32:38,895 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 15:32:41,264 [40] Nut.Web.Framework.Logging.LoggingModule - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Administration/Views/Shared/Create.cshtml
+~/Administration/Views/Language/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Language/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Areas/Admin/Views/Language/Create.cshtml
+~/Areas/Admin/Views/Shared/Create.cshtml
+~/Themes/DefaultClean/Views/Language/Create.cshtml
+~/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Views/Language/Create.cshtml
+~/Views/Shared/Create.cshtml
+2015-12-29 15:32:41,290 [40] Nut.Web.Framework.Logging.LoggingModule - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Administration/Views/Shared/Create.cshtml
+~/Administration/Views/Language/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Language/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Areas/Admin/Views/Language/Create.cshtml
+~/Areas/Admin/Views/Shared/Create.cshtml
+~/Themes/DefaultClean/Views/Language/Create.cshtml
+~/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Views/Language/Create.cshtml
+~/Views/Shared/Create.cshtml
+2015-12-29 15:41:39,892 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 15:42:13,259 [41] Nut.Web.Framework.Logging.LoggingModule - The best overloaded method match for 'string.IsNullOrWhiteSpace(string)' has some invalid arguments
+2015-12-29 15:42:13,292 [41] Nut.Web.Framework.Logging.LoggingModule - The best overloaded method match for 'string.IsNullOrWhiteSpace(string)' has some invalid arguments
+2015-12-29 15:43:25,728 [40] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 15:49:57,087 [41] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Language\_CreateOrUpdate.cshtml(25): error CS1026: ) expected
+2015-12-29 15:49:57,107 [41] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Language\_CreateOrUpdate.cshtml(25): error CS1026: ) expected
+2015-12-29 15:50:36,199 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages) is not found. Language ID = 2
+2015-12-29 15:50:36,230 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 15:50:36,256 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration) is not found. Language ID = 2
+2015-12-29 15:50:36,278 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages) is not found. Language ID = 2
+2015-12-29 15:50:36,296 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.addnew) is not found. Language ID = 2
+2015-12-29 15:50:36,310 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name) is not found. Language ID = 2
+2015-12-29 15:50:36,324 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture) is not found. Language ID = 2
+2015-12-29 15:50:36,339 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.resources.view) is not found. Language ID = 2
+2015-12-29 15:50:36,348 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.resources.view) is not found. Language ID = 2
+2015-12-29 15:50:36,361 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.displayorder) is not found. Language ID = 2
+2015-12-29 15:50:36,375 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.published) is not found. Language ID = 2
+2015-12-29 15:50:36,391 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.edit) is not found. Language ID = 2
+2015-12-29 15:50:36,399 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.edit) is not found. Language ID = 2
+2015-12-29 15:50:36,413 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.delete) is not found. Language ID = 2
+2015-12-29 15:50:36,430 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.pagetitle) is not found. Language ID = 2
+2015-12-29 15:50:36,443 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 15:50:36,473 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.customers) is not found. Language ID = 2
+2015-12-29 15:50:36,497 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.customers.customers) is not found. Language ID = 2
+2015-12-29 15:50:36,539 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles) is not found. Language ID = 2
+2015-12-29 15:50:36,566 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.onlineusers) is not found. Language ID = 2
+2015-12-29 15:50:36,583 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.settings) is not found. Language ID = 2
+2015-12-29 15:50:36,592 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages) is not found. Language ID = 2
+2015-12-29 15:50:36,610 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.acl) is not found. Language ID = 2
+2015-12-29 15:50:36,628 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.plugins) is not found. Language ID = 2
+2015-12-29 15:50:36,641 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system) is not found. Language ID = 2
+2015-12-29 15:50:36,655 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.log) is not found. Language ID = 2
+2015-12-29 15:50:36,667 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.queuedemails) is not found. Language ID = 2
+2015-12-29 15:50:36,682 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.maintenance) is not found. Language ID = 2
+2015-12-29 15:50:36,696 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.scheduletasks) is not found. Language ID = 2
+2015-12-29 15:50:36,709 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.warnings) is not found. Language ID = 2
+2015-12-29 15:50:36,726 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.systeminfo) is not found. Language ID = 2
+2015-12-29 15:50:36,745 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.senames) is not found. Language ID = 2
+2015-12-29 15:50:36,762 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.welcome) is not found. Language ID = 2
+2015-12-29 15:50:36,780 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.changepassword) is not found. Language ID = 2
+2015-12-29 15:50:36,793 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.header.restartapplication) is not found. Language ID = 2
+2015-12-29 15:50:36,811 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.logout) is not found. Language ID = 2
+2015-12-29 15:50:36,829 [41] Nut.Services.Localization.LocalizationService - Resource string (menu) is not found. Language ID = 2
+2015-12-29 15:50:36,847 [41] Nut.Services.Localization.LocalizationService - Resource string (common.home) is not found. Language ID = 2
+2015-12-29 15:50:36,860 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.settings) is not found. Language ID = 2
+2015-12-29 15:50:47,932 [32] Nut.Web.Framework.Logging.LoggingModule - The model item passed into the dictionary is of type 'Nut.Admin.Models.Localization.LanguageModel', but this dictionary requires a model item of type 'Nut.Admin.Models.Users.UserRoleModel'.
+2015-12-29 15:50:47,953 [32] Nut.Web.Framework.Logging.LoggingModule - The model item passed into the dictionary is of type 'Nut.Admin.Models.Localization.LanguageModel', but this dictionary requires a model item of type 'Nut.Admin.Models.Users.UserRoleModel'.
+2015-12-29 15:51:11,772 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 2
+2015-12-29 15:51:11,784 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 2
+2015-12-29 15:51:11,796 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.backtolist) is not found. Language ID = 2
+2015-12-29 15:51:11,811 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles) is not found. Language ID = 2
+2015-12-29 15:51:11,839 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:11,864 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:11,879 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:11,893 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:11,905 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name) is not found. Language ID = 2
+2015-12-29 15:51:11,938 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name) is not found. Language ID = 2
+2015-12-29 15:51:11,957 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:11,976 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:11,997 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:12,016 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:12,038 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name) is not found. Language ID = 2
+2015-12-29 15:51:12,061 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture) is not found. Language ID = 2
+2015-12-29 15:51:12,070 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture) is not found. Language ID = 2
+2015-12-29 15:51:12,084 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:12,092 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:12,101 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:12,109 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:12,117 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture) is not found. Language ID = 2
+2015-12-29 15:51:12,129 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode) is not found. Language ID = 2
+2015-12-29 15:51:12,137 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode) is not found. Language ID = 2
+2015-12-29 15:51:12,147 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:12,186 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:12,201 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:12,222 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:12,249 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode) is not found. Language ID = 2
+2015-12-29 15:51:12,275 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.flagimagefilename) is not found. Language ID = 2
+2015-12-29 15:51:12,289 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.flagimagefilename) is not found. Language ID = 2
+2015-12-29 15:51:12,299 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:12,307 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:12,316 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:12,325 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:12,334 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.flagimagefilename) is not found. Language ID = 2
+2015-12-29 15:51:12,349 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.show) is not found. Language ID = 2
+2015-12-29 15:51:12,360 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.hide) is not found. Language ID = 2
+2015-12-29 15:51:12,368 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.show) is not found. Language ID = 2
+2015-12-29 15:51:12,394 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.rtl) is not found. Language ID = 2
+2015-12-29 15:51:12,403 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.rtl) is not found. Language ID = 2
+2015-12-29 15:51:12,414 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:12,424 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:12,433 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:12,444 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:12,453 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.rtl) is not found. Language ID = 2
+2015-12-29 15:51:12,471 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.published) is not found. Language ID = 2
+2015-12-29 15:51:12,479 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.published) is not found. Language ID = 2
+2015-12-29 15:51:12,490 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:12,500 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:12,511 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:12,520 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:12,530 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.published) is not found. Language ID = 2
+2015-12-29 15:51:12,547 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.displayorder) is not found. Language ID = 2
+2015-12-29 15:51:12,555 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.displayorder) is not found. Language ID = 2
+2015-12-29 15:51:12,564 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:12,574 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:12,582 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:12,591 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:12,599 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.displayorder) is not found. Language ID = 2
+2015-12-29 15:51:12,612 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.limitedtostores) is not found. Language ID = 2
+2015-12-29 15:51:12,622 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.limitedtostores) is not found. Language ID = 2
+2015-12-29 15:51:12,631 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:12,642 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:12,651 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:12,659 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:12,667 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.limitedtostores) is not found. Language ID = 2
+2015-12-29 15:51:12,683 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.availablestores) is not found. Language ID = 2
+2015-12-29 15:51:12,700 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.save) is not found. Language ID = 2
+2015-12-29 15:51:12,718 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.savecontinue) is not found. Language ID = 2
+2015-12-29 15:51:12,734 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.pagetitle) is not found. Language ID = 2
+2015-12-29 15:51:12,750 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 15:51:12,766 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.customers) is not found. Language ID = 2
+2015-12-29 15:51:12,780 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.customers.customers) is not found. Language ID = 2
+2015-12-29 15:51:12,791 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles) is not found. Language ID = 2
+2015-12-29 15:51:12,805 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.onlineusers) is not found. Language ID = 2
+2015-12-29 15:51:12,816 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.settings) is not found. Language ID = 2
+2015-12-29 15:51:12,866 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages) is not found. Language ID = 2
+2015-12-29 15:51:12,903 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.acl) is not found. Language ID = 2
+2015-12-29 15:51:12,926 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.plugins) is not found. Language ID = 2
+2015-12-29 15:51:12,948 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system) is not found. Language ID = 2
+2015-12-29 15:51:12,974 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.log) is not found. Language ID = 2
+2015-12-29 15:51:12,999 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.queuedemails) is not found. Language ID = 2
+2015-12-29 15:51:13,016 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.maintenance) is not found. Language ID = 2
+2015-12-29 15:51:13,038 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.scheduletasks) is not found. Language ID = 2
+2015-12-29 15:51:13,054 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.warnings) is not found. Language ID = 2
+2015-12-29 15:51:13,066 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.systeminfo) is not found. Language ID = 2
+2015-12-29 15:51:13,078 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.system.senames) is not found. Language ID = 2
+2015-12-29 15:51:13,089 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.welcome) is not found. Language ID = 2
+2015-12-29 15:51:13,101 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.changepassword) is not found. Language ID = 2
+2015-12-29 15:51:13,112 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.header.restartapplication) is not found. Language ID = 2
+2015-12-29 15:51:13,124 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.logout) is not found. Language ID = 2
+2015-12-29 15:51:13,140 [41] Nut.Services.Localization.LocalizationService - Resource string (menu) is not found. Language ID = 2
+2015-12-29 15:51:13,172 [41] Nut.Services.Localization.LocalizationService - Resource string (common.home) is not found. Language ID = 2
+2015-12-29 15:51:13,186 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.settings) is not found. Language ID = 2
+2015-12-29 15:51:20,925 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name) is not found. Language ID = 2
+2015-12-29 15:51:20,946 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture) is not found. Language ID = 2
+2015-12-29 15:51:20,963 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode) is not found. Language ID = 2
+2015-12-29 15:51:20,987 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.flagimagefilename) is not found. Language ID = 2
+2015-12-29 15:51:21,025 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.rtl) is not found. Language ID = 2
+2015-12-29 15:51:21,057 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.published) is not found. Language ID = 2
+2015-12-29 15:51:21,073 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.displayorder) is not found. Language ID = 2
+2015-12-29 15:51:21,091 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.limitedtostores) is not found. Language ID = 2
+2015-12-29 15:51:21,106 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.availablestores) is not found. Language ID = 2
+2015-12-29 15:51:21,120 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,136 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,195 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,218 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,243 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,258 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,280 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,289 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,298 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,306 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,314 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,322 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,357 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,376 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,409 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,435 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,456 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,471 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,485 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,493 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,501 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,508 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,516 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,524 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,534 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,542 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,550 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,558 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,566 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,574 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,583 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,590 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,598 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,606 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,614 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,622 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,630 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,637 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,647 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,655 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,664 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,673 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,683 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,691 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,700 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,709 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,717 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,727 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,740 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,750 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,760 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,769 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,779 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.name.required) is not found. Language ID = 2
+2015-12-29 15:51:21,787 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.languageculture.validation) is not found. Language ID = 2
+2015-12-29 15:51:21,797 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.required) is not found. Language ID = 2
+2015-12-29 15:51:21,807 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.fields.uniqueseocode.length) is not found. Language ID = 2
+2015-12-29 15:51:21,836 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.updated) is not found. Language ID = 2
+2015-12-29 15:51:25,387 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 15:51:25,442 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:07:23,631 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:07:23,643 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:07:37,086 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:07:37,097 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:09:04,258 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:09:04,275 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:09:13,746 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:09:13,755 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:20:24,798 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:20:24,821 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:37:19,089 [35] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:37:19,101 [35] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:37:19,355 [35] Nut.Web.Framework.Logging.LoggingModule - The following sections have been defined but have not been rendered for the layout page "~/Administration/Views/Shared/_Layout.cshtml": "BodyArea".
+2015-12-29 16:37:19,367 [35] Nut.Web.Framework.Logging.LoggingModule - The following sections have been defined but have not been rendered for the layout page "~/Administration/Views/Shared/_Layout.cshtml": "BodyArea".
+2015-12-29 16:38:16,900 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:38:16,913 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:39:15,704 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:39:15,717 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:40:29,297 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:40:29,305 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:40:37,303 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:40:37,310 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:40:41,077 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 16:40:41,116 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 16:40:41,153 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles) is not found. Language ID = 2
+2015-12-29 16:40:41,169 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.onlineusers) is not found. Language ID = 2
+2015-12-29 16:40:41,246 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.common.welcome) is not found. Language ID = 2
+2015-12-29 16:40:41,262 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.changepassword) is not found. Language ID = 2
+2015-12-29 16:40:41,279 [41] Nut.Services.Localization.LocalizationService - Resource string (admin.users.logout) is not found. Language ID = 2
+2015-12-29 16:40:51,148 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 16:40:51,208 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 16:40:51,238 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles) is not found. Language ID = 2
+2015-12-29 16:40:51,251 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.users.onlineusers) is not found. Language ID = 2
+2015-12-29 16:40:51,325 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.common.welcome) is not found. Language ID = 2
+2015-12-29 16:40:51,337 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.users.changepassword) is not found. Language ID = 2
+2015-12-29 16:40:51,351 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.users.logout) is not found. Language ID = 2
+2015-12-29 16:41:00,320 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 16:41:00,359 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 16:41:00,378 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles) is not found. Language ID = 2
+2015-12-29 16:41:00,390 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.users.onlineusers) is not found. Language ID = 2
+2015-12-29 16:41:00,443 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.common.welcome) is not found. Language ID = 2
+2015-12-29 16:41:00,457 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.users.changepassword) is not found. Language ID = 2
+2015-12-29 16:41:00,471 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.users.logout) is not found. Language ID = 2
+2015-12-29 16:41:04,957 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles) is not found. Language ID = 2
+2015-12-29 16:41:04,973 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 16:41:04,987 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users) is not found. Language ID = 2
+2015-12-29 16:41:04,994 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles) is not found. Language ID = 2
+2015-12-29 16:41:05,007 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles.fields.name) is not found. Language ID = 2
+2015-12-29 16:41:05,017 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles.fields.active) is not found. Language ID = 2
+2015-12-29 16:41:05,028 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles.fields.issystemrole) is not found. Language ID = 2
+2015-12-29 16:41:05,047 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 16:41:05,060 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles) is not found. Language ID = 2
+2015-12-29 16:41:05,073 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.onlineusers) is not found. Language ID = 2
+2015-12-29 16:41:05,135 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.common.welcome) is not found. Language ID = 2
+2015-12-29 16:41:05,146 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.changepassword) is not found. Language ID = 2
+2015-12-29 16:41:05,164 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.logout) is not found. Language ID = 2
+2015-12-29 16:41:09,302 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 16:41:09,335 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.home) is not found. Language ID = 2
+2015-12-29 16:41:09,352 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles) is not found. Language ID = 2
+2015-12-29 16:41:09,361 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.onlineusers) is not found. Language ID = 2
+2015-12-29 16:41:09,435 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.common.welcome) is not found. Language ID = 2
+2015-12-29 16:41:09,451 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.changepassword) is not found. Language ID = 2
+2015-12-29 16:41:09,472 [37] Nut.Services.Localization.LocalizationService - Resource string (admin.users.logout) is not found. Language ID = 2
+2015-12-29 16:42:51,985 [12] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 16:43:14,641 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:43:14,666 [32] Nut.Services.Localization.LocalizationService - Resource string (admin.configuration.languages.edit) is not found. Language ID = 1
+2015-12-29 16:44:05,784 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 16:44:16,502 [37] Nut.Services.Localization.LocalizationService - Resource string (at least one published language is required.) is not found. Language ID = 1
+2015-12-29 16:49:51,854 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2015-12-29 16:49:56,857 [34] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Language\Resources.cshtml(2): error CS0103: The name 'EngineContext' does not exist in the current context
+2015-12-29 16:49:56,880 [34] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Language\Resources.cshtml(2): error CS0103: The name 'EngineContext' does not exist in the current context

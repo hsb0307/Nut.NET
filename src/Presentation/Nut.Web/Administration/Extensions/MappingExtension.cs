@@ -6,6 +6,8 @@ using Nut.Core.Plugins;
 using Nop.Admin.Models.Plugins;
 using Nut.Core.Domain.Stores;
 using Nut.Admin.Models.Stores;
+using Nut.Core.Domain.Localization;
+using Nut.Admin.Models.Localization;
 
 namespace Nut.Admin.Extensions {
     public static class MappingExtension {
@@ -59,6 +61,20 @@ namespace Nut.Admin.Extensions {
 
         #endregion
 
+        #region Languages
 
+        public static LanguageModel ToModel(this Language entity) {
+            return Mapper.Map<Language, LanguageModel>(entity);
+        }
+
+        public static Language ToEntity(this LanguageModel model) {
+            return Mapper.Map<LanguageModel, Language>(model);
+        }
+
+        public static Language ToEntity(this LanguageModel model, Language destination) {
+            return Mapper.Map(model, destination);
+        }
+
+        #endregion
     }
 }

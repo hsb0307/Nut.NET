@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Nop.Admin.Models.Plugins;
+using Nut.Admin.Models.Localization;
 using Nut.Admin.Models.Stores;
 using Nut.Admin.Models.Users;
+using Nut.Core.Domain.Localization;
 using Nut.Core.Domain.Stores;
 using Nut.Core.Domain.Users;
 using Nut.Core.Infrastructure;
@@ -34,6 +36,15 @@ namespace Nut.Admin.Infrastructure {
                 .ForMember(dest => dest.Locales, mo => mo.Ignore())
                 .ForMember(dest => dest.CustomProperties, mo => mo.Ignore());
             Mapper.CreateMap<StoreModel, Store>();
+
+            //language
+            Mapper.CreateMap<Language, LanguageModel>()
+                .ForMember(dest => dest.AvailableStores, mo => mo.Ignore())
+                .ForMember(dest => dest.SelectedStoreIds, mo => mo.Ignore())
+                .ForMember(dest => dest.FlagFileNames, mo => mo.Ignore())
+                .ForMember(dest => dest.CustomProperties, mo => mo.Ignore());
+            Mapper.CreateMap<LanguageModel, Language>()
+                .ForMember(dest => dest.LocaleStringResources, mo => mo.Ignore());
         }
 
         public int Order {
