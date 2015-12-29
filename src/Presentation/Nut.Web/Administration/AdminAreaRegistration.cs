@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Nop.Admin
+namespace Nut.Admin
 {
     public class AdminAreaRegistration : AreaRegistration
     {
