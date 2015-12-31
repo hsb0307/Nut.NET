@@ -3,6 +3,8 @@
     ViewBag.Title = T("Admin.System.ScheduleTasks").Text;
 }
 
+@Html.AntiForgeryToken()
+
 <h3>
     <!-- Breadcrumb right aligned-->
     <ol class="breadcrumb pull-right">
@@ -35,12 +37,14 @@
                     read: {
                         url: "@Html.Raw(Url.Action("List", "ScheduleTask"))",
                         type: "POST",
-                        dataType: "json"
+                        dataType: "json",
+                        data: addAntiForgeryToken
                     },
                     update: {
                         url: "@Html.Raw(Url.Action("TaskUpdate", "ScheduleTask"))",
                         type: "POST",
-                        dataType: "json"
+                        dataType: "json",
+                        data: addAntiForgeryToken
                     }
                 },
                 schema: {
@@ -125,11 +129,18 @@
                 title: "@T("Admin.System.ScheduleTasks.RunNow")",
                 width: 150,
                 template: '<a href="@Url.Content("~/Admin/ScheduleTask/RunNow/")#=Id#" class="k-button run-now">@T("Admin.System.ScheduleTasks.RunNow")</a>'
-            }, {
-                command: { name: "edit", text: "@T("Admin.Common.Edit")" },
+            }@*, {
+                command: {
+                    name: "edit",
+                    text: {
+                        edit: "@T("Admin.Common.Edit")",
+                        update: "@T("Admin.Common.Update")",
+                        cancel: "@T("Admin.Common.Cancel")"
+                    }
+                },
                 title: "@T("Admin.Common.Edit")",
                 width: 100
-            }]
+            }*@]
         });
     });
 </script>

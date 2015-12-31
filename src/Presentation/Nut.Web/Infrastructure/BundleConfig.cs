@@ -28,7 +28,8 @@ namespace Nut.Web.Infrastructure {
                 "~/Scripts/app/modules/navbar-search.js",
                 "~/Scripts/app/modules/sidebar.js",
                 "~/Scripts/app/modules/toggle-state.js",
-                "~/Scripts/app/modules/utils.js"
+                "~/Scripts/app/modules/utils.js",
+                "~/Scripts/admin.common.js"
             ));
 
             // Main Vendor

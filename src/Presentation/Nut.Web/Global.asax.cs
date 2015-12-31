@@ -114,17 +114,17 @@ namespace Nut.Web
             if (!DataSettingsHelper.DatabaseIsInstalled())
                 return;
 
-            //ensure license is installed
-            if (!LicenseSettingsHelper.LicenseIsInstalled()) {
-                //跳转到License 注册界面
-                string licenseUrl = string.Format("{0}license", webHelper.GetStoreLocation());
-                if (!webHelper.GetThisPageUrl(false).StartsWith(licenseUrl, StringComparison.InvariantCultureIgnoreCase)) {
-                    this.Response.Redirect(licenseUrl);
-                }
-            }
+            ////ensure license is installed
+            //if (!LicenseSettingsHelper.LicenseIsInstalled()) {
+            //    //跳转到License 注册界面
+            //    string licenseUrl = string.Format("{0}license", webHelper.GetStoreLocation());
+            //    if (!webHelper.GetThisPageUrl(false).StartsWith(licenseUrl, StringComparison.InvariantCultureIgnoreCase)) {
+            //        this.Response.Redirect(licenseUrl);
+            //    }
+            //}
 
-            if (!LicenseSettingsHelper.LicenseIsInstalled())
-                return;
+            //if (!LicenseSettingsHelper.LicenseIsInstalled())
+            //    return;
 
         }
 

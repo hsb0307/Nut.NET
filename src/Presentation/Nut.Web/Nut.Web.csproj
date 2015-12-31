@@ -191,6 +191,7 @@
     <Content Include="Content\install\style.css" />
     <Content Include="Content\install\style.rtl.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\admin.common.js" />
     <Content Include="Scripts\app\app.init.js" />
     <Content Include="Scripts\app\modules\bootstrap-start.js" />
     <Content Include="Scripts\app\modules\clear-storage.js" />

@@ -69,6 +69,8 @@
     <Compile Include="Localization\LocalizationExtensions.cs" />
     <Compile Include="Localization\LocalizationService.cs" />
     <Compile Include="Localization\LocalizedEntityService.cs" />
+    <Compile Include="Logging\ActivityLogService.cs" />
+    <Compile Include="Logging\IActivityLogService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\EncryptionService.cs" />
     <Compile Include="Security\IEncryptionService.cs" />

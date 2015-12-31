@@ -110,6 +110,8 @@
     <Compile Include="Domain\Localization\LocaleStringResource.cs" />
     <Compile Include="Domain\Localization\LocalizationSettings.cs" />
     <Compile Include="Domain\Localization\LocalizedProperty.cs" />
+    <Compile Include="Domain\Logging\ActivityLog.cs" />
+    <Compile Include="Domain\Logging\ActivityLogType.cs" />
     <Compile Include="Domain\Security\DefaultPermissionRecord.cs" />
     <Compile Include="Domain\Security\PermissionRecord.cs" />
     <Compile Include="Domain\Security\SecuritySettings.cs" />
