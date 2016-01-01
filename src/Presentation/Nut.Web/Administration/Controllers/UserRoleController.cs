@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Nut.Services.Logging;
 
 namespace Nut.Admin.Controllers
 {
@@ -21,6 +22,7 @@ namespace Nut.Admin.Controllers
         #region Fields
 
         private readonly IUserService _userService;
+        private readonly IActivityLogService _activityLogService;
         private readonly ILocalizationService _localizationService;
         private readonly IPermissionService _permissionService;
         private readonly IStoreService _storeService;
@@ -31,11 +33,13 @@ namespace Nut.Admin.Controllers
         #region Constructors
 
         public UserRoleController(IUserService userService,
+            IActivityLogService activityLogService,
             ILocalizationService localizationService,
             IPermissionService permissionService,
             IStoreService storeService,
             IWorkContext workContext) {
             this._userService = userService;
+            this._activityLogService = activityLogService;
             this._localizationService = localizationService;
             this._permissionService = permissionService;
             this._storeService = storeService;
@@ -102,7 +106,7 @@ namespace Nut.Admin.Controllers
                 _userService.InsertUserRole(userRole);
 
                 //activity log
-                //_customerActivityService.InsertActivity("AddNewCustomerRole", _localizationService.GetResource("ActivityLog.AddNewCustomerRole"), customerRole.Name);
+                _activityLogService.InsertActivity("AddNewUserRole", _localizationService.GetResource("ActivityLog.AddNewUserRole"), userRole.Name);
 
                 SuccessNotification(_localizationService.GetResource("Admin.Users.UserRoles.Added"));
                 return continueEditing ? RedirectToAction("Edit", new { id = userRole.Id }) : RedirectToAction("List");
@@ -152,8 +156,8 @@ namespace Nut.Admin.Controllers
                     _userService.UpdateUserRole(userRole);
 
                     //activity log
-                    //_customerActivityService.InsertActivity("EditCustomerRole", _localizationService.GetResource("ActivityLog.EditCustomerRole"), userRole.Name);
-
+                    _activityLogService.InsertActivity("EditUserRole", _localizationService.GetResource("ActivityLog.EditUserRole"), userRole.Name);
+                    
                     SuccessNotification(_localizationService.GetResource("Admin.Customers.CustomerRoles.Updated"));
                     return continueEditing ? RedirectToAction("Edit", userRole.Id) : RedirectToAction("List");
                 }
@@ -180,9 +184,7 @@ namespace Nut.Admin.Controllers
                 _userService.DeleteUserRole(customerRole);
 
                 //activity log
-                //_customerActivityService.InsertActivity("DeleteCustomerRole", _localizationService.GetResource("ActivityLog.DeleteCustomerRole"), customerRole.Name);
-
-                //SuccessNotification(_localizationService.GetResource("Admin.Customers.CustomerRoles.Deleted"));
+                _activityLogService.InsertActivity("DeleteUserRole", _localizationService.GetResource("ActivityLog.DeleteUserRole"), customerRole.Name);
 
                 return Json(new { success = true, message = "删除用户成功", });
             } catch (Exception exc) {

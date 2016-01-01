@@ -8,6 +8,8 @@ using Nut.Core.Domain.Stores;
 using Nut.Admin.Models.Stores;
 using Nut.Core.Domain.Localization;
 using Nut.Admin.Models.Localization;
+using Nut.Admin.Models.Logging;
+using Nut.Core.Domain.Logging;
 
 namespace Nut.Admin.Extensions {
     public static class MappingExtension {
@@ -75,6 +77,16 @@ namespace Nut.Admin.Extensions {
             return Mapper.Map(model, destination);
         }
 
+        #endregion
+
+        #region ActivityLog
+        public static ActivityLogTypeModel ToModel(this ActivityLogType entity) {
+            return entity.MapTo<ActivityLogType, ActivityLogTypeModel>();
+        }
+
+        public static ActivityLogModel ToModel(this ActivityLog entity) {
+            return entity.MapTo<ActivityLog, ActivityLogModel>();
+        }
         #endregion
     }
 }

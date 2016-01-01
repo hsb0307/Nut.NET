@@ -6,20 +6,24 @@ using Nut.Services.Authentication;
 using Nut.Services.Users;
 using Nut.Core.Domain.Users;
 using Nut.Services.Localization;
+using Nut.Services.Logging;
 
 namespace Nut.Web.Controllers {
     public class UserController : BasePublicController {
 
         private readonly IUserRegistrationService _userRegistrationService;
+        private readonly IActivityLogService _activityLogService;
         private readonly IAuthenticationService _authenticationService;
         private readonly IUserService _userService;
         private readonly ILocalizationService _localizationService;
 
-        public UserController(IUserRegistrationService userRegistrationService, 
+        public UserController(IUserRegistrationService userRegistrationService,
+            IActivityLogService activityLogService,
             IUserService userService,
             IAuthenticationService authenticationService,
             ILocalizationService localizationService) {
             this._userRegistrationService = userRegistrationService;
+            this._activityLogService = activityLogService;
             this._userService = userService;
             this._authenticationService = authenticationService;
             this._localizationService = localizationService;
@@ -51,11 +55,12 @@ namespace Nut.Web.Controllers {
                 switch (loginResult) {
                     case UserLoginResults.Successful:
                         {
-                            var customer = _userService.GetUserByUsername(model.Username);
+                            var user = _userService.GetUserByUsername(model.Username);
 
                             //sign in new customer
-                            _authenticationService.SignIn(customer, model.RememberMe);
-
+                            _authenticationService.SignIn(user, model.RememberMe);
+                            //activity log
+                            _activityLogService.InsertActivity("PublicStore.Login", _localizationService.GetResource("ActivityLog.PublicStore.Login"), user);
 
                             if (String.IsNullOrEmpty(returnUrl) || !Url.IsLocalUrl(returnUrl))
                                 return RedirectToRoute("HomePage");
@@ -86,6 +91,8 @@ namespace Nut.Web.Controllers {
         public ActionResult Logout() {
 
             _authenticationService.SignOut();
+            //activity log
+            _activityLogService.InsertActivity("PublicStore.Logout", _localizationService.GetResource("ActivityLog.PublicStore.Logout"));
             return RedirectToRoute("HomePage");
         }
 

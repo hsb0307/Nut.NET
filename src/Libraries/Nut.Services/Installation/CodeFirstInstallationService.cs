@@ -12,6 +12,7 @@ using Nut.Core.Infrastructure;
 using Nut.Services.Localization;
 using Nut.Services.Configuration;
 using Nut.Services.Users;
+using Nut.Core.Domain.Logging;
 
 namespace Nut.Services.Installation {
     public partial class CodeFirstInstallationService : IInstallationService {
@@ -22,6 +23,7 @@ namespace Nut.Services.Installation {
         private readonly IRepository<User> _userRepository;
         private readonly IRepository<UserRole> _userRoleRepository;
         private readonly IRepository<ScheduleTask> _scheduleTaskRepository;
+        private readonly IRepository<ActivityLogType> _activityLogTypeRepository;
         private readonly IWebHelper _webHelper;
 
         #endregion
@@ -33,6 +35,7 @@ namespace Nut.Services.Installation {
             IRepository<User> userRepository,
             IRepository<UserRole> userRoleRepository,
             IRepository<ScheduleTask> scheduleTaskRepository,
+            IRepository<ActivityLogType> activityLogTypeRepository,
             IWebHelper webHelper) {
             this._storeRepository = storeRepository;
             this._languageRepository = languageRepository;
@@ -40,6 +43,7 @@ namespace Nut.Services.Installation {
             this._userRoleRepository = userRoleRepository;
 
             this._scheduleTaskRepository = scheduleTaskRepository;
+            this._activityLogTypeRepository = activityLogTypeRepository;
             this._webHelper = webHelper;
         }
 
@@ -203,6 +207,90 @@ namespace Nut.Services.Installation {
             _scheduleTaskRepository.Insert(tasks);
         }
 
+        protected virtual void InstallActivityLogTypes() {
+            var activityLogTypes = new List<ActivityLogType>
+                                      {
+                                          //admin area activities
+                                         
+                                          new ActivityLogType
+                                              {
+                                                  SystemKeyword = "AddNewUser",
+                                                  Enabled = true,
+                                                  Name = "Add a new User"
+                                              },
+                                          new ActivityLogType
+                                              {
+                                                  SystemKeyword = "AddNewUserRole",
+                                                  Enabled = true,
+                                                  Name = "Add a new user role"
+                                              },
+
+                                          new ActivityLogType
+                                              {
+                                                  SystemKeyword = "AddNewSetting",
+                                                  Enabled = true,
+                                                  Name = "Add a new setting"
+                                              },
+
+                                          new ActivityLogType
+                                              {
+                                                  SystemKeyword = "DeleteUser",
+                                                  Enabled = true,
+                                                  Name = "Delete a user"
+                                              },
+                                          new ActivityLogType
+                                              {
+                                                  SystemKeyword = "DeleteUserRole",
+                                                  Enabled = true,
+                                                  Name = "Delete a user role"
+                                              },
+
+                                          new ActivityLogType
+                                              {
+                                                  SystemKeyword = "DeleteSetting",
+                                                  Enabled = true,
+                                                  Name = "Delete a setting"
+                                              },
+                                         
+
+                                          new ActivityLogType
+                                              {
+                                                  SystemKeyword = "EditUser",
+                                                  Enabled = true,
+                                                  Name = "Edit a user"
+                                              },
+                                          new ActivityLogType
+                                              {
+                                                  SystemKeyword = "EditUserRole",
+                                                  Enabled = true,
+                                                  Name = "Edit a user role"
+                                              },
+
+                                          new ActivityLogType
+                                              {
+                                                  SystemKeyword = "EditSettings",
+                                                  Enabled = true,
+                                                  Name = "Edit setting(s)"
+                                              },
+                                          
+                                              //public store activities
+                                        
+                                          new ActivityLogType
+                                              {
+                                                  SystemKeyword = "PublicStore.Login",
+                                                  Enabled = false,
+                                                  Name = "Public store. Login"
+                                              },
+                                          new ActivityLogType
+                                              {
+                                                  SystemKeyword = "PublicStore.Logout",
+                                                  Enabled = false,
+                                                  Name = "Public store. Logout"
+                                              },
+
+                                      };
+            _activityLogTypeRepository.Insert(activityLogTypes);
+        }
         #endregion
 
         #region Methods

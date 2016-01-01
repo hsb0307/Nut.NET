@@ -68,8 +68,8 @@
       <Private>True</Private>
       <HintPath>..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminAreaRegistration.cs" />
+    <Compile Include="Controllers\ActivityLogController.cs" />
     <Compile Include="Controllers\BaseAdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
@@ -140,6 +141,9 @@
     <Compile Include="Infrastructure\DependencyRegistrar.cs" />
     <Compile Include="Models\Localization\LanguageModel.cs" />
     <Compile Include="Models\Localization\LanguageResourceModel.cs" />
+    <Compile Include="Models\Logging\ActivityLogModel.cs" />
+    <Compile Include="Models\Logging\ActivityLogSearchModel.cs" />
+    <Compile Include="Models\Logging\ActivityLogTypeModel.cs" />
     <Compile Include="Models\Plugins\PluginModel.cs" />
     <Compile Include="Models\Security\PermissionMappingModel.cs" />
     <Compile Include="Models\Security\PermissionRecordModel.cs" />
@@ -416,24 +420,6 @@
     <Content Include="Views\Language\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Libraries\Nut.Core\Nut.Core.csproj">
-      <Project>{c1b336c9-e5b7-42c0-9e05-16e4d778abc2}</Project>
-      <Name>Nut.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Libraries\Nut.Data\Nut.Data.csproj">
-      <Project>{c8bac805-51e3-49b3-beeb-22bc4d009996}</Project>
-      <Name>Nut.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Libraries\Nut.Services\Nut.Services.csproj">
-      <Project>{646cd524-298a-4387-96c6-8cb87a169d58}</Project>
-      <Name>Nut.Services</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Nut.Web.Framework\Nut.Web.Framework.csproj">
-      <Project>{5bfe4dc8-f6ed-4acc-9d75-37a53a609c9d}</Project>
-      <Name>Nut.Web.Framework</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -487,9 +473,32 @@
   <ItemGroup>
     <Content Include="Views\Language\Resources.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\ActivityLog\ListLogs.cshtml" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ScheduleTask\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ActivityLog\ListTypes.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Libraries\Nut.Core\Nut.Core.csproj">
+      <Project>{c1b336c9-e5b7-42c0-9e05-16e4d778abc2}</Project>
+      <Name>Nut.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\Nut.Data\Nut.Data.csproj">
+      <Project>{c8bac805-51e3-49b3-beeb-22bc4d009996}</Project>
+      <Name>Nut.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\Nut.Services\Nut.Services.csproj">
+      <Project>{646cd524-298a-4387-96c6-8cb87a169d58}</Project>
+      <Name>Nut.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Nut.Web.Framework\Nut.Web.Framework.csproj">
+      <Project>{5bfe4dc8-f6ed-4acc-9d75-37a53a609c9d}</Project>
+      <Name>Nut.Web.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

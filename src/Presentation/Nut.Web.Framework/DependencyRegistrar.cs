@@ -23,6 +23,7 @@ using Nut.Services.Authentication;
 using Nut.Services.Common;
 using Nut.Services.Configuration;
 using Nut.Services.Users;
+using Nut.Services.Logging;
 using Nut.Services.Helpers;
 using Nut.Services.License;
 using Nut.Services.Installation;
@@ -139,6 +140,7 @@ namespace Nut.Web.Framework {
 
             builder.RegisterType<UserService>().As<IUserService>().InstancePerLifetimeScope();
             builder.RegisterType<UserRegistrationService>().As<IUserRegistrationService>().InstancePerLifetimeScope();
+            builder.RegisterType<ActivityLogService>().As<IActivityLogService>().InstancePerLifetimeScope();
 
             builder.RegisterType<PermissionService>().As<IPermissionService>()
                 .InstancePerLifetimeScope();
