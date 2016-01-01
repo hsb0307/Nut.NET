@@ -1,8 +1,10 @@
-﻿@{
+﻿@using Nut.Services.Stores
+@{
     var defaultGridPageSize = EngineContext.Current.Resolve<Nut.Core.Domain.Common.AdminAreaSettings>().DefaultGridPageSize;
     var gridPageSizes = EngineContext.Current.Resolve<Nut.Core.Domain.Common.AdminAreaSettings>().GridPageSizes;
+
     //page title
-    ViewBag.Title = T("Admin.Configuration.Languages.Localization").Text;
+    ViewBag.Title = T("Admin.Configuration.Settings.AllSettings").Text;
 }
 @Html.AntiForgeryToken()
 
@@ -12,47 +14,33 @@
         <li>
             <a href="#">@T("Admin.Home")</a>
         </li>
-        <li>
+        <li class="active">
             @T("Admin.Configuration")
         </li>
-        <li class="active">
-            @T("Admin.Configuration.Languages")
-        </li>
     </ol>
-    @T("Admin.Configuration.Languages.Localization")
+    @T("Admin.Configuration.Settings.AllSettings")
     <!-- Small text for title-->
     @*<span class="text-sm hidden-xs">this is online Users.</span>*@
     <!-- Breadcrumb below title-->
 </h3>
+<p>
+    @T("Admin.Configuration.Settings.AllSettings.Description")
+</p>
 
-@if (ViewBag.AllLanguages != null) {
-
-    <p>
-        @T("Admin.Configuration.Languages.Select"):&nbsp;&nbsp;
-        @Html.DropDownList("localeresource-language", (IEnumerable<SelectListItem>)ViewBag.AllLanguages, new { onchange = "onLocaleResourceLanguageSelected(this.value);" })
-        <script type="text/javascript">
-            function onLocaleResourceLanguageSelected(languageid) {
-                window.location = '@(Url.Action("Resources") + "?languageId=")' + languageid;
-            }
-        </script>
-    </p>
-}
-
-<p>@T("Admin.Configuration.Languages.Resources.Description")</p>
-
+<!-- START table-responsive-->
 <div class="table-responsive b0">
-    <div id="resources-grid"></div>
-
+    <div id="settings-grid"></div>
 </div>
+<!-- END table-responsive -->
 
 <script>
     $(document).ready(function () {
-        $("#resources-grid").kendoGrid({
+        $("#settings-grid").kendoGrid({
             dataSource: {
                 type: "json",
                 transport: {
                     read: {
-                        url: "@Html.Raw(Url.Action("Resources", "Language", new { languageId = ViewBag.LanguageId }))",
+                        url: "@Html.Raw(Url.Action("AllSettings", "Setting"))",
                         type: "POST",
                         dataType: "json",
                         contentType: "application/json"
@@ -60,19 +48,22 @@
                         //data: addAntiForgeryToken
                     },
                     create: {
-                        url: "@Html.Raw(Url.Action("ResourceAdd", "Language", new { languageId = ViewBag.LanguageId }))",
+                        url: "@Html.Raw(Url.Action("SettingAdd", "Setting"))",
                         type: "POST",
-                        dataType: "json"
+                        dataType: "json",
+                        data: addAntiForgeryToken
                     },
                     update: {
-                        url:"@Html.Raw(Url.Action("ResourceUpdate", "Language"))",
+                        url:"@Html.Raw(Url.Action("SettingUpdate", "Setting"))",
                         type: "POST",
-                        dataType: "json"
+                        dataType: "json",
+                        data: addAntiForgeryToken
                     },
                     destroy: {
-                        url: "@Html.Raw(Url.Action("ResourceDelete", "Language"))",
+                        url: "@Html.Raw(Url.Action("SettingDelete", "Setting"))",
                         type: "POST",
-                        dataType: "json"
+                        dataType: "json",
+                        data: addAntiForgeryToken
                     },
                     parameterMap: function(data, operation) {
                         if (operation != "read") {
@@ -92,6 +83,8 @@
                         fields: {
                             Name: { editable: true, type: "string" },
                             Value: { editable: true, type: "string" },
+                            Store: { editable: true, type: "string" },
+                            StoreId: { editable: true, type: "number" },
                             Id: { editable: false, type: "number" }
                         }
                     }
@@ -134,17 +127,24 @@
             scrollable: false,
             columns: [{
                 field: "Name",
-                title: "@T("Admin.Configuration.Languages.Resources.Fields.Name")",
+                title: "@T("Admin.Configuration.Settings.AllSettings.Fields.Name")",
                 width: 300,
                 filterable: true,
                 sortable: true
             }, {
                 field: "Value",
-                title: "@T("Admin.Configuration.Languages.Resources.Fields.Value")",
+                title: "@T("Admin.Configuration.Settings.AllSettings.Fields.Value")",
                 width: 300,
                 filterable: true,
                 sortable: true
-
+            }, {
+                field: "StoreId",
+                title: "@T("Admin.Configuration.Settings.AllSettings.Fields.StoreName")",
+                width: 150,
+                editor: storeDropDownEditor,
+                template: "#:Store#",
+                filterable: false,
+                sortable: false
             }, {
                 command: [{
                     name: "edit",
@@ -159,4 +159,33 @@
         });
     });
 
+    //local datasource
+    var allStores = [
+        {
+            Id : 0,
+            Name : "@T("Admin.Configuration.Settings.AllSettings.Fields.StoreName.AllStores")"
+        }
+        @{
+                        var storeService = EngineContext.Current.Resolve<IStoreService>();
+                        var allStores = storeService.GetAllStores();
+                    }
+        @foreach (var store in allStores)
+                    {
+                        <text>
+            , {
+                Id: @(store.Id),
+                Name: "@(Html.Raw(HttpUtility.JavaScriptStringEncode(store.Name)))"
+            }
+            </text>
+                    }
+    ];
+
+    function storeDropDownEditor(container, options) {
+        $('<input required data-text-field="Name" data-value-field="Id" data-bind="value:StoreId"/>')
+            .appendTo(container)
+            .kendoDropDownList({
+                autoBind: false,
+                dataSource: allStores
+            });
+    }
 </script>

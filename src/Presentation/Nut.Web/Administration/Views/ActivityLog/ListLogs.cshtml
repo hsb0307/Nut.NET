@@ -1,7 +1,7 @@
 ﻿@model Nut.Admin.Models.Logging.ActivityLogSearchModel
 @{
-    var defaultGridPageSize = 20;
-    var gridPageSizes = 20;
+    var defaultGridPageSize = EngineContext.Current.Resolve<Nut.Core.Domain.Common.AdminAreaSettings>().DefaultGridPageSize;
+    var gridPageSizes = EngineContext.Current.Resolve<Nut.Core.Domain.Common.AdminAreaSettings>().GridPageSizes;
 
     //page title
     ViewBag.Title = T("Admin.Configuration.ActivityLog.ActivityLog").Text;
