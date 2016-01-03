@@ -84,8 +84,14 @@
     <Compile Include="Mapping\Stores\StoreMap.cs" />
     <Compile Include="Mapping\Stores\StoreMappingMap.cs" />
     <Compile Include="Mapping\Tasks\ScheduleTaskMap.cs" />
-    <Compile Include="Mapping\Users\CustomerMap.cs" />
-    <Compile Include="Mapping\Users\CustomerRoleMap.cs" />
+    <Compile Include="Mapping\Users\UserMap.cs" />
+    <Compile Include="Mapping\Users\UserRoleMap.cs" />
+    <Compile Include="Mapping\Users\DepartmentMap.cs" />
+    <Compile Include="Migrations\201601030022386_2016010301.cs" />
+    <Compile Include="Migrations\201601030022386_2016010301.Designer.cs">
+      <DependentUpon>201601030022386_2016010301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NutObjectContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryableExtensions.cs" />
@@ -102,7 +108,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201601030022386_2016010301.resx">
+      <DependentUpon>201601030022386_2016010301.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

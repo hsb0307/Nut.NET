@@ -88,5 +88,20 @@ namespace Nut.Admin.Extensions {
             return entity.MapTo<ActivityLog, ActivityLogModel>();
         }
         #endregion
+        #region Department
+
+        public static DepartmentModel ToModel(this Department entity) {
+            return Mapper.Map<Department, DepartmentModel>(entity);
+        }
+
+        public static Department ToEntity(this DepartmentModel model) {
+            return Mapper.Map<DepartmentModel, Department>(model);
+        }
+
+        public static Department ToEntity(this DepartmentModel model, Department destination) {
+            return Mapper.Map(model, destination);
+        }
+
+        #endregion
     }
 }

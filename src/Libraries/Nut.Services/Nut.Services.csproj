@@ -93,6 +93,9 @@
     <Compile Include="Tasks\TaskThread.cs" />
     <Compile Include="Users\ChangePasswordRequest.cs" />
     <Compile Include="Users\ChangePasswordResult.cs" />
+    <Compile Include="Users\DepartmentExtensions.cs" />
+    <Compile Include="Users\DepartmentService.cs" />
+    <Compile Include="Users\IDepartmentService.cs" />
     <Compile Include="Users\IUserRegistrationService.cs" />
     <Compile Include="Users\UserRegistrationService.cs" />
     <Compile Include="Users\UserService.cs" />

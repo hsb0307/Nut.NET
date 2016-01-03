@@ -83,7 +83,7 @@ namespace Nut.Web.Framework.Controllers
                 return 0;
 
 
-            var storeId = workContext.CurrentUser.StoreId;
+            var storeId = workContext.CurrentUser.Department.StoreId;
             var store = storeService.GetStoreById(storeId);
             return store != null ? store.Id : 0;
         }

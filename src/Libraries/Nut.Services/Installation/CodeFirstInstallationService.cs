@@ -20,6 +20,7 @@ namespace Nut.Services.Installation {
 
         private readonly IRepository<Store> _storeRepository;
         private readonly IRepository<Language> _languageRepository;
+        private readonly IRepository<Department> _departmentRepository;
         private readonly IRepository<User> _userRepository;
         private readonly IRepository<UserRole> _userRoleRepository;
         private readonly IRepository<ScheduleTask> _scheduleTaskRepository;
@@ -32,6 +33,7 @@ namespace Nut.Services.Installation {
 
         public CodeFirstInstallationService(IRepository<Store> storeRepository,
             IRepository<Language> languageRepository,
+            IRepository<Department> departmentRepository,
             IRepository<User> userRepository,
             IRepository<UserRole> userRoleRepository,
             IRepository<ScheduleTask> scheduleTaskRepository,
@@ -39,6 +41,7 @@ namespace Nut.Services.Installation {
             IWebHelper webHelper) {
             this._storeRepository = storeRepository;
             this._languageRepository = languageRepository;
+            this._departmentRepository = departmentRepository;
             this._userRepository = userRepository;
             this._userRoleRepository = userRoleRepository;
 
@@ -94,6 +97,24 @@ namespace Nut.Services.Installation {
 
         }
 
+        protected virtual void InstallDepartments() {
+
+            var departments = new List<Department>
+           {
+                new Department
+                {
+                    Name = "Your depatrment Name",
+                    Code= "01",
+                    Deleted = false,
+                    ParentId =0,
+                    StoreId=1,
+                    DisplayOrder = 1
+                },
+            };
+
+            _departmentRepository.Insert(departments);
+        }
+
         protected virtual void InstallCustomersAndUsers(string defaultUserEmail, string defaultUserPassword) {
             var crAdministrators = new UserRole {
                 Name = "Administrators",
@@ -128,6 +149,7 @@ namespace Nut.Services.Installation {
                 PasswordFormat = PasswordFormat.Clear,
                 PasswordSalt = "",
                 Active = true,
+                DepartmentId = 1,
                 CreatedOnUtc = DateTime.UtcNow,
                 LastActivityDateUtc = DateTime.UtcNow,
             };
@@ -251,7 +273,7 @@ namespace Nut.Services.Installation {
                                                   Enabled = true,
                                                   Name = "Delete a setting"
                                               },
-                                         
+
 
                                           new ActivityLogType
                                               {
@@ -299,6 +321,7 @@ namespace Nut.Services.Installation {
             string defaultUserPassword, bool installSampleData = true) {
             InstallStores();
             InstallLanguages();
+            InstallDepartments();
             InstallCustomersAndUsers(defaultUserEmail, defaultUserPassword);
             InstallSettings();
             InstallLocaleResources();

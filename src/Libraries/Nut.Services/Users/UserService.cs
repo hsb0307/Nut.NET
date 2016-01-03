@@ -255,6 +255,7 @@ namespace Nut.Services.Users {
                 Active = true,
                 CreatedOnUtc = DateTime.UtcNow,
                 LastActivityDateUtc = DateTime.UtcNow,
+                DepartmentId = 1
             };
 
             //add to 'Guests' role

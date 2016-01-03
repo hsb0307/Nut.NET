@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Nut.Core.Domain.Users {
-    public class User: BaseEntity {
+    public class User : BaseEntity {
         private ICollection<UserRole> _userRoles;
 
         /// <summary>
@@ -72,9 +72,9 @@ namespace Nut.Core.Domain.Users {
         public bool IsSystemAccount { get; set; }
 
         /// <summary>
-        /// Gets or sets the store identifier.
+        /// Gets or sets the department identifier.
         /// </summary>
-        public int StoreId { get; set; }
+        public int DepartmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the last IP address
@@ -104,6 +104,10 @@ namespace Nut.Core.Domain.Users {
             get { return _userRoles ?? (_userRoles = new List<UserRole>()); }
             protected set { _userRoles = value; }
         }
+        /// <summary>
+        /// Gets or sets the department.
+        /// </summary>
+        public virtual Department Department { get; set; }
         #endregion
     }
 }

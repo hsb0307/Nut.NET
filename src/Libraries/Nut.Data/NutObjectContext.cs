@@ -18,6 +18,12 @@ namespace Nut.Data
     {
         #region Ctor
 
+        public NutObjectContext()
+            : base("DefaultConnection")
+        {
+            //((IObjectContextAdapter) this).ObjectContext.ContextOptions.LazyLoadingEnabled = true;
+        }
+
         public NutObjectContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {

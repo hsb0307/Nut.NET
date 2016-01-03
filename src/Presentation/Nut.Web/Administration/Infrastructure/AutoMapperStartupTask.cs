@@ -58,6 +58,16 @@ namespace Nut.Admin.Infrastructure {
                 .ForMember(dest => dest.UserName, mo => mo.MapFrom(src => src.User.Username))
                 .ForMember(dest => dest.CreatedOn, mo => mo.Ignore())
                 .ForMember(dest => dest.CustomProperties, mo => mo.Ignore());
+
+            // Department
+            Mapper.CreateMap<Department, DepartmentModel>()
+                //.ForMember(dest => dest.Locales, mo => mo.Ignore())
+                .ForMember(dest => dest.AvailableDepartments, mo => mo.Ignore())
+                .ForMember(dest => dest.AvailableStores, mo => mo.Ignore())
+                .ForMember(dest => dest.ParentName, mo => mo.Ignore())
+                .ForMember(dest => dest.CustomProperties, mo => mo.Ignore());
+            Mapper.CreateMap<DepartmentModel, Department>()
+                .ForMember(dest => dest.Deleted, mo => mo.Ignore());
         }
 
         public int Order {

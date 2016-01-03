@@ -15,10 +15,8 @@ using System.Web;
 using System.Web.Mvc;
 using Nut.Services.Logging;
 
-namespace Nut.Admin.Controllers
-{
-    public class UserRoleController : BaseAdminController
-    {
+namespace Nut.Admin.Controllers {
+    public class UserRoleController : BaseAdminController {
         #region Fields
 
         private readonly IUserService _userService;
@@ -147,18 +145,18 @@ namespace Nut.Admin.Controllers
             try {
                 if (ModelState.IsValid) {
                     if (userRole.IsSystemRole && !model.Active)
-                        throw new NutException(_localizationService.GetResource("Admin.Customers.CustomerRoles.Fields.Active.CantEditSystem"));
+                        throw new NutException(_localizationService.GetResource("Admin.Users.UserRoles.Fields.Active.CantEditSystem"));
 
                     if (userRole.IsSystemRole && !userRole.SystemName.Equals(model.SystemName, StringComparison.InvariantCultureIgnoreCase))
-                        throw new NutException(_localizationService.GetResource("Admin.Customers.CustomerRoles.Fields.SystemName.CantEditSystem"));
+                        throw new NutException(_localizationService.GetResource("Admin.Users.UserRoles.Fields.SystemName.CantEditSystem"));
 
                     userRole = model.ToEntity(userRole);
                     _userService.UpdateUserRole(userRole);
 
                     //activity log
                     _activityLogService.InsertActivity("EditUserRole", _localizationService.GetResource("ActivityLog.EditUserRole"), userRole.Name);
-                    
-                    SuccessNotification(_localizationService.GetResource("Admin.Customers.CustomerRoles.Updated"));
+
+                    SuccessNotification(_localizationService.GetResource("Admin.Users.UserRoles.Updated"));
                     return continueEditing ? RedirectToAction("Edit", userRole.Id) : RedirectToAction("List");
                 }
 
@@ -186,10 +184,10 @@ namespace Nut.Admin.Controllers
                 //activity log
                 _activityLogService.InsertActivity("DeleteUserRole", _localizationService.GetResource("ActivityLog.DeleteUserRole"), customerRole.Name);
 
-                return Json(new { success = true, message = "删除用户成功", });
+                return Json(new { success = true, message = _localizationService.GetResource("Admin.Users.UserRoles.Deleted") });
             } catch (Exception exc) {
                 ErrorNotification(exc.Message);
-                return Json(new { success = false, message = "删除用户失败", });
+                return Json(new { success = false, message = _localizationService.GetResource("Admin.Users.UserRoles.Deleted"), });
             }
 
         }

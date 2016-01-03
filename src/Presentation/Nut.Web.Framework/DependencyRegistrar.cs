@@ -137,7 +137,7 @@ namespace Nut.Web.Framework {
 
             //services
             builder.RegisterType<GenericAttributeService>().As<IGenericAttributeService>().InstancePerLifetimeScope();
-
+            builder.RegisterType<DepartmentService>().As<IDepartmentService>().InstancePerLifetimeScope();
             builder.RegisterType<UserService>().As<IUserService>().InstancePerLifetimeScope();
             builder.RegisterType<UserRegistrationService>().As<IUserRegistrationService>().InstancePerLifetimeScope();
             builder.RegisterType<ActivityLogService>().As<IActivityLogService>().InstancePerLifetimeScope();
