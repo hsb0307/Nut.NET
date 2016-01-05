@@ -63,7 +63,7 @@ namespace Nut.Admin.Controllers {
         }
 
         public ActionResult List() {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             return View();
@@ -71,7 +71,7 @@ namespace Nut.Admin.Controllers {
 
         [HttpPost]
         public ActionResult List(DataSourceRequest command) {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             var customerRoles = _userService.GetAllUserRoles(true);
@@ -85,7 +85,7 @@ namespace Nut.Admin.Controllers {
         }
 
         public ActionResult Create() {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             var model = new UserRoleModel();
@@ -96,7 +96,7 @@ namespace Nut.Admin.Controllers {
 
         [HttpPost, ParameterBasedOnFormName("save-continue", "continueEditing")]
         public ActionResult Create(UserRoleModel model, bool continueEditing) {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             if (ModelState.IsValid) {
@@ -115,7 +115,7 @@ namespace Nut.Admin.Controllers {
         }
 
         public ActionResult Edit(int id) {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             var userRole = _userService.GetUserRoleById(id);
@@ -134,7 +134,7 @@ namespace Nut.Admin.Controllers {
 
         [HttpPost, ParameterBasedOnFormName("save-continue", "continueEditing")]
         public ActionResult Edit(UserRoleModel model, bool continueEditing) {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             var userRole = _userService.GetUserRoleById(model.Id);
@@ -170,7 +170,7 @@ namespace Nut.Admin.Controllers {
 
         [HttpPost]
         public ActionResult Delete(int id) {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             var customerRole = _userService.GetUserRoleById(id);

@@ -83,11 +83,15 @@ namespace Nut.Services.Users {
         /// <param name="pageIndex">Index of the page.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns></returns>
-        public IPagedList<User> GetAllUsers(DateTime? createdFromUtc = null,
+        public IPagedList<User> GetAllUsers(int departmentId = 0, DateTime? createdFromUtc = null,
              DateTime? createdToUtc = null, int[] UserRoleIds = null, string email = null, string username = null,
              int pageIndex = 0, int pageSize = 2147483647) //Int32.MaxValue
         {
             var query = _userRepository.Table;
+
+            if (departmentId > 0)
+                query = query.Where(c => c.DepartmentId == departmentId);
+
             if (createdFromUtc.HasValue)
                 query = query.Where(c => createdFromUtc.Value <= c.CreatedOnUtc);
             if (createdToUtc.HasValue)

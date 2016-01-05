@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using Nut.Core;
 using Nut.Core.Domain.Users;
 
-namespace Nut.Services.Users
-{
+namespace Nut.Services.Users {
     /// <summary>
     /// User service interface
     /// </summary>
-    public partial interface IUserService
-    {
+    public partial interface IUserService {
         #region Users
 
         /// <summary>
@@ -23,8 +21,8 @@ namespace Nut.Services.Users
         /// <param name="pageIndex">Index of the page.</param>
         /// <param name="pageSize">Size of the page.</param>
         /// <returns></returns>
-        IPagedList<User> GetAllUsers(DateTime? createdFromUtc = null,
-            DateTime? createdToUtc = null,int[] UserRoleIds = null, string email = null, string username = null,
+        IPagedList<User> GetAllUsers(int departmentId = 0, DateTime? createdFromUtc = null,
+            DateTime? createdToUtc = null, int[] UserRoleIds = null, string email = null, string username = null,
             int pageIndex = 0, int pageSize = 2147483647); //Int32.MaxValue
 
         /// <summary>

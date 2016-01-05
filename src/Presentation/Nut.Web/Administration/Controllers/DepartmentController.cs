@@ -78,7 +78,7 @@ namespace Nut.Admin.Controllers
         }
 
         public ActionResult List() {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             return View();
@@ -86,7 +86,7 @@ namespace Nut.Admin.Controllers
 
         [HttpPost]
         public ActionResult List(DataSourceRequest command) {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             var departments = _departmentService
@@ -105,7 +105,7 @@ namespace Nut.Admin.Controllers
 
         //create
         public ActionResult Create() {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             var model = new DepartmentModel();
@@ -117,7 +117,7 @@ namespace Nut.Admin.Controllers
 
         [HttpPost, ParameterBasedOnFormName("save-continue", "continueEditing")]
         public ActionResult Create(DepartmentModel model, bool continueEditing) {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             if (ModelState.IsValid) {
@@ -139,7 +139,7 @@ namespace Nut.Admin.Controllers
 
         //edit
         public ActionResult Edit(int id) {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             var department = _departmentService.GetById(id);
@@ -154,7 +154,7 @@ namespace Nut.Admin.Controllers
 
         [HttpPost, ParameterBasedOnFormName("save-continue", "continueEditing")]
         public ActionResult Edit(DepartmentModel model, bool continueEditing) {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             var department = _departmentService.GetById(model.Id);
@@ -181,7 +181,7 @@ namespace Nut.Admin.Controllers
         //delete
         [HttpPost]
         public ActionResult Delete(int id) {
-            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCustomers))
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageUsers))
                 return AccessDeniedView();
 
             var department = _departmentService.GetById(id);

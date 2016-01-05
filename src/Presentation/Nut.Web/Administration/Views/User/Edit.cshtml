@@ -1,0 +1,29 @@
+﻿@model Nut.Admin.Models.Users.UserModel
+
+@{
+    ViewBag.Title = "Admin.Users.Edit";
+}
+
+<h3>
+    @T("Admin.Users.Edit") - @Model.Username
+    <span class="text-sm hidden-xs"><a href="@Url.Action("List")">@T("Admin.Users.BackToList")</a></span>
+</h3>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>@T("Admin.Users")</h4>
+        <hr />
+
+        @Html.Partial("_CreateOrUpdate", Model)
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" name="save" value="@T("Admin.Common.Save")" class="btn btn-default" />
+                <input type="submit" name="save-continue" value="@T("Admin.Common.SaveContinue")" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+

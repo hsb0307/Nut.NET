@@ -1,0 +1,66 @@
+﻿@model Nut.Admin.Models.Users.UserModel
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@Html.HiddenFor(model => model.Id)
+@Html.HiddenFor(model => model.Deleted)
+@Html.HiddenFor(model => model.CreatedOnUtc)
+@Html.HiddenFor(model => model.LastActivityDateUtc)
+
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.DepartmentId, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.DropDownListFor(model => model.DepartmentId, Model.AvailableDepartments)
+        @Html.ValidationMessageFor(model => model.DepartmentId, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Active, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Active, new { htmlAttributes = new { @class = "needsclick" } })
+        @Html.ValidationMessageFor(model => model.Active, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+
+<div class="form-group">
+    @Html.LabelFor(model => model.UserRoleNames, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @{ 
+            if (Model != null && Model.AvailableUserRoles.Count > 0) {
+                foreach (var userRole in Model.AvailableUserRoles) {
+                    <div>
+                        <input type="checkbox" name="SelectedUserRoleIds" value="@userRole.Id" checked="@(Model.SelectedUserRoleIds != null && Model.SelectedUserRoleIds.Contains(userRole.Id))" />@userRole.Name
+                    </div>
+                }
+            } else {
+                @T("Admin.Customers.Customers.Fields.CustomerRoles.NoRoles")
+            }
+        }
+    </div>
+</div>

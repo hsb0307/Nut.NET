@@ -137,6 +137,7 @@
     <Compile Include="Controllers\ScheduleTaskController.cs" />
     <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Controllers\SettingController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UserRoleController.cs" />
     <Compile Include="Extensions\MappingExtension.cs" />
     <Compile Include="Infrastructure\AutoMapperStartupTask.cs" />
@@ -155,6 +156,8 @@
     <Compile Include="Models\Users\DepartmentListModel.cs" />
     <Compile Include="Models\Users\DepartmentModel.cs" />
     <Compile Include="Models\Users\OnlineUserModel.cs" />
+    <Compile Include="Models\Users\UserListModel.cs" />
+    <Compile Include="Models\Users\UserModel.cs" />
     <Compile Include="Models\Users\UserRoleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validators\Localization\LanguageResourceValidator.cs" />
@@ -517,6 +520,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Department\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\_CreateOrUpdate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\Edit.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
