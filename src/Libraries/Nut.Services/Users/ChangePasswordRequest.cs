@@ -7,9 +7,9 @@ namespace Nut.Services.Users {
     public class ChangePasswordRequest
     {
         /// <summary>
-        /// Email
+        /// Username
         /// </summary>
-        public string Email { get; set; }
+        public string Username { get; set; }
         /// <summary>
         /// A value indicating whether we should validate request
         /// </summary>
@@ -35,10 +35,10 @@ namespace Nut.Services.Users {
         /// <param name="newPasswordFormat">Password format</param>
         /// <param name="newPassword">New password</param>
         /// <param name="oldPassword">Old password</param>
-        public ChangePasswordRequest(string email, bool validateRequest, 
+        public ChangePasswordRequest(string username, bool validateRequest, 
             PasswordFormat newPasswordFormat, string newPassword, string oldPassword = "")
         {
-            this.Email = email;
+            this.Username = username;
             this.ValidateRequest = validateRequest;
             this.NewPasswordFormat = newPasswordFormat;
             this.NewPassword = newPassword;

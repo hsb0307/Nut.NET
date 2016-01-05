@@ -98,7 +98,7 @@ namespace Nut.Services.Users {
                 throw new ArgumentNullException("request");
 
             var result = new ChangePasswordResult();
-            if (String.IsNullOrWhiteSpace(request.Email)) {
+            if (String.IsNullOrWhiteSpace(request.Username)) {
                 result.AddError(_localizationService.GetResource("Account.ChangePassword.Errors.EmailIsNotProvided"));
                 return result;
             }
@@ -107,9 +107,9 @@ namespace Nut.Services.Users {
                 return result;
             }
 
-            var user = _userService.GetUserByEmail(request.Email);
+            var user = _userService.GetUserByUsername(request.Username);
             if (user == null) {
-                result.AddError(_localizationService.GetResource("Account.ChangePassword.Errors.EmailNotFound"));
+                result.AddError(_localizationService.GetResource("Account.ChangePassword.Errors.UsernameNotFound"));
                 return result;
             }
 

@@ -61,19 +61,18 @@ namespace Nut.Services.Installation
 
         }
 
-        protected virtual void UpdateDefaultCustomer(string defaultUserEmail, string defaultUserPassword)
+        protected virtual void UpdateDefaultCustomer(string defaultUsername, string defaultUserPassword)
         {
             var adminUser = _userRepository.Table.Single(x => !x.IsSystemAccount);
             if (adminUser == null)
                 throw new Exception("Admin user cannot be loaded");
 
             adminUser.UserGuid = Guid.NewGuid();
-            adminUser.Email = defaultUserEmail;
-            adminUser.Username = defaultUserEmail;
+            adminUser.Username = defaultUsername;
             _userRepository.Update(adminUser);
 
             var customerRegistrationService = EngineContext.Current.Resolve<IUserRegistrationService>();
-            customerRegistrationService.ChangePassword(new ChangePasswordRequest(defaultUserEmail, false,
+            customerRegistrationService.ChangePassword(new ChangePasswordRequest(defaultUsername, false,
                  PasswordFormat.Hashed, defaultUserPassword));
         }
 
@@ -130,12 +129,12 @@ namespace Nut.Services.Installation
 
         #region Methods
 
-        public virtual void InstallData(string defaultUserEmail,
+        public virtual void InstallData(string defaultUsername,
             string defaultUserPassword, bool installSampleData = true)
         {
             ExecuteSqlFile(_webHelper.MapPath("~/App_Data/Install/create_required_data.sql"));
             InstallLocaleResources();
-            UpdateDefaultCustomer(defaultUserEmail, defaultUserPassword);
+            UpdateDefaultCustomer(defaultUsername, defaultUserPassword);
             UpdateDefaultStoreUrl();
 
             if (installSampleData)

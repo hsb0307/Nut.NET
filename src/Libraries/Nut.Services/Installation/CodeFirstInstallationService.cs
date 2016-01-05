@@ -160,9 +160,9 @@ namespace Nut.Services.Installation {
 
         }
 
-        protected virtual void HashDefaultCustomerPassword(string defaultUserEmail, string defaultUserPassword) {
+        protected virtual void HashDefaultCustomerPassword(string defaultUsername, string defaultUserPassword) {
             var customerRegistrationService = EngineContext.Current.Resolve<IUserRegistrationService>();
-            customerRegistrationService.ChangePassword(new ChangePasswordRequest(defaultUserEmail, false,
+            customerRegistrationService.ChangePassword(new ChangePasswordRequest(defaultUsername, false,
                  PasswordFormat.Hashed, defaultUserPassword));
         }
 
@@ -317,15 +317,15 @@ namespace Nut.Services.Installation {
 
         #region Methods
 
-        public virtual void InstallData(string defaultUserEmail,
+        public virtual void InstallData(string defaultUsername,
             string defaultUserPassword, bool installSampleData = true) {
             InstallStores();
             InstallLanguages();
             InstallDepartments();
-            InstallCustomersAndUsers(defaultUserEmail, defaultUserPassword);
+            InstallCustomersAndUsers(defaultUsername, defaultUserPassword);
             InstallSettings();
             InstallLocaleResources();
-            HashDefaultCustomerPassword(defaultUserEmail, defaultUserPassword);
+            HashDefaultCustomerPassword(defaultUsername, defaultUserPassword);
             InstallScheduleTasks();
 
         }

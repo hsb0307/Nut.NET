@@ -201,12 +201,6 @@ namespace Nut.Admin.Controllers {
                     ModelState.AddModelError("", "Username is already registered");
             }
 
-            if (!String.IsNullOrWhiteSpace(model.Email)) {
-                var cust2 = _userService.GetUserByEmail(model.Email);
-                if (cust2 != null)
-                    ModelState.AddModelError("", "Email is already registered");
-            }
-
             //validate customer roles
             var allUserRoles = _userService.GetAllUserRoles(true);
             var newUserRoles = new List<UserRole>();
@@ -236,7 +230,7 @@ namespace Nut.Admin.Controllers {
 
                 //password
                 if (!String.IsNullOrWhiteSpace(model.Password)) {
-                    var changePassRequest = new ChangePasswordRequest(model.Email, false, PasswordFormat.Hashed, model.Password);
+                    var changePassRequest = new ChangePasswordRequest(model.Username, false, PasswordFormat.Hashed, model.Password);
                     var changePassResult = _userRegistrationService.ChangePassword(changePassRequest);
                     if (!changePassResult.Success) {
                         foreach (var changePassError in changePassResult.Errors)
@@ -324,6 +318,8 @@ namespace Nut.Admin.Controllers {
                         user.Username = model.Username;
                     }
 
+                  
+
                     //customer roles
                     foreach (var userRole in allUserRoles) {
                         //ensure that the current customer cannot add/remove to/from "Administrators" system role
@@ -344,6 +340,16 @@ namespace Nut.Admin.Controllers {
                         }
                     }
                     _userService.UpdateUser(user);
+
+                    //password
+                    if (!String.IsNullOrWhiteSpace(model.Password)) {
+                        var changePassRequest = new ChangePasswordRequest(model.Username, false, PasswordFormat.Hashed, model.Password);
+                        var changePassResult = _userRegistrationService.ChangePassword(changePassRequest);
+                        if (!changePassResult.Success) {
+                            foreach (var changePassError in changePassResult.Errors)
+                                ErrorNotification(changePassError);
+                        }
+                    }
 
                     //activity log
                     //_customerActivityService.InsertActivity("EditCustomer", _localizationService.GetResource("ActivityLog.EditCustomer"), user.Id);

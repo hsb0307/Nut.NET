@@ -15,7 +15,7 @@ namespace Nut.Web.Models.Install
             this.AvailableLanguages = new List<SelectListItem>();
         }
         [AllowHtml]
-        public string AdminEmail { get; set; }
+        public string AdminUsername { get; set; }
         [AllowHtml]
         [DataType(DataType.Password)]
         public string AdminPassword { get; set; }

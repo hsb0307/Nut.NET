@@ -157,7 +157,7 @@ namespace Nut.Web.Controllers
 
             var model = new InstallModel
             {
-                AdminEmail = "admin@qq.com",
+                AdminUsername = "admin@qq.com",
                 InstallSampleData = false,
                 DatabaseConnectionString = "",
                 DataProvider = "sqlserver",
@@ -354,7 +354,7 @@ namespace Nut.Web.Controllers
                     
                     //now resolve installation service
                     var installationService = EngineContext.Current.Resolve<IInstallationService>();
-                    installationService.InstallData(model.AdminEmail, model.AdminPassword, model.InstallSampleData);
+                    installationService.InstallData(model.AdminUsername, model.AdminPassword, model.InstallSampleData);
 
                     //reset cache
                     DataSettingsHelper.ResetCache();
