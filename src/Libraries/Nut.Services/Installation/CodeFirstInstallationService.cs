@@ -13,6 +13,7 @@ using Nut.Services.Localization;
 using Nut.Services.Configuration;
 using Nut.Services.Users;
 using Nut.Core.Domain.Logging;
+using Nut.Core.Domain.Common;
 
 namespace Nut.Services.Installation {
     public partial class CodeFirstInstallationService : IInstallationService {
@@ -169,28 +170,17 @@ namespace Nut.Services.Installation {
 
         protected virtual void InstallSettings() {
             var settingService = EngineContext.Current.Resolve<ISettingService>();
-            //
+
+            settingService.SaveSetting(new AdminAreaSettings {
+                DefaultGridPageSize = 15,
+                GridPageSizes = "10, 15, 20, 50, 100"
+            });
         }
 
         protected virtual void InstallScheduleTasks() {
             var tasks = new List<ScheduleTask>
             {
-                new ScheduleTask
-                {
-                    Name = "Send emails",
-                    Seconds = 60,
-                    Type = "Nut.Services.Messages.QueuedMessagesSendTask, Nut.Services",
-                    Enabled = true,
-                    StopOnError = false,
-                },
-                new ScheduleTask
-                {
-                    Name = "Keep alive",
-                    Seconds = 300,
-                    Type = "Nut.Services.Common.KeepAliveTask, Nut.Services",
-                    Enabled = true,
-                    StopOnError = false,
-                },
+                
                 new ScheduleTask
                 {
                     Name = "Delete guests",
@@ -199,14 +189,7 @@ namespace Nut.Services.Installation {
                     Enabled = true,
                     StopOnError = false,
                 },
-                new ScheduleTask
-                {
-                    Name = "Clear cache",
-                    Seconds = 600,
-                    Type = "Nut.Services.Caching.ClearCacheTask, Nut.Services",
-                    Enabled = false,
-                    StopOnError = false,
-                },
+                
                 new ScheduleTask
                 {
                     Name = "Clear log",
@@ -216,14 +199,7 @@ namespace Nut.Services.Installation {
                     Enabled = false,
                     StopOnError = false,
                 },
-                new ScheduleTask
-                {
-                    Name = "Update currency exchange rates",
-                    Seconds = 900,
-                    Type = "Nut.Services.Directory.UpdateExchangeRateTask, Nut.Services",
-                    Enabled = true,
-                    StopOnError = false,
-                },
+                
             };
 
             _scheduleTaskRepository.Insert(tasks);
@@ -324,10 +300,11 @@ namespace Nut.Services.Installation {
             InstallDepartments();
             InstallCustomersAndUsers(defaultUsername, defaultUserPassword);
             InstallSettings();
+
             InstallLocaleResources();
             HashDefaultCustomerPassword(defaultUsername, defaultUserPassword);
             InstallScheduleTasks();
-
+            InstallActivityLogTypes();
         }
 
         #endregion

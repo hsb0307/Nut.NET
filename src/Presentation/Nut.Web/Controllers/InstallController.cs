@@ -157,7 +157,7 @@ namespace Nut.Web.Controllers
 
             var model = new InstallModel
             {
-                AdminUsername = "admin@qq.com",
+                AdminUsername = "admin",
                 InstallSampleData = false,
                 DatabaseConnectionString = "",
                 DataProvider = "sqlserver",

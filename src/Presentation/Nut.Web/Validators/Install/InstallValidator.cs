@@ -10,7 +10,6 @@ namespace Nut.Web.Validators.Install
         public InstallValidator(IInstallationLocalizationService locService)
         {
             RuleFor(x => x.AdminUsername).NotEmpty().WithMessage(locService.GetResource("AdminEmailRequired"));
-            RuleFor(x => x.AdminUsername).EmailAddress();
             RuleFor(x => x.AdminPassword).NotEmpty().WithMessage(locService.GetResource("AdminPasswordRequired"));
             RuleFor(x => x.ConfirmPassword).NotEmpty().WithMessage(locService.GetResource("ConfirmPasswordRequired"));
             RuleFor(x => x.AdminPassword).Equal(x => x.ConfirmPassword).WithMessage(locService.GetResource("PasswordsDoNotMatch"));
