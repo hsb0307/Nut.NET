@@ -1,0 +1,9 @@
+E:\Nut.NET\src\Tests\Nut.Tests\bin\Debug\Nut.Tests.dll
+E:\Nut.NET\src\Tests\Nut.Tests\bin\Debug\Nut.Tests.pdb
+E:\Nut.NET\src\Tests\Nut.Tests\bin\Debug\nunit.framework.dll
+E:\Nut.NET\src\Tests\Nut.Tests\bin\Debug\Rhino.Mocks.dll
+E:\Nut.NET\src\Tests\Nut.Tests\bin\Debug\nunit.framework.xml
+E:\Nut.NET\src\Tests\Nut.Tests\bin\Debug\Rhino.Mocks.xml
+E:\Nut.NET\src\Tests\Nut.Tests\obj\Debug\Nut.Tests.csprojResolveAssemblyReference.cache
+E:\Nut.NET\src\Tests\Nut.Tests\obj\Debug\Nut.Tests.dll
+E:\Nut.NET\src\Tests\Nut.Tests\obj\Debug\Nut.Tests.pdb
