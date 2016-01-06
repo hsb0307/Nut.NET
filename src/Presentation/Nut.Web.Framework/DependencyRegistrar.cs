@@ -33,6 +33,7 @@ using Nut.Services.Seo;
 using Nut.Services.Stores;
 using Nut.Services.Tasks;
 using Nut.Web.Framework.Mvc.Routes;
+using Nut.Web.Framework.Mvc.Bundles;
 using Nut.Web.Framework.Themes;
 using Nut.Web.Framework.UI;
 using Nut.Web.Framework.Logging;
@@ -202,9 +203,8 @@ namespace Nut.Web.Framework {
             builder.RegisterType<ThemeProvider>().As<IThemeProvider>().InstancePerLifetimeScope();
             builder.RegisterType<ThemeContext>().As<IThemeContext>().InstancePerLifetimeScope();
 
-
             builder.RegisterType<RoutePublisher>().As<IRoutePublisher>().SingleInstance();
-
+            builder.RegisterType<BundlePublisher>().As<IBundlePublisher>().SingleInstance();
             //License
             builder.RegisterType<DefaultMachineCodeProvider>().As<IMachineCodeProvider>().SingleInstance();
             builder.RegisterType<DefaultCryptoProvider>().As<ICryptoProvider>().SingleInstance();

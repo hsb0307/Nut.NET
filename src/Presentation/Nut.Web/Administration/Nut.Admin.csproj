@@ -141,6 +141,7 @@
     <Compile Include="Controllers\UserRoleController.cs" />
     <Compile Include="Extensions\MappingExtension.cs" />
     <Compile Include="Infrastructure\AutoMapperStartupTask.cs" />
+    <Compile Include="Infrastructure\BundleConfig.cs" />
     <Compile Include="Infrastructure\DependencyRegistrar.cs" />
     <Compile Include="Models\Localization\LanguageModel.cs" />
     <Compile Include="Models\Localization\LanguageResourceModel.cs" />

@@ -13,6 +13,7 @@ using Nut.Web.Controllers;
 using Nut.Web.Framework;
 using Nut.Web.Framework.Mvc;
 using Nut.Web.Framework.Mvc.Routes;
+using Nut.Web.Framework.Mvc.Bundles;
 using Nut.Web.Framework.Themes;
 using Nut.Core.Logging;
 using Nut.Services.License;
@@ -40,6 +41,11 @@ namespace Nut.Web
             );
         }
 
+        public static void RegisterBundles(BundleCollection bundles) {
+            var bundlePublisher = EngineContext.Current.Resolve<IBundlePublisher>();
+            bundlePublisher.RegisterBundles(bundles);
+        }
+
         protected void Application_Start()
         {
             //initialize engine context
@@ -60,7 +66,7 @@ namespace Nut.Web
             //Registering some regular mvc stuff
             AreaRegistration.RegisterAllAreas();
             RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            RegisterBundles(BundleTable.Bundles);
 
             //fluent validation
             DataAnnotationsModelValidatorProvider.AddImplicitRequiredAttributeForValueTypes = false;
