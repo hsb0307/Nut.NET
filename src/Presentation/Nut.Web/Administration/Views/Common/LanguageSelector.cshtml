@@ -1,0 +1,19 @@
+﻿@model Nut.Admin.Models.Common.LanguageSelectorModel
+@using Nut.Core;
+
+  <!-- START Language list-->
+<div class="pull-right">
+    <div class="btn-group">
+        <button type="button" data-toggle="dropdown" class="btn btn-default">@Model.CurrentLanguage.Name</button>
+        <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort">
+            @{
+                foreach (var lanague in Model.AvailableLanguages) {
+                    <li>
+                        <a href="@Html.Raw(Url.Action("SetLanguage", "Common", new { langid = lanague.Id, area = "Admin" }))">@lanague.Name</a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</div>
+<!-- END Language list    -->

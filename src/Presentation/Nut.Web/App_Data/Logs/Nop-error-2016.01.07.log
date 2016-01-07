@@ -1,0 +1,6 @@
+2016-01-07 13:30:20,250 [80] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Common\LanguageSelector.cshtml(12): error CS0103: The name 'lang' does not exist in the current context
+2016-01-07 13:30:20,282 [80] Nut.Web.Framework.Logging.LoggingModule - Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'.
+2016-01-07 13:30:20,300 [80] Nut.Web.Framework.Logging.LoggingModule - Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'.
+2016-01-07 13:30:38,463 [80] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Common\LanguageSelector.cshtml(12): error CS1501: No overload for method 'Raw' takes 2 arguments
+2016-01-07 13:30:38,494 [80] Nut.Web.Framework.Logging.LoggingModule - Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'.
+2016-01-07 13:30:38,541 [80] Nut.Web.Framework.Logging.LoggingModule - Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'.
