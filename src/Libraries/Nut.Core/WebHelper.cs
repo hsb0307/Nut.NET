@@ -34,7 +34,7 @@ namespace Nut.Core
                 if (httpContext.Request == null)
                     return false;
             }
-            catch (HttpException ex)
+            catch (HttpException)
             {
                 return false;
             }

@@ -127,6 +127,7 @@
     <Compile Include="Domain\Stores\StoreMapping.cs" />
     <Compile Include="Domain\Tasks\ScheduleTask.cs" />
     <Compile Include="Domain\Users\Department.cs" />
+    <Compile Include="Domain\Users\Notification.cs" />
     <Compile Include="Domain\Users\UserLoginResults.cs" />
     <Compile Include="Domain\Users\SystemUserAttributeNames.cs" />
     <Compile Include="Domain\Users\UserExtensions.cs" />

@@ -14,3 +14,19 @@
 2016-01-07 13:30:38,463 [80] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Common\LanguageSelector.cshtml(12): error CS1501: No overload for method 'Raw' takes 2 arguments
 2016-01-07 13:30:38,494 [80] Nut.Web.Framework.Logging.LoggingModule - Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'.
 2016-01-07 13:30:38,541 [80] Nut.Web.Framework.Logging.LoggingModule - Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'.
+2016-01-07 16:53:25,455 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2016-01-07 17:04:07,660 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2016-01-07 17:04:15,403 [8] Nut.Services.Localization.LocalizationService - Resource string (account.login.unsuccessful) is not found. Language ID = 1
+2016-01-07 17:04:15,463 [8] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-07 17:04:15,531 [8] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-07 17:04:15,558 [8] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-07 17:04:15,613 [8] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-07 17:04:50,940 [7] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-07 17:04:50,961 [7] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-07 17:04:50,985 [7] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.rememberme) is not found. Language ID = 1
+2016-01-07 17:10:09,390 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2016-01-07 17:10:14,319 [8] Nut.Services.Localization.LocalizationService - Resource string (account.login.unsuccessful) is not found. Language ID = 1
+2016-01-07 17:10:14,369 [8] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-07 17:10:14,452 [8] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-07 17:10:14,489 [8] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-07 17:10:14,554 [8] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1

@@ -65,7 +65,6 @@ namespace Nut.Core.Data
                     case "DataConnectionString":
                         shellSettings.DataConnectionString = value;
                         break;
-                        break;
                     default:
                         shellSettings.RawDataSettings.Add(key,value);
                         break;

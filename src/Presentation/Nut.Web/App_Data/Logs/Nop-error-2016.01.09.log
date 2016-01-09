@@ -1,0 +1,19 @@
+2016-01-09 11:20:37,194 [12] Nut.Web.Framework.Logging.LoggingModule - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>Multiple types were found that match the controller named 'home'. This can happen if the route that services this request ('{controller}/{action}/{id}') does not specify namespaces to search for a controller that matches the request. If this is the case, register this route by calling an overload of the 'MapRoute' method that takes a 'namespaces' parameter.
+
+The request for 'home' has found the following matching controllers:
+Nut.Web.Controllers.HomeController
+Nut.Admin.Controllers.HomeController</format><args>{System.InvalidOperationException: Multiple types were found that match the controller named 'home'. This can happen if the route that services this request ('{controller}/{action}/{id}') does not specify namespaces to search for a controller that matches the request. If this is the case, register this route by calling an overload of the 'MapRoute' method that takes a 'namespaces' parameter.
+
+The request for 'home' has found the following matching controllers:
+Nut.Web.Controllers.HomeController
+Nut.Admin.Controllers.HomeController
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   at System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   at System.Web.Mvc.MvcRouteHandler.System.Web.Routing.IRouteHandler.GetHttpHandler(RequestContext requestContext)
+   at System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   at System.Web.Routing.UrlRoutingModule.OnApplicationPostResolveRequestCache(Object sender, EventArgs e)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously), System.Data.Entity.DynamicProxies.User_25201788F13740EED31EACBFEC9C53F26170E4EC15F06BEFC70B349683DC7203}</args></log4net.Error>

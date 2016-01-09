@@ -192,10 +192,10 @@ namespace Nut.Services.Installation {
                 
                 new ScheduleTask
                 {
-                    Name = "Clear log",
+                    Name = "Delete Notifications",
                     //60 minutes
                     Seconds = 3600,
-                    Type = "Nut.Services.Logging.ClearLogTask, Nut.Services",
+                    Type = "Nut.Services.Users.DeleteNotificationsTask, Nut.Services",
                     Enabled = false,
                     StopOnError = false,
                 },

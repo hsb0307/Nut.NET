@@ -99,7 +99,6 @@ E:\Nut.NET\src\Presentation\Nut.Web.Framework\bin\Debug\Nut.Services.pdb
 E:\Nut.NET\src\Presentation\Nut.Web.Framework\bin\Debug\Antlr3.Runtime.pdb
 E:\Nut.NET\src\Presentation\Nut.Web.Framework\bin\Debug\Autofac.xml
 E:\Nut.NET\src\Presentation\Nut.Web.Framework\bin\Debug\Autofac.Integration.Mvc.xml
-E:\Nut.NET\src\Presentation\Nut.Web.Framework\bin\Debug\EntityFramework.xml
 E:\Nut.NET\src\Presentation\Nut.Web.Framework\bin\Debug\FluentValidation.pdb
 E:\Nut.NET\src\Presentation\Nut.Web.Framework\bin\Debug\FluentValidation.xml
 E:\Nut.NET\src\Presentation\Nut.Web.Framework\bin\Debug\log4net.xml
