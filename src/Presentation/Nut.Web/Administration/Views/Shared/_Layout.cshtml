@@ -22,12 +22,12 @@
     @Styles.Render("~/bundles/whirl")
     @Styles.Render("~/bundles/kendocss")
     @Styles.Render("~/bundles/SweetAlertCss")
-
+    @Html.NutCssFiles(this.Url, ResourceLocation.Head)
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/kendo")
-
+    @Html.NutScripts(this.Url, ResourceLocation.Head)
     <!-- =============== PAGE VENDOR STYLES =============== -->
     @if (IsSectionDefined("Styles")) {@RenderSection("Styles", required: false)}
     <!-- =============== APP STYLES ===============-->
@@ -70,6 +70,8 @@
     @Scripts.Render("~/bundles/screenfull")
     @Scripts.Render("~/bundles/localize")
     @Scripts.Render("~/bundles/SweetAlert")
+    @Html.NutCssFiles(this.Url, ResourceLocation.Foot)
+    @Html.NutScripts(this.Url, ResourceLocation.Foot)
     <!-- =============== PAGE VENDOR SCRIPTS ===============-->
     @RenderSection("scripts", required: false)
     <!-- =============== APP SCRIPTS ===============-->

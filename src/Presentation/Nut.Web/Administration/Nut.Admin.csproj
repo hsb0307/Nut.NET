@@ -536,7 +536,9 @@
   <ItemGroup>
     <Content Include="Views\User\Edit.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\Shared\EditorTemplates\RichEditor.cshtml" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Common\LanguageSelector.cshtml" />
   </ItemGroup>

@@ -28,3 +28,4 @@ Nut.Admin.Controllers.HomeController
    at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously), System.Data.Entity.DynamicProxies.User_25201788F13740EED31EACBFEC9C53F26170E4EC15F06BEFC70B349683DC7203}</args></log4net.Error>
 2016-01-09 11:27:19,931 [15] Nut.Web.Framework.Logging.LoggingModule - Application started
+2016-01-09 11:43:19,640 [29] Nut.Web.Framework.Logging.LoggingModule - Application started

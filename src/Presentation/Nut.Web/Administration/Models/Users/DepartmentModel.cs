@@ -4,6 +4,7 @@ using FluentValidation.Attributes;
 using Nut.Admin.Validators.Users;
 using Nut.Web.Framework;
 using Nut.Web.Framework.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace Nut.Admin.Models.Users {
     [Validator(typeof(DepartmentValidator))]
@@ -41,6 +42,7 @@ namespace Nut.Admin.Models.Users {
 
         [NutResourceDisplayName("Admin.Users.Departments.Fields.Description")]
         //[AllowHtml]
+        [UIHint("RichEditor")]
         public System.String Description { get; set; }
 
         private IList<SelectListItem> _availableDepartments;

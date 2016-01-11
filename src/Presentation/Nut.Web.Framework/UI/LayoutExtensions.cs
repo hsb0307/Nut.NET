@@ -34,7 +34,7 @@ namespace Nut.Web.Framework.UI
         /// <param name="addDefaultTitle">A value indicating whether to insert a default title</param>
         /// <param name="part">Title part</param>
         /// <returns>Generated string</returns>
-        public static MvcHtmlString NopTitle(this HtmlHelper html, bool addDefaultTitle, string part = "")
+        public static MvcHtmlString NutTitle(this HtmlHelper html, bool addDefaultTitle, string part = "")
         {
             var pageHeadBuilder = EngineContext.Current.Resolve<IPageHeadBuilder>();
             html.AppendTitleParts(part);
@@ -68,7 +68,7 @@ namespace Nut.Web.Framework.UI
         /// <param name="html">HTML helper</param>
         /// <param name="part">Meta description part</param>
         /// <returns>Generated string</returns>
-        public static MvcHtmlString NopMetaDescription(this HtmlHelper html, string part = "")
+        public static MvcHtmlString NutMetaDescription(this HtmlHelper html, string part = "")
         {
             var pageHeadBuilder = EngineContext.Current.Resolve<IPageHeadBuilder>();
             html.AppendMetaDescriptionParts(part);
@@ -102,7 +102,7 @@ namespace Nut.Web.Framework.UI
         /// <param name="html">HTML helper</param>
         /// <param name="part">Meta keyword part</param>
         /// <returns>Generated string</returns>
-        public static MvcHtmlString NopMetaKeywords(this HtmlHelper html, string part = "")
+        public static MvcHtmlString NutMetaKeywords(this HtmlHelper html, string part = "")
         {
             var pageHeadBuilder = EngineContext.Current.Resolve<IPageHeadBuilder>();
             html.AppendMetaKeywordParts(part);
@@ -162,7 +162,7 @@ namespace Nut.Web.Framework.UI
         /// <param name="location">A location of the script element</param>
         /// <param name="bundleFiles">A value indicating whether to bundle script elements</param>
         /// <returns>Generated string</returns>
-        public static MvcHtmlString NopScripts(this HtmlHelper html, UrlHelper urlHelper, 
+        public static MvcHtmlString NutScripts(this HtmlHelper html, UrlHelper urlHelper, 
             ResourceLocation location, bool? bundleFiles = null)
         {
             var pageHeadBuilder = EngineContext.Current.Resolve<IPageHeadBuilder>();
@@ -219,7 +219,7 @@ namespace Nut.Web.Framework.UI
         /// <param name="location">A location of the script element</param>
         /// <param name="bundleFiles">A value indicating whether to bundle script elements</param>
         /// <returns>Generated string</returns>
-        public static MvcHtmlString NopCssFiles(this HtmlHelper html, UrlHelper urlHelper,
+        public static MvcHtmlString NutCssFiles(this HtmlHelper html, UrlHelper urlHelper,
             ResourceLocation location, bool? bundleFiles = null)
         {
             var pageHeadBuilder = EngineContext.Current.Resolve<IPageHeadBuilder>();
@@ -253,7 +253,7 @@ namespace Nut.Web.Framework.UI
         /// <param name="html">HTML helper</param>
         /// <param name="part">Canonical URL part</param>
         /// <returns>Generated string</returns>
-        public static MvcHtmlString NopCanonicalUrls(this HtmlHelper html, string part = "")
+        public static MvcHtmlString NutCanonicalUrls(this HtmlHelper html, string part = "")
         {
             var pageHeadBuilder = EngineContext.Current.Resolve<IPageHeadBuilder>();
             html.AppendCanonicalUrlParts(part);
@@ -285,7 +285,7 @@ namespace Nut.Web.Framework.UI
         /// </summary>
         /// <param name="html">HTML helper</param>
         /// <returns>Generated string</returns>
-        public static MvcHtmlString NopHeadCustom(this HtmlHelper html)
+        public static MvcHtmlString NutHeadCustom(this HtmlHelper html)
         {
             var pageHeadBuilder = EngineContext.Current.Resolve<IPageHeadBuilder>();
             return MvcHtmlString.Create(pageHeadBuilder.GenerateHeadCustom());
