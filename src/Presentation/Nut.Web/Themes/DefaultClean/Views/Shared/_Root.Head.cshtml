@@ -18,19 +18,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@Html.NopTitle(true)</title>
-    <meta name="description" content="@(Html.NopMetaDescription())" />
-    <meta name="keywords" content="@(Html.NopMetaKeywords())" />
+    <title>@Html.NutTitle(true)</title>
+    <meta name="description" content="@(Html.NutMetaDescription())" />
+    <meta name="keywords" content="@(Html.NutMetaKeywords())" />
     <meta name="generator" content="hushibo" />
     <meta name="viewport" content="width=device-width">
 
-    @Html.NopHeadCustom()
+    @Html.NutHeadCustom()
     @*This is used so that themes can inject content into the header*@
     @Html.Partial("Head")
     
-    @Html.NopCssFiles(this.Url, ResourceLocation.Head)
+    @Html.NutCssFiles(this.Url, ResourceLocation.Head)
   
-    @Html.NopCanonicalUrls()
+    @Html.NutCanonicalUrls()
 
    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
     <!--[if lte IE 8]>
@@ -55,7 +55,7 @@
     </script>
     <![endif]-->
 
-    @Html.NopScripts(this.Url, ResourceLocation.Head)
+    @Html.NutScripts(this.Url, ResourceLocation.Head)
 
     <style type="text/css">
         body { min-height: 600px;}
@@ -70,8 +70,8 @@
     <![endif]-->
     @RenderBody()
 
-    @Html.NopCssFiles(this.Url, ResourceLocation.Foot)
-    @Html.NopScripts(this.Url, ResourceLocation.Foot)
+    @Html.NutCssFiles(this.Url, ResourceLocation.Foot)
+    @Html.NutScripts(this.Url, ResourceLocation.Foot)
     @Html.Partial("Foot")
 
     @RenderSection("scripts", required: false)

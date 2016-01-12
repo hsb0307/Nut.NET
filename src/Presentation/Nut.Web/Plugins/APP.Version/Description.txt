@@ -1,0 +1,8 @@
+﻿Group: APP
+FriendlyName: APP Version Update Manage
+SystemName: APP.Version
+Version: 1.13
+SupportedVersions: 3.60
+Author: lanfengqi
+DisplayOrder: 1
+FileName: Nut.Plugin.APP.Version.dll
