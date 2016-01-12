@@ -1,0 +1,217 @@
+﻿<%-- 
+Name:
+Author: 
+Description: 
+--%>
+<%@ Template Language="C#" TargetLanguage="C#" Debug="True" %>
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table to get the data from." %>
+<%--<%@ Property Name="NameSpace" Type="System.String" Category="Data" Description="Entities Namespace." %>
+<%@ Property Name="ServiceNameSpace" Type="System.String" Category="Data" Description="Service Namespace." %>--%>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Assembly Name="System.Data" %>
+
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text" %>
+
+using System;
+using System.Linq;
+using System.Web.Mvc;
+using Nut.Core;
+using Nut.Admin.Models.<%= SourceTable.Name %>;
+using Nut.Core.Domain.<%= SourceTable.Name %>;
+using Nut.Services.<%= SourceTable.Name %>;
+using Nut.Services.Localization;
+using Nut.Services.Logging;
+using Nut.Services.Security;
+using Nut.Core.Exceptions;
+using Nut.Web.Framework.Controllers;
+using Nut.Web.Framework.Kendoui;
+
+namespace Nut.Admin.Controllers
+{
+    public partial class <%= SourceTable.Name %>Controller : BaseAdminController
+    {
+        #region Fields
+
+        private readonly I<%= SourceTable.Name %>Service _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Service;
+        private readonly ILocalizationService _localizationService;
+        private readonly IActivityLogService _activityLogService;
+        private readonly IPermissionService _permissionService;
+        private readonly IExceptionPolicy _exceptionPolicy;
+
+        #endregion Fields
+
+        #region Constructors
+
+        public <%= SourceTable.Name %>Controller(I<%= SourceTable.Name %>Service <%=  StringUtil.ToCamelCase(SourceTable.Name) %>Service,
+            ILocalizationService localizationService, IActivityLogService activityLogService,
+            IPermissionService permissionService,IExceptionPolicy exceptionPolicy)
+        {
+            this._<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Service = <%=  StringUtil.ToCamelCase(SourceTable.Name) %>Service;
+
+            this._localizationService = localizationService;
+            this._activityLogService = activityLogService;
+            this._permissionService = permissionService;
+            this._exceptionPolicy = exceptionPolicy;
+        }
+
+        #endregion
+        
+        
+        #region Methods
+
+        //list
+        public ActionResult Index()
+        {
+            return RedirectToAction("List");
+        }
+
+        public ActionResult List()
+        {
+            if (!_permissionService.Authorize(StandardPermissionProvider.Manage<%= SourceTable.Name %>s))
+                return AccessDeniedView();
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult List(DataSourceRequest command)
+        {
+            if (!_permissionService.Authorize(StandardPermissionProvider.Manage<%= SourceTable.Name %>s))
+                return AccessDeniedView();
+
+            var <%=  StringUtil.ToCamelCase(SourceTable.Name) %>s = _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Service
+                .GetPaged(command.Page - 1, command.PageSize);
+            var gridModel = new DataSourceResult
+            {
+                Data = <%=  StringUtil.ToCamelCase(SourceTable.Name) %>s.Select(x => x.ToModel()),
+                Total = <%=  StringUtil.ToCamelCase(SourceTable.Name) %>s.TotalCount
+            };
+
+            return Json(gridModel);
+        }
+        
+        //create
+        public ActionResult Create()
+        {
+            if (!_permissionService.Authorize(StandardPermissionProvider.Manage<%= SourceTable.Name %>s))
+                return AccessDeniedView();
+
+            var model = new <%= SourceTable.Name %>Model();
+        
+            return View(model);
+        }
+
+        [HttpPost, ParameterBasedOnFormName("save-continue", "continueEditing")]
+        public ActionResult Create(<%= SourceTable.Name %>Model model, bool continueEditing)
+        {
+            if (!_permissionService.Authorize(StandardPermissionProvider.Manage<%= SourceTable.Name %>s))
+                return AccessDeniedView();
+
+            if (ModelState.IsValid)
+            {
+                var <%=  StringUtil.ToCamelCase(SourceTable.Name) %> = model.ToEntity();
+                <%=  StringUtil.ToCamelCase(SourceTable.Name) %>.CreatedOn = DateTime.Now;
+                
+                _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Service.Insert(<%=  StringUtil.ToCamelCase(SourceTable.Name) %>);
+
+                //activity log
+                _activityLogService.InsertActivity("AddNew<%= SourceTable.Name %>", _localizationService.GetResource("ActivityLog.AddNew<%= SourceTable.Name %>"), <%=  StringUtil.ToCamelCase(SourceTable.Name) %>.Name);
+
+                SuccessNotification(_localizationService.GetResource("Admin.Catalog.Attributes.<%= SourceTable.Name %>s.Added"));
+                return continueEditing ? RedirectToAction("Edit", new { id = <%=  StringUtil.ToCamelCase(SourceTable.Name) %>.Id }) : RedirectToAction("List");
+            }
+
+            //If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
+        //edit
+        public ActionResult Edit(int id)
+        {
+            if (!_permissionService.Authorize(StandardPermissionProvider.Manage<%= SourceTable.Name %>s))
+                return AccessDeniedView();
+
+            var <%=  StringUtil.ToCamelCase(SourceTable.Name) %> = _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Service.GetById(id);
+            if (<%=  StringUtil.ToCamelCase(SourceTable.Name) %> == null)
+                //No product attribute found with the specified id
+                return RedirectToAction("List");
+
+            var model = <%=  StringUtil.ToCamelCase(SourceTable.Name) %>.ToModel();
+
+            return View(model);
+        }
+
+        [HttpPost, ParameterBasedOnFormName("save-continue", "continueEditing")]
+        public ActionResult Edit(<%= SourceTable.Name %>Model model, bool continueEditing)
+        {
+            if (!_permissionService.Authorize(StandardPermissionProvider.Manage<%= SourceTable.Name %>s))
+                return AccessDeniedView();
+
+            var <%=  StringUtil.ToCamelCase(SourceTable.Name) %> = _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Service.GetById(model.Id);
+            if (<%=  StringUtil.ToCamelCase(SourceTable.Name) %> == null)
+                //No product attribute found with the specified id
+                return RedirectToAction("List");
+            
+            if (ModelState.IsValid)
+            {
+                <%= StringUtil.ToCamelCase(SourceTable.Name) %> = model.ToEntity(<%=  StringUtil.ToCamelCase(SourceTable.Name) %>);
+                <%= StringUtil.ToCamelCase(SourceTable.Name) %>.UpdateOn = DateTime.Now;
+
+                _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Service.Update(<%=  StringUtil.ToCamelCase(SourceTable.Name) %>);
+
+
+                //activity log
+                _activityLogService.InsertActivity("Edit<%= SourceTable.Name %>", _localizationService.GetResource("ActivityLog.Edit<%= SourceTable.Name %>"), <%=  StringUtil.ToCamelCase(SourceTable.Name) %>.Name);
+
+                SuccessNotification(_localizationService.GetResource("Admin.<%= SourceTable.Name %>s.Updated"));
+                return continueEditing ? RedirectToAction("Edit", <%=  StringUtil.ToCamelCase(SourceTable.Name) %>.Id) : RedirectToAction("List");
+            }
+
+            //If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
+        //delete
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            if (!_permissionService.Authorize(StandardPermissionProvider.Manage<%= SourceTable.Name %>s))
+                return AccessDeniedView();
+
+            var <%=  StringUtil.ToCamelCase(SourceTable.Name) %> = _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Service.GetById(id);
+            if (<%=  StringUtil.ToCamelCase(SourceTable.Name) %> == null)
+                //No product attribute found with the specified id
+                return RedirectToAction("List");
+
+            try {
+                _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Service.Delete(<%=  StringUtil.ToCamelCase(SourceTable.Name) %>);
+
+                //activity log
+                _activityLogService.InsertActivity("Delete<%= SourceTable.Name %>", _localizationService.GetResource("ActivityLog.Delete<%= SourceTable.Name %>"), <%=  StringUtil.ToCamelCase(SourceTable.Name) %>.Name);
+
+                 return Json(new { success = true, message = _localizationService.GetResource("Admin.Users.UserRoles.Deleted") });
+            } catch (Exception exc) {
+                 if (!_exceptionPolicy.HandleException(this, exception))
+                    throw;
+                return Json(new { success = false, message = _localizationService.GetResource("Admin.<%= SourceTable.Name %>s.UnDeleted"), });
+            }
+        }
+
+        #endregion
+    }
+}
+
+
+
+<script runat="template">
+// My methods here.
+public string SampleMethod()
+{
+  return "Method output.";
+}
+</script>

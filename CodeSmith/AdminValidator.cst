@@ -1,0 +1,47 @@
+﻿<%-- 
+Name:
+Author: 
+Description: 
+--%>
+<%@ Template Language="C#" TargetLanguage="C#" Debug="True" %>
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table to get the data from." %>
+<%--<%@ Property Name="NameSpace" Type="System.String" Category="Data" Description="Entities Namespace." %>
+<%@ Property Name="ServiceNameSpace" Type="System.String" Category="Data" Description="Service Namespace." %>--%>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Assembly Name="System.Data" %>
+
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text" %>
+
+using FluentValidation;
+using Nut.Admin.Models.<%= SourceTable.Name %>s;
+using Nut.Services.Localization;
+
+namespace Nut.Admin.Validators.<%= SourceTable.Name %>s
+{
+    public class <%= SourceTable.Name %>Validator : AbstractValidator<<%= SourceTable.Name %>Model>
+    {
+        public <%= SourceTable.Name %>Validator(ILocalizationService localizationService)
+        {
+            <% foreach(ColumnSchema col in SourceTable.Columns) { %>
+            <% if(col.Name !="Id") { %>
+            RuleFor(x => x.<%= col.Name %>).NotEmpty().WithMessage(localizationService.GetResource("Admin.<%= SourceTable.Name %>s.Fields.<%= col.Name %>.Required"));
+            RuleFor(x => x.<%= col.Name %>).Length(0,50).WithMessage(localizationService.GetResource("Admin.Common.LengthValidation"),0,50);
+            <% } %>
+            <% } %>
+        }
+    }
+}
+
+
+<script runat="template">
+// My methods here.
+public string SampleMethod()
+{
+  return "Method output.";
+}
+</script>

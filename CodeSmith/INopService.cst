@@ -1,0 +1,77 @@
+﻿<%-- 
+Name:
+Author: 
+Description: 
+<%@ CodeTemplate Language="C#" Debug="True" TargetLanguage="#" Description="Generates a script based on the data from a table." %>
+--%>
+<%@ CodeTemplate Language="C#" TargetLanguage="C#" Debug="True" Description="Generates C# Services from a table." %>
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table to get the data from." %>
+<%@ Property Name="NameSpace" Type="System.String" Category="Data" Description="Entities Namespace." %>
+<%@ Property Name="ServiceNameSpace" Type="System.String" Category="Data" Description="Service Namespace." %>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Assembly Name="System.Data" %>
+
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text" %>
+
+
+using System.Collections.Generic;
+
+using Nut.Core;
+using <%=NameSpace%>;
+
+namespace <%=ServiceNameSpace%>
+{
+    /// <summary>
+    /// <%=  SourceTable.Name %> service interface
+    /// </summary>
+    public partial interface I<%= SourceTable.Name %>Service
+    {
+        /// <summary>
+        /// Gets all <%= StringUtil.ToPlural( SourceTable.Name) %>
+        /// </summary>
+        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <returns><%=  SourceTable.Name %> collection</returns>
+        IList<<%=  SourceTable.Name %>> GetAll(bool showHidden = false);
+        
+        
+        IPagedList<<%=  SourceTable.Name %>> GetPaged(int pageIndex = 0, int pageSize = int.MaxValue, bool showHidden = false);
+
+        /// <summary>
+        /// Gets a <%=  StringUtil.ToCamelCase(SourceTable.Name) %> 
+        /// </summary>
+        /// <param name="countryId"><%=  SourceTable.Name %> identifier</param>
+        /// <returns><%=  SourceTable.Name %></returns>
+        <%=  SourceTable.Name %> GetById(int id);
+
+        /// <summary>
+        /// Inserts a <%=  StringUtil.ToCamelCase(SourceTable.Name) %>
+        /// </summary>
+        /// <param name="<%=  StringUtil.ToCamelCase(SourceTable.Name) %>"><%=  SourceTable.Name %></param>
+        void Insert(<%=  SourceTable.Name %> <%=  StringUtil.ToCamelCase(SourceTable.Name) %>);
+
+        /// <summary>
+        /// Updates the <%=  StringUtil.ToCamelCase(SourceTable.Name) %>
+        /// </summary>
+        /// <param name="<%=  StringUtil.ToCamelCase(SourceTable.Name) %>"><%=  SourceTable.Name %></param>
+        void Update(<%=  SourceTable.Name %> <%=  StringUtil.ToCamelCase(SourceTable.Name) %>);
+        /// <summary>
+        /// Deletes a <%=  StringUtil.ToCamelCase(SourceTable.Name) %>
+        /// </summary>
+        /// <param name="<%=  StringUtil.ToCamelCase(SourceTable.Name) %>"><%=  SourceTable.Name %></param>
+        void Delete(<%= SourceTable.Name %> <%= SourceTable.Name.ToLower() %>);
+    }
+}
+
+
+<script runat="template">
+// My methods here.
+public string SampleMethod()
+{
+  return "Method output.";
+}
+</script>

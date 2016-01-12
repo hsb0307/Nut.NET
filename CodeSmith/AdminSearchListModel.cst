@@ -1,0 +1,43 @@
+﻿<%-- 
+Name:
+Author: 
+Description: 
+--%>
+<%@ Template Language="C#" TargetLanguage="C#" Language="C#" TargetLanguage="C#" Debug="True" %>
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table to get the data from." %>
+<%--<%@ Property Name="NameSpace" Type="System.String" Category="Data" Description="Entities Namespace." %>
+<%@ Property Name="ServiceNameSpace" Type="System.String" Category="Data" Description="Service Namespace." %>--%>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Assembly Name="System.Data" %>
+
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text" %>
+
+using System.Collections.Generic;
+using System.Web.Mvc;
+using Nut.Web.Framework;
+using Nut.Web.Framework.Mvc;
+
+namespace Nop.Admin.Models.<%= SourceTable.Name %>s
+{
+    public partial class <%= SourceTable.Name %>ListModel : BaseNutModel
+    {
+        <% foreach(ColumnSchema col in SourceTable.Columns) { %>
+        [NutResourceDisplayName("Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>.Fields.<%= col.Name %>")]
+        //[AllowHtml]
+        public string Search<%= col.Name %> { get; set; }
+        
+        <% } %>
+    }
+}
+<script runat="template">
+// My methods here.
+public string SampleMethod()
+{
+  return "Method output.";
+}
+</script>

@@ -1,0 +1,184 @@
+﻿<%-- 
+Name:
+Author: 
+Description: 
+<%@ Template Language="C#" Debug="True" TargetLanguage="#" Description="Generates a script based on the data from a table." %>
+--%>
+<%@ CodeTemplate Language="C#" TargetLanguage="C#" Debug="True" Description="Generates C# Services from a table." %>
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table to get the data from." %>
+<%@ Property Name="NameSpace" Type="System.String" Category="Data" Description="Entities Namespace." %>
+<%@ Property Name="ServiceNameSpace" Type="System.String" Category="Data" Description="Service Namespace." %>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Assembly Name="System.Data" %>
+
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text" %>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Nut.Core;
+using Nut.Core.Caching;
+using Nut.Core.Data;
+using <%=NameSpace%>;
+
+namespace <%=ServiceNameSpace%>
+{
+    /// <summary>
+    /// <%= SourceTable.Name %> service 
+    /// </summary>
+    public partial class <%= SourceTable.Name %>Service : I<%= SourceTable.Name %>Service
+    {
+        #region Constants
+
+        /// <summary>
+        /// Key for caching
+        /// </summary>
+        /// <remarks>
+        /// {0} : show hidden records?
+        /// </remarks>
+        private const string <%= SourceTable.Name.ToUpper() %>_ALL_KEY = "Nuts.<%=  StringUtil.ToCamelCase(SourceTable.Name) %>.all-{0}";
+        
+        /// <summary>
+        /// Key pattern to clear cache
+        /// </summary>
+        private const string <%= SourceTable.Name.ToUpper() %>_PATTERN_KEY = "Nuts.<%=  SourceTable.Name.ToLower() %>.";
+
+        #endregion
+        
+        #region Fields
+        
+        private readonly IRepository<<%= SourceTable.Name %>> _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Repository;
+        private readonly ICacheManager _cacheManager;
+        private readonly ISignals _signals;
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="cacheManager">Cache manager</param>
+        /// <param name="<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Repository"><%= SourceTable.Name %> repository</param>
+        /// <param name="eventPublisher">Event published</param>
+        public <%= SourceTable.Name %>Service(ICacheManager cacheManager,
+            IRepository<<%= SourceTable.Name %>> <%=  StringUtil.ToCamelCase(SourceTable.Name) %>Repository,
+            ISignals signals)
+        {
+            _cacheManager = cacheManager;
+            _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Repository = <%=  StringUtil.ToCamelCase(SourceTable.Name) %>Repository;
+            _signals = signals;
+        }
+
+        #endregion
+
+        #region Methods
+
+        
+
+        /// <summary>
+        /// Gets all countries
+        /// </summary>
+        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <returns><%= SourceTable.Name %> collection</returns>
+        public virtual IList<<%= SourceTable.Name %>> GetAll(bool showHidden = false)
+        {
+            string key = string.Format(<%= SourceTable.Name.ToUpper() %>_ALL_KEY, showHidden);
+            return _cacheManager.Get(key, ctx =>
+            {
+                ctx.Monitor(_signals.When(<%= SourceTable.Name.ToUpper() %>_PATTERN_KEY));
+                var query = from c in _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Repository.Table
+                            //orderby c.DisplayOrder, c.Name
+                            //where showHidden || c.Published
+                            select c;
+                if (!showHidden)
+                    query = query.Where(c => !c.Deleted).OrderBy(c => c.DisplayOrder);                            
+                var <%=  StringUtil.ToCamelCase(StringUtil.ToPlural(SourceTable.Name)) %> = query.ToList();
+                return <%=  StringUtil.ToCamelCase(StringUtil.ToPlural(SourceTable.Name)) %>;
+            });
+        }
+        
+        
+        public virtual IPagedList<<%=  SourceTable.Name %>> GetPaged(int pageIndex = 0, int pageSize = int.MaxValue, bool showHidden = false)
+        {
+            var query = _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Repository.Table;
+            if (!showHidden)
+                query = query.Where(v => !v.Deleted);
+            query = query.OrderBy(v => v.DisplayOrder).ThenBy(v => v.Name);
+
+            var <%=  StringUtil.ToCamelCase(StringUtil.ToPlural(SourceTable.Name)) %> = new PagedList<<%=  SourceTable.Name %>>(query, pageIndex, pageSize);
+            return <%=  StringUtil.ToCamelCase(StringUtil.ToPlural(SourceTable.Name)) %>;
+        }
+
+        /// <summary>
+        /// Gets a <%=  StringUtil.ToCamelCase(SourceTable.Name) %> 
+        /// </summary>
+        /// <param name="<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Id"><%= SourceTable.Name %> identifier</param>
+        /// <returns><%= SourceTable.Name %></returns>
+        public virtual <%= SourceTable.Name %> GetById(int <%=  StringUtil.ToCamelCase(SourceTable.Name) %>Id)
+        {
+            if (<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Id == 0)
+                return null;
+
+            return _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Repository.GetById(<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Id);
+        }
+    
+
+        /// <summary>
+        /// Inserts a <%=  StringUtil.ToCamelCase(SourceTable.Name) %>
+        /// </summary>
+        /// <param name="<%=  StringUtil.ToCamelCase(SourceTable.Name) %>"><%= SourceTable.Name %></param>
+        public virtual void Insert(<%= SourceTable.Name %> <%=  StringUtil.ToCamelCase(SourceTable.Name) %>)
+        {
+            if (<%=  StringUtil.ToCamelCase(SourceTable.Name) %> == null)
+                throw new ArgumentNullException("<%=  StringUtil.ToCamelCase(SourceTable.Name) %>");
+
+            _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Repository.Insert(<%=  StringUtil.ToCamelCase(SourceTable.Name) %>);
+
+            _signals.Trigger(<%= SourceTable.Name.ToUpper() %>_PATTERN_KEY);
+
+        }
+
+        /// <summary>
+        /// Updates the <%=  StringUtil.ToCamelCase(SourceTable.Name) %>
+        /// </summary>
+        /// <param name="<%=  StringUtil.ToCamelCase(SourceTable.Name) %>"><%= SourceTable.Name %></param>
+        public virtual void Update(<%= SourceTable.Name %> <%=  StringUtil.ToCamelCase(SourceTable.Name) %>)
+        {
+            if (<%=  StringUtil.ToCamelCase(SourceTable.Name) %> == null)
+                throw new ArgumentNullException("<%=  StringUtil.ToCamelCase(SourceTable.Name) %>");
+
+            _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Repository.Update(<%=  StringUtil.ToCamelCase(SourceTable.Name) %>);
+
+            _signals.Trigger(<%= SourceTable.Name.ToUpper() %>_PATTERN_KEY);
+
+        }
+        
+        /// <summary>
+        /// Deletes a <%=  StringUtil.ToCamelCase(SourceTable.Name) %>
+        /// </summary>
+        /// <param name="<%=  StringUtil.ToCamelCase(SourceTable.Name) %>"><%= SourceTable.Name %></param>
+        public virtual void Delete(<%= SourceTable.Name %> <%=  StringUtil.ToCamelCase(SourceTable.Name) %>)
+        {
+            if (<%=  StringUtil.ToCamelCase(SourceTable.Name) %> == null)
+                throw new ArgumentNullException("<%=  StringUtil.ToCamelCase(SourceTable.Name) %>");
+
+            _<%=  StringUtil.ToCamelCase(SourceTable.Name) %>Repository.Delete(<%=  StringUtil.ToCamelCase(SourceTable.Name) %>);
+
+            _signals.Trigger(<%= SourceTable.Name.ToUpper() %>_PATTERN_KEY);
+
+        }
+
+        #endregion
+    }
+}
+<script runat="template">
+// My methods here.
+public string SampleMethod()
+{
+  return "Method output.";
+}
+</script>

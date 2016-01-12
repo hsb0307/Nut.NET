@@ -1,0 +1,56 @@
+﻿<%-- 
+Name:
+Author: 
+Description: 
+--%>
+<%@ Template Language="C#" TargetLanguage="Text" Language="C#" TargetLanguage="C#" Debug="True" %>
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table to get the data from." %>
+<%--<%@ Property Name="NameSpace" Type="System.String" Category="Data" Description="Entities Namespace." %>
+<%@ Property Name="ServiceNameSpace" Type="System.String" Category="Data" Description="Service Namespace." %>--%>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Assembly Name="System.Data" %>
+
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text" %>
+
+
+@model <%= SourceTable.Name %>Model
+@{
+    //page title
+    ViewBag.Title = T("Admin.<%= SourceTable.Name %>s.Edit").Text;
+}
+<h3>
+    @T("Admin.<%= SourceTable.Name %>s.Edit") - @Model.Name
+    <span class="text-sm hidden-xs"><a href="@Url.Action("List")">@T("Admin.<%= SourceTable.Name %>s.BackToList")</a></span>
+</h3>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>@T("Admin.<%= SourceTable.Name %>s")</h4>
+        <hr />
+
+        @Html.Partial("_CreateOrUpdate", Model)
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" name="save" value="@T("Admin.Common.Save")" class="btn btn-default" />
+                <input type="submit" name="save-continue" value="@T("Admin.Common.SaveContinue")" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+<script runat="template">
+// My methods here.
+public string SampleMethod()
+{
+  return "Method output.";
+}
+</script>

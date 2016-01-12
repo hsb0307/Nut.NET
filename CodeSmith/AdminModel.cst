@@ -1,0 +1,96 @@
+﻿<%-- 
+Name:
+Author: 
+Description: 
+--%>
+<%@ Template Language="C#" TargetLanguage="C#" Debug="True" %>
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table to get the data from." %>
+<%--<%@ Property Name="NameSpace" Type="System.String" Category="Data" Description="Entities Namespace." %>
+<%@ Property Name="ServiceNameSpace" Type="System.String" Category="Data" Description="Service Namespace." %>--%>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Assembly Name="System.Data" %>
+
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text" %>
+
+using System.Collections.Generic;
+using System.Web.Mvc;
+using FluentValidation.Attributes;
+using Nut.Admin.Validators.<%= SourceTable.Name %>;
+using Nut.Web.Framework;
+using Nut.Web.Framework.Localization;
+using Nut.Web.Framework.Mvc;
+
+namespace Nut.Admin.Models.<%= SourceTable.Name %>
+{
+    [Validator(typeof(<%= SourceTable.Name %>Validator))]
+    public partial class <%= SourceTable.Name %>Model : BaseNutEntityModel
+    {
+        <%--public <%= SourceTable.Name %>Model()
+        {
+            Locales = new List<<%= SourceTable.Name %>LocalizedModel>();
+        }--%>
+        <% foreach(ColumnSchema col in SourceTable.Columns) { %>
+        <% if(col.Name != "Id") { %>
+        [NutResourceDisplayName("Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>.Fields.<%= col.Name %>")]
+        public <%= col.SystemType %> <%= col.Name %> { get; set; }
+        <% } %>
+        <% } %>
+        
+    }
+}
+
+<% foreach(ColumnSchema col in SourceTable.Columns) { %>
+INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (2, 'Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>.Fields.<%= col.Name %>', '')
+GO
+<% } %>
+
+
+<% foreach(ColumnSchema col in SourceTable.Columns) { %>
+INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (2, 'Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>.Fields.<%= col.Name %>.Required', '')
+GO
+<% } %>
+
+<% foreach(ColumnSchema col in SourceTable.Columns) { %>
+<LocaleResource Name="Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>.Fields.<%= col.Name %>"><Value></Value></LocaleResource>
+<LocaleResource Name="Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>.Fields.<%= col.Name %>.Hint"><Value></Value></LocaleResource>
+<LocaleResource Name="Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>.Fields.<%= col.Name %>.Required"><Value>必填</Value></LocaleResource>
+<% } %>
+
+
+// <%= SourceTable.Name %>
+Mapper.CreateMap<<%= SourceTable.Name %>, <%= SourceTable.Name %>Model>()
+    //.ForMember(dest => dest., mo => mo.Ignore())
+    .ForMember(dest => dest.CustomProperties, mo => mo.Ignore());
+Mapper.CreateMap<<%= SourceTable.Name %>Model, <%= SourceTable.Name %>>();
+   // .ForMember(dest => dest., mo => mo.Ignore());
+
+#region <%= SourceTable.Name %>
+
+public static <%= SourceTable.Name %>Model ToModel(this <%= SourceTable.Name %> entity)
+{
+    return Mapper.Map<<%= SourceTable.Name %>, <%= SourceTable.Name %>Model>(entity);
+}
+
+public static <%= SourceTable.Name %> ToEntity(this <%= SourceTable.Name %>Model model)
+{
+    return Mapper.Map<<%= SourceTable.Name %>Model, <%= SourceTable.Name %>>(model);
+}
+
+public static <%= SourceTable.Name %> ToEntity(this <%= SourceTable.Name %>Model model, <%= SourceTable.Name %> destination)
+{
+    return Mapper.Map(model, destination);
+}
+
+#endregion
+<script runat="template">
+// My methods here.
+public string SampleMethod()
+{
+  return "Method output.";
+}
+</script>
