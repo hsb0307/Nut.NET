@@ -90,12 +90,11 @@
                         '<br />@T("Admin.Configuration.Plugins.Fields.Installed"): <img src="@Url.Content("~/Administration/Content/images/")active-#=Installed#.gif" />' +
                         '# if(CanChangeEnabled) {# <br />@T("Admin.Configuration.Plugins.Fields.IsEnabled"): <img src="@Url.Content("~/Administration/Content/images/")active-#=IsEnabled#.gif" /> #} #' +
                     //allow configuration only when a plugin has a configuration URL specified
-                        '<br /># if(ConfigurationUrl && ConfigurationUrl.length > 0) {# <a class="plugin-button plugin-button-configure" href="#=ConfigurationUrl#">@T("Admin.Configuration.Plugins.Fields.Configure")</a>&nbsp;&nbsp;&nbsp; #} #' +
-                        '<a class="plugin-button plugin-button-edit" href="javascript:OpenWindow(\'@Url.Content("~/Admin/Plugin/EditPopup")?systemName=#=SystemName#&btnId=btnRefresh&formId=plugins-form\', 800, 300, true);">@T("Admin.Common.Edit")</a>'
+                        '<br /># if(ConfigurationUrl && ConfigurationUrl.length > 0) {# <a class="plugin-button plugin-button-configure" href="#=ConfigurationUrl#">@T("Admin.Configuration.Plugins.Fields.Configure")</a>&nbsp;&nbsp;&nbsp; #} #'
                 }, {
                     field: "Installed",
                     title: "@T("Admin.Configuration.Plugins.Fields.Installation")",
-                    template: '# if(Installed) {# <input type="submit" name="uninstall-plugin-link-#=SystemName#" class="plugin-button uninstall-plugin-link" value="@T("Admin.Configuration.Plugins.Fields.Uninstall")" /> #} else {#  <input type="submit" name="install-plugin-link-#=SystemName#" class="plugin-button install-plugin-link" value="@T("Admin.Configuration.Plugins.Fields.Install")" /> #} #',
+                    template: '# if(Installed) {# <a href="@Url.Content("~/Admin/Plugin/Uninstall/")?systemName=#=SystemName#" class="btn btn-info">@T("Admin.Configuration.Plugins.Fields.Uninstall")</a> #} else {# <a href="@Url.Content("~/Admin/Plugin/Install/")?systemName=#=SystemName#" class="btn btn-info">@T("Admin.Configuration.Plugins.Fields.Install")</a> #} #',
                     headerAttributes: { style: "text-align:center" },
                     attributes: { style: "text-align:center" }
                 }
