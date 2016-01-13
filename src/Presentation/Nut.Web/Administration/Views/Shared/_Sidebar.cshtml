@@ -117,7 +117,7 @@ if (!string.IsNullOrEmpty(item.ControllerName) && !string.IsNullOrEmpty(item.Act
             }
 
             @foreach (var item in pluginNode.ChildNodes.Where(x => x.Visible)) {
-                @RenderMenuItem(item)
+                @RenderMenuItem2(item)
             }
             <!-- END plugins menu -->
         </ul>

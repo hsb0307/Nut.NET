@@ -1,0 +1,139 @@
+﻿@{
+    //page title
+    //ViewBag.Title = T("Admin.AppVersions").Text;
+    int defaultGridPageSize = EngineContext.Current.Resolve<Nut.Core.Domain.Common.AdminAreaSettings>().DefaultGridPageSize;
+    string gridPageSizes = EngineContext.Current.Resolve<Nut.Core.Domain.Common.AdminAreaSettings>().GridPageSizes;
+}
+
+@using Nut.Core.Infrastructure;
+@using Nut.Web.Framework;
+@using Nut.Web.Framework.UI;
+
+
+<h3>
+    <!-- Breadcrumb right aligned-->
+    <ol class="breadcrumb pull-right">
+        <li>
+            <a href="#">@T("Admin.Home")</a>
+        </li>
+        <li class="active">
+            @T("Admin.AppVersions")
+        </li>
+    </ol>
+    @T("Admin.AppVersions")
+    <!-- Small text for title-->
+    @*<span class="text-sm hidden-xs">this is online Users.</span>*@
+    <!-- Breadcrumb below title-->
+</h3>
+
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-info">@T("Admin.Common.AddNew")</a>
+</p>
+
+<!-- START table-responsive-->
+<div class="table-responsive b0">
+    <div id="appversion-grid"></div>
+
+</div>
+<!-- END table-responsive -->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#appversion-grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: "@Html.Raw(Url.Action("List", "AppVersion"))",
+                        type: "POST",
+                        dataType: "json"
+                    }
+                },
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    errors: "Errors"
+                },
+                error: function(e) {
+                    display_kendoui_grid_error(e);
+                    // Cancel the changes
+                    this.cancelChanges();
+                },
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true
+            },
+            pageable: {
+                refresh: true,
+                numeric: false,
+                previousNext: false,
+                info: false
+            },
+            editable: {
+                confirmation: false,
+                mode: "inline"
+            },
+            scrollable: false,
+            columns: [{
+                field: "Id",
+                title: "@T("Admin.AppVersions.Fields.Id")"
+            }, {
+                field: "VersionNum",
+                title: "@T("Admin.AppVersions.Fields.VersionNum")"
+            }, {
+                field: "Version",
+                title: "@T("Admin.AppVersions.Fields.Version")"
+            }, {
+                field: "APPName",
+                title: "@T("Admin.AppVersions.Fields.APPName")"
+            }, {
+                field: "Description",
+                title: "@T("Admin.AppVersions.Fields.Description")"
+            }, {
+                field: "DownloadURL",
+                title: "@T("Admin.AppVersions.Fields.DownloadURL")"
+            }, {
+                field: "CreateON",
+                title: "@T("Admin.AppVersions.Fields.CreateON")"
+            }, {
+                field: "Id",
+                title: "@T("Admin.Common.Edit")",
+                width: 100,
+                template: '<a class="btn btn-sm btn-default" href="Edit/#=Id#">@T("Admin.Common.Edit")</a>&nbsp;&nbsp;<a class="btn btn-sm btn-default" href="javascript:void(0);" onclick="DeleteAppVersion(#=Id#)">@T("Admin.Common.Delete")</a>'
+            }]
+        });
+    });
+
+    function DeleteAppVersion(id) {
+
+       swal({
+            title : "Are you sure?",
+            text : "You will not be Delete AppVersion!",
+            type : "warning",
+            showCancelButton : true,
+            confirmButtonColor : "#DD6B55",
+            confirmButtonText : "Yes, delete it!",
+            closeOnConfirm : false
+        },
+        function () {
+            $.ajax({
+                type: "POST",
+                dataType: "text",
+                url: '@(Url.Action("Delete", "AppVersion"))',
+                data: { "id": id },
+                success: function (d) {
+                    var da=eval('(' + d + ')');
+                    if(da.success==true){
+                        swal("Deleted!", da.message, "success");
+                        window.document.location.reload();
+                    }
+                    else{
+                        swal("Deleted!", da.message, "error");
+                    }
+                }
+            })
+
+        });
+
+    }
+</script>

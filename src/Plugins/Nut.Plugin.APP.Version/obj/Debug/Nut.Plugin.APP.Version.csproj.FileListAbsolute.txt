@@ -5,3 +5,4 @@ E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Nut.Plugin.APP.Version.p
 E:\Nut.NET\src\Plugins\Nut.Plugin.APP.Version\obj\Debug\Nut.Plugin.APP.Version.csprojResolveAssemblyReference.cache
 E:\Nut.NET\src\Plugins\Nut.Plugin.APP.Version\obj\Debug\Nut.Plugin.APP.Version.dll
 E:\Nut.NET\src\Plugins\Nut.Plugin.APP.Version\obj\Debug\Nut.Plugin.APP.Version.pdb
+E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml

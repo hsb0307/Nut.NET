@@ -3,7 +3,7 @@ using Nut.Plugin.APP.Version.Domain;
 
 namespace Nut.Plugin.APP.Version.Data {
 
-    public class APPVersionMap : NutEntityTypeConfiguration<APPVersion> {
+    public class APPVersionMap : NutEntityTypeConfiguration<AppVersion> {
         public APPVersionMap() {
             this.ToTable("AppVersion");
             this.HasKey(x => x.Id);

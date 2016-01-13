@@ -5,7 +5,7 @@ namespace Nut.Plugin.APP.Version.Domain {
     /// <summary>
     /// APP Version
     /// </summary>
-    public class APPVersion : BaseEntity {
+    public class AppVersion : BaseEntity {
         /// <summary>
         /// Gets or sets the version number.
         /// </summary>
@@ -30,6 +30,11 @@ namespace Nut.Plugin.APP.Version.Domain {
         /// Gets or sets the download URL.
         /// </summary>
         public string DownloadURL { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="AppVersion"/> is delete.
+        /// </summary>
+        public bool Deleted { get; set; }
 
         /// <summary>
         /// Gets or sets the create on.

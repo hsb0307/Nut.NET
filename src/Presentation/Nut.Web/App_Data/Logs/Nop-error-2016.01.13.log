@@ -1,0 +1,82 @@
+2016-01-13 14:08:22,581 [7] Nut.Web.Framework.Logging.LoggingModule - The view 'List' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Themes/DefaultClean/Views/AppVersion/List.cshtml
+~/Themes/DefaultClean/Views/Shared/List.cshtml
+~/Views/AppVersion/List.cshtml
+~/Views/Shared/List.cshtml
+~/Administration/Views/AppVersion/List.cshtml
+~/Administration/Views/Shared/List.cshtml
+2016-01-13 14:12:29,133 [8] Nut.Web.Framework.Logging.LoggingModule - The view 'List' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Themes/DefaultClean/Views/AppVersion/List.cshtml
+~/Themes/DefaultClean/Views/Shared/List.cshtml
+~/Views/AppVersion/List.cshtml
+~/Views/Shared/List.cshtml
+~/Administration/Views/AppVersion/List.cshtml
+~/Administration/Views/Shared/List.cshtml
+2016-01-13 14:18:33,974 [18] Nut.Web.Framework.Logging.LoggingModule - The view 'Nut.Plugin.APP.Version.Views.AppVersion.List' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Themes/DefaultClean/Views/AppVersion/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Themes/DefaultClean/Views/Shared/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Views/AppVersion/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Views/Shared/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Administration/Views/AppVersion/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Administration/Views/Shared/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+2016-01-13 14:19:40,152 [19] Nut.Web.Framework.Logging.LoggingModule - The view 'Nut.Plugin.APP.Version.Views.AppVersion.List' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Themes/DefaultClean/Views/AppVersion/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Themes/DefaultClean/Views/Shared/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Views/AppVersion/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Views/Shared/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Administration/Views/AppVersion/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Administration/Views/Shared/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+2016-01-13 14:20:18,379 [22] Nut.Web.Framework.Logging.LoggingModule - The view 'Nut.Plugin.APP.Version.Views.AppVersion.List' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Themes/DefaultClean/Views/AppVersion/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Themes/DefaultClean/Views/Shared/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Views/AppVersion/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Views/Shared/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Administration/Views/AppVersion/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+~/Administration/Views/Shared/Nut.Plugin.APP.Version.Views.AppVersion.List.cshtml
+2016-01-13 14:23:27,803 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:25:46,687 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:27:46,600 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:07,730 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:08,775 [9] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:09,716 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:10,321 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:10,856 [9] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:11,317 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:11,641 [6] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:11,875 [9] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:12,088 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:12,284 [5] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:12,475 [9] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:12,677 [6] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:12,892 [5] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:13,106 [9] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:13,560 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:13,787 [5] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:14,045 [9] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:14,244 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:14,451 [5] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:14,681 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:14,914 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:15,140 [5] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:15,374 [6] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:15,619 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:15,843 [5] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:16,062 [9] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:16,267 [6] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:16,494 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:16,705 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:16,898 [6] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:17,120 [5] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:17,338 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:17,568 [5] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:18,910 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:18,910 [9] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:18,911 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:18,911 [5] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:19,014 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:19,023 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:19,118 [5] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:19,320 [7] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:19,523 [5] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:19,720 [9] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context
+2016-01-13 14:28:19,909 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Plugins\APP.Version\Views\AppVersion\List.cshtml(17): error CS0103: The name 'T' does not exist in the current context

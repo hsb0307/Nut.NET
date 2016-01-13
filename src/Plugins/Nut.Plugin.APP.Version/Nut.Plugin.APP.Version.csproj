@@ -49,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
@@ -82,16 +83,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APPVersionPlugin.cs" />
+    <Compile Include="Controllers\AppVersionController.cs" />
     <Compile Include="Data\APPVersionMap.cs" />
     <Compile Include="Data\APPVersionObjectContext.cs" />
     <Compile Include="Data\EfStartUpTask.cs" />
     <Compile Include="DependencyRegistrar.cs" />
     <Compile Include="Domain\APPVersion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RouteProvider.cs" />
+    <Compile Include="Services\AppVersionService.cs" />
+    <Compile Include="Services\IAppVersionService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Views\AppVersion\Create.cshtml" />
+    <None Include="Views\AppVersion\Edit.cshtml" />
+    <None Include="Views\AppVersion\List.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Views\AppVersion\_CreateOrUpdate.cshtml" />
+    <None Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Libraries\Nut.Core\Nut.Core.csproj">

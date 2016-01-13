@@ -57,7 +57,7 @@ namespace Nut.Plugin.APP.Version.Data {
         }
 
         public void Uninstall() {
-            var tableName = this.GetTableName<APPVersion>();
+            var tableName = this.GetTableName<AppVersion>();
             this.DropPluginTable(tableName);
         }
 
