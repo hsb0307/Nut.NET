@@ -13,9 +13,10 @@ namespace Nut.Services.Users {
         /// <summary>
         /// Gets all users.
         /// </summary>
+        /// <param name="departmentId">The department identifier.</param>
         /// <param name="createdFromUtc">The created from UTC.</param>
         /// <param name="createdToUtc">The created to UTC.</param>
-        /// <param name="UserRoleIds">The User role ids.</param>
+        /// <param name="UserRoleIds">The user role ids.</param>
         /// <param name="email">The email.</param>
         /// <param name="username">The username.</param>
         /// <param name="pageIndex">Index of the page.</param>

@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 
 namespace Nut.Core.Domain.Users {
+    /// <summary>
+    /// 
+    /// </summary>
     public class UserRole : BaseEntity {
         private ICollection<PermissionRecord> _permissionRecords;
 
         /// <summary>
-        /// Gets or sets the customer role name
+        /// Gets or sets the name.
         /// </summary>
         public string Name { get; set; }
 

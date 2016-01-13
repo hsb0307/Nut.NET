@@ -19,7 +19,7 @@ Description:
 
 @{
     //page title
-    ViewBag.Title = T("Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>s").Text;
+    ViewBag.Title = T("Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>").Text;
     var defaultGridPageSize = EngineContext.Current.Resolve<Nut.Core.Domain.Common.AdminAreaSettings>().DefaultGridPageSize;
     var gridPageSizes = EngineContext.Current.Resolve<Nut.Core.Domain.Common.AdminAreaSettings>().GridPageSizes;
 }
@@ -31,10 +31,10 @@ Description:
             <a href="#">@T("Admin.Home")</a>
         </li>
         <li class="active">
-            @T("Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>s")
+            @T("Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>")
         </li>
     </ol>
-    @T("Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>s")
+    @T("Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>")
     <!-- Small text for title-->
     @*<span class="text-sm hidden-xs">this is online Users.</span>*@
     <!-- Breadcrumb below title-->

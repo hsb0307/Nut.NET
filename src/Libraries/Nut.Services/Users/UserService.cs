@@ -75,6 +75,7 @@ namespace Nut.Services.Users {
         /// <summary>
         /// Gets all users.
         /// </summary>
+        /// <param name="departmentId"></param>
         /// <param name="createdFromUtc">The created from UTC.</param>
         /// <param name="createdToUtc">The created to UTC.</param>
         /// <param name="UserRoleIds">The User role ids.</param>

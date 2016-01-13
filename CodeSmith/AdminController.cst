@@ -30,6 +30,7 @@ using Nut.Services.Security;
 using Nut.Core.Exceptions;
 using Nut.Web.Framework.Controllers;
 using Nut.Web.Framework.Kendoui;
+using Nut.Admin.Extensions;
 
 namespace Nut.Admin.Controllers
 {

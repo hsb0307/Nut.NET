@@ -44,14 +44,25 @@ namespace Nut.Admin.Models.<%= SourceTable.Name %>
     }
 }
 
+
+INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (1, 'Admin.<%= SourceTable.Name %>s', 'Admin.<%= SourceTable.Name %>s')
+INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (2, 'Admin.<%= SourceTable.Name %>s', '')
+
+INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (1, 'Admin.<%= SourceTable.Name %>.Edit', 'Admin.<%= SourceTable.Name %>.Edit')
+INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (2, 'Admin.<%= SourceTable.Name %>.Edit', '')
+
+INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (1, 'Admin.<%= SourceTable.Name %>.AddNew', 'Admin.<%= SourceTable.Name %>.AddNew')
+INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (2, 'Admin.<%= SourceTable.Name %>.AddNew', '')
+GO
+
 <% foreach(ColumnSchema col in SourceTable.Columns) { %>
-INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (2, 'Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>.Fields.<%= col.Name %>', '')
+INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (1, 'Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>.Fields.<%= col.Name %>', '<%= col.Name %>')
 GO
 <% } %>
 
 
 <% foreach(ColumnSchema col in SourceTable.Columns) { %>
-INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (2, 'Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>.Fields.<%= col.Name %>.Required', '')
+INSERT INTO [dbo].[LocaleStringResource] ([LanguageId], [ResourceName], [ResourceValue]) VALUES (2, 'Admin.<%=  StringUtil.ToPlural(SourceTable.Name) %>.Fields.<%= col.Name %>', '')
 GO
 <% } %>
 

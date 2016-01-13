@@ -21,18 +21,18 @@ Description:
 @model <%= SourceTable.Name %>Model
 @{
     //page title
-    ViewBag.Title = T("Admin.<%= SourceTable.Name %>s.Edit").Text;
+    ViewBag.Title = T("Admin.<%= SourceTable.Name %>.Edit").Text;
 }
 <h3>
-    @T("Admin.<%= SourceTable.Name %>s.Edit") - @Model.Name
-    <span class="text-sm hidden-xs"><a href="@Url.Action("List")">@T("Admin.<%= SourceTable.Name %>s.BackToList")</a></span>
+    @T("Admin.<%= SourceTable.Name %>.Edit") - @Model.Name
+    <span class="text-sm hidden-xs"><a href="@Url.Action("List")">@T("Admin.Common.BackToList")</a></span>
 </h3>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>@T("Admin.<%= SourceTable.Name %>s")</h4>
+        <h4>@T("Admin.<%= SourceTable.Name %>")</h4>
         <hr />
 
         @Html.Partial("_CreateOrUpdate", Model)
