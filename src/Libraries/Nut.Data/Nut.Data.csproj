@@ -71,6 +71,7 @@
     <Compile Include="Initializers\DropCreateCeDatabaseAlways.cs" />
     <Compile Include="Initializers\DropCreateCeDatabaseIfModelChanges.cs" />
     <Compile Include="Initializers\SqlCeInitializer.cs" />
+    <Compile Include="Mapping\App\APPVersionMap.cs" />
     <Compile Include="Mapping\Common\GenericAttributeMap.cs" />
     <Compile Include="Mapping\Configuration\SettingMap.cs" />
     <Compile Include="Mapping\Localization\LanguageMap.cs" />
@@ -88,9 +89,9 @@
     <Compile Include="Mapping\Users\UserMap.cs" />
     <Compile Include="Mapping\Users\UserRoleMap.cs" />
     <Compile Include="Mapping\Users\DepartmentMap.cs" />
-    <Compile Include="Migrations\201601090302068_20160109.cs" />
-    <Compile Include="Migrations\201601090302068_20160109.Designer.cs">
-      <DependentUpon>201601090302068_20160109.cs</DependentUpon>
+    <Compile Include="Migrations\201601140529390_2016011401.cs" />
+    <Compile Include="Migrations\201601140529390_2016011401.Designer.cs">
+      <DependentUpon>201601140529390_2016011401.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NutObjectContext.cs" />
@@ -110,8 +111,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601090302068_20160109.resx">
-      <DependentUpon>201601090302068_20160109.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601140529390_2016011401.resx">
+      <DependentUpon>201601140529390_2016011401.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

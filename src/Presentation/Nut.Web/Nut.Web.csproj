@@ -209,6 +209,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Content\i18n\site-en.json" />
     <Content Include="Content\i18n\site-es.json" />
+    <None Include="Properties\PublishProfiles\1212.pubxml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
     <Content Include="Scripts\jquery-2.1.3.min.js" />

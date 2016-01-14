@@ -98,6 +98,12 @@ public static <%= SourceTable.Name %> ToEntity(this <%= SourceTable.Name %>Model
 }
 
 #endregion
+
+public static readonly PermissionRecord Manage<%=  StringUtil.ToPlural(SourceTable.Name) %>s = new PermissionRecord { Name = "Admin area. Manage <%=  StringUtil.ToPlural(SourceTable.Name) %>", SystemName = "Manage<%=  StringUtil.ToPlural(SourceTable.Name) %>", Category = "<%=  StringUtil.ToPlural(SourceTable.Name) %>" };
+ 
+INSERT INTO　PermissionRecord　(Name,SystemName,Category,DisplayOrder)
+SELECT 'Admin area. Manage <%=  StringUtil.ToPlural(SourceTable.Name) %>','Manage<%=  StringUtil.ToPlural(SourceTable.Name) %>s','<%=  StringUtil.ToPlural(SourceTable.Name) %>',0
+ 
 <script runat="template">
 // My methods here.
 public string SampleMethod()

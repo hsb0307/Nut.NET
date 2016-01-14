@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using Nop.Admin.Models.Plugins;
+using Nut.Admin.Models.App;
 using Nut.Admin.Models.Localization;
 using Nut.Admin.Models.Logging;
 using Nut.Admin.Models.Stores;
 using Nut.Admin.Models.Users;
+using Nut.Core.Domain.App;
 using Nut.Core.Domain.Localization;
 using Nut.Core.Domain.Logging;
 using Nut.Core.Domain.Stores;
@@ -68,6 +70,14 @@ namespace Nut.Admin.Infrastructure {
                 .ForMember(dest => dest.CustomProperties, mo => mo.Ignore());
             Mapper.CreateMap<DepartmentModel, Department>()
                 .ForMember(dest => dest.Deleted, mo => mo.Ignore());
+
+
+            // AppVersion
+            Mapper.CreateMap<AppVersion, AppVersionModel>()
+                //.ForMember(dest => dest., mo => mo.Ignore())
+                .ForMember(dest => dest.CustomProperties, mo => mo.Ignore());
+            Mapper.CreateMap<AppVersionModel, AppVersion>();
+            // .ForMember(dest => dest., mo => mo.Ignore());
         }
 
         public int Order {

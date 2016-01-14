@@ -20,6 +20,8 @@ namespace Nut.Services.Security {
         public static readonly PermissionRecord ManageMaintenance = new PermissionRecord { Name = "Admin area. Manage Maintenance", SystemName = "ManageMaintenance", Category = "Configuration" };
         public static readonly PermissionRecord HtmlEditorManagePictures = new PermissionRecord { Name = "Admin area. HTML Editor. Manage pictures", SystemName = "HtmlEditor.ManagePictures", Category = "Configuration" };
         public static readonly PermissionRecord ManageScheduleTasks = new PermissionRecord { Name = "Admin area. Manage Schedule Tasks", SystemName = "ManageScheduleTasks", Category = "Configuration" };
+        //APP
+        public static readonly PermissionRecord ManageAppVersions = new PermissionRecord { Name = "Admin area. Manage AppVersions", SystemName = "ManageAppVersions", Category = "App" };
 
 
         public static readonly PermissionRecord PublicStoreAllow = new PermissionRecord { Name = "Public store. Allow", SystemName = "PublicStoreAllow", Category = "PublicStore" };

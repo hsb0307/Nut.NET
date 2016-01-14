@@ -195,9 +195,9 @@ namespace Nut.Admin.Controllers
                 //activity log
                 _activityLogService.InsertActivity("Delete<%= SourceTable.Name %>", _localizationService.GetResource("ActivityLog.Delete<%= SourceTable.Name %>"), <%=  StringUtil.ToCamelCase(SourceTable.Name) %>.Name);
 
-                 return Json(new { success = true, message = _localizationService.GetResource("Admin.Users.UserRoles.Deleted") });
+                 return Json(new { success = true, message = _localizationService.GetResource("Admin.<%= SourceTable.Name %>s.Deleted") });
             } catch (Exception exc) {
-                 if (!_exceptionPolicy.HandleException(this, exception))
+                 if (!_exceptionPolicy.HandleException(this, exc))
                     throw;
                 return Json(new { success = false, message = _localizationService.GetResource("Admin.<%= SourceTable.Name %>s.UnDeleted"), });
             }

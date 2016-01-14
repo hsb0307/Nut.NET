@@ -10,6 +10,8 @@ using Nut.Core.Domain.Localization;
 using Nut.Admin.Models.Localization;
 using Nut.Admin.Models.Logging;
 using Nut.Core.Domain.Logging;
+using Nut.Core.Domain.App;
+using Nut.Admin.Models.App;
 
 namespace Nut.Admin.Extensions {
     public static class MappingExtension {
@@ -99,6 +101,23 @@ namespace Nut.Admin.Extensions {
         }
 
         public static Department ToEntity(this DepartmentModel model, Department destination) {
+            return Mapper.Map(model, destination);
+        }
+
+        #endregion
+
+
+        #region AppVersion
+
+        public static AppVersionModel ToModel(this AppVersion entity) {
+            return Mapper.Map<AppVersion, AppVersionModel>(entity);
+        }
+
+        public static AppVersion ToEntity(this AppVersionModel model) {
+            return Mapper.Map<AppVersionModel, AppVersion>(model);
+        }
+
+        public static AppVersion ToEntity(this AppVersionModel model, AppVersion destination) {
             return Mapper.Map(model, destination);
         }
 

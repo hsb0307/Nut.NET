@@ -1,2 +1,2 @@
 DataProvider: sqlserver
-DataConnectionString: Data Source=.;Initial Catalog=NutNET;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=sa
+DataConnectionString: Data Source=.;Initial Catalog=NutNet;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=sa
