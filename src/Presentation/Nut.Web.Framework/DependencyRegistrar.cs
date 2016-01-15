@@ -165,7 +165,7 @@ namespace Nut.Web.Framework {
             builder.RegisterType<LanguageService>().As<ILanguageService>().InstancePerLifetimeScope();
 
             builder.RegisterType<DownloadService>().As<IDownloadService>().InstancePerLifetimeScope();
-            //builder.RegisterType<PictureService>().As<IPictureService>().InstancePerLifetimeScope();
+            builder.RegisterType<PictureService>().As<IPictureService>().InstancePerLifetimeScope();
 
             //builder.RegisterType<MessageTemplateService>().As<IMessageTemplateService>().InstancePerLifetimeScope();
             //builder.RegisterType<QueuedEmailService>().As<IQueuedEmailService>().InstancePerLifetimeScope();

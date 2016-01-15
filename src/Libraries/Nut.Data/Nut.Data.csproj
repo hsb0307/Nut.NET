@@ -91,9 +91,9 @@
     <Compile Include="Mapping\Users\UserMap.cs" />
     <Compile Include="Mapping\Users\UserRoleMap.cs" />
     <Compile Include="Mapping\Users\DepartmentMap.cs" />
-    <Compile Include="Migrations\201601140818087_2016011403.cs" />
-    <Compile Include="Migrations\201601140818087_2016011403.Designer.cs">
-      <DependentUpon>201601140818087_2016011403.cs</DependentUpon>
+    <Compile Include="Migrations\201601150745063_20160115001.cs" />
+    <Compile Include="Migrations\201601150745063_20160115001.Designer.cs">
+      <DependentUpon>201601150745063_20160115001.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NutObjectContext.cs" />
@@ -113,14 +113,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601140818087_2016011403.resx">
-      <DependentUpon>201601140818087_2016011403.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601150745063_20160115001.resx">
+      <DependentUpon>201601150745063_20160115001.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
-</PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

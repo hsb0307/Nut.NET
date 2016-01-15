@@ -682,6 +682,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\bootstrap\" />
+    <Folder Include="Content\Images\thumbs\" />
     <Folder Include="Scripts\kendo\2014.1.318\" />
     <Folder Include="Vendor\sweetalert\" />
   </ItemGroup>

@@ -7,6 +7,7 @@ using Nut.Core.Data;
 using Nut.Core.Domain.Localization;
 using Nut.Core.Domain.Stores;
 using Nut.Core.Domain.Tasks;
+using Nut.Core.Domain.Media;
 using Nut.Core.Domain.Users;
 using Nut.Core.Infrastructure;
 using Nut.Services.Localization;
@@ -175,12 +176,18 @@ namespace Nut.Services.Installation {
                 DefaultGridPageSize = 15,
                 GridPageSizes = "10, 15, 20, 50, 100"
             });
+
+            settingService.SaveSetting(new MediaSettings {
+                DefaultImageQuality = 80,
+                MaximumImageSize = 1280,
+                MultipleThumbDirectories = false
+            });
         }
 
         protected virtual void InstallScheduleTasks() {
             var tasks = new List<ScheduleTask>
             {
-                
+
                 new ScheduleTask
                 {
                     Name = "Delete guests",
@@ -189,7 +196,7 @@ namespace Nut.Services.Installation {
                     Enabled = true,
                     StopOnError = false,
                 },
-                
+
                 new ScheduleTask
                 {
                     Name = "Delete Notifications",
@@ -199,7 +206,7 @@ namespace Nut.Services.Installation {
                     Enabled = false,
                     StopOnError = false,
                 },
-                
+
             };
 
             _scheduleTaskRepository.Insert(tasks);

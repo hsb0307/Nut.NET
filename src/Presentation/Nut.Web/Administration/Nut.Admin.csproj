@@ -553,6 +553,9 @@
   <ItemGroup>
     <Content Include="Views\Shared\EditorTemplates\Download.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\EditorTemplates\Picture.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
