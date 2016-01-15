@@ -71,13 +71,13 @@ namespace Nut.Admin.Infrastructure {
             Mapper.CreateMap<DepartmentModel, Department>()
                 .ForMember(dest => dest.Deleted, mo => mo.Ignore());
 
-
             // AppVersion
             Mapper.CreateMap<AppVersion, AppVersionModel>()
                 //.ForMember(dest => dest., mo => mo.Ignore())
                 .ForMember(dest => dest.CustomProperties, mo => mo.Ignore());
             Mapper.CreateMap<AppVersionModel, AppVersion>();
             // .ForMember(dest => dest., mo => mo.Ignore());
+
         }
 
         public int Order {

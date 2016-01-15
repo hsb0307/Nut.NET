@@ -270,6 +270,18 @@
     <Content Include="Vendor\animo.js\animo.js" />
     <Content Include="Vendor\bootstrap\dist\css\bootstrap.css" />
     <Content Include="Vendor\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Vendor\fineuploader\edit.gif" />
+    <Content Include="Vendor\fineuploader\fineuploader-4.2.2.css" />
+    <Content Include="Vendor\fineuploader\fineuploader-4.2.2.min.css" />
+    <Content Include="Vendor\fineuploader\iframe.xss.response-4.2.2.js" />
+    <Content Include="Vendor\fineuploader\jquery.fineuploader-4.2.2.js" />
+    <Content Include="Vendor\fineuploader\jquery.fineuploader-4.2.2.min.js" />
+    <Content Include="Vendor\fineuploader\loading.gif" />
+    <Content Include="Vendor\fineuploader\placeholders\not_available-generic.png" />
+    <Content Include="Vendor\fineuploader\placeholders\waiting-generic.png" />
+    <Content Include="Vendor\fineuploader\processing.gif" />
+    <Content Include="Vendor\fineuploader\templates\default.html" />
+    <Content Include="Vendor\fineuploader\templates\simple-thumbnails.html" />
     <Content Include="Vendor\fontawesome\css\font-awesome.min.css" />
     <Content Include="Vendor\fontawesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Vendor\jquery-localize-i18n\dist\jquery.localize.js" />
@@ -659,6 +671,7 @@
     <Content Include="Vendor\tinymce\skins\lightgray\fonts\tinymce.eot" />
     <Content Include="Vendor\tinymce\skins\lightgray\fonts\tinymce.ttf" />
     <Content Include="Vendor\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Vendor\fineuploader\LICENSE" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,2 @@
+2016-01-14 13:57:24,589 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\AppVersion\_CreateOrUpdate.cshtml(45): error CS1026: ) expected
+2016-01-14 13:57:24,606 [8] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\AppVersion\_CreateOrUpdate.cshtml(45): error CS1026: ) expected

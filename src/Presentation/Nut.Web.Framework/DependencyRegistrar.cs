@@ -26,6 +26,7 @@ using Nut.Services.Users;
 using Nut.Services.Logging;
 using Nut.Services.Helpers;
 using Nut.Services.License;
+using Nut.Services.Media;
 using Nut.Services.Installation;
 using Nut.Services.Localization;
 using Nut.Services.Security;
@@ -163,7 +164,7 @@ namespace Nut.Web.Framework {
                 .InstancePerLifetimeScope();
             builder.RegisterType<LanguageService>().As<ILanguageService>().InstancePerLifetimeScope();
 
-            //builder.RegisterType<DownloadService>().As<IDownloadService>().InstancePerLifetimeScope();
+            builder.RegisterType<DownloadService>().As<IDownloadService>().InstancePerLifetimeScope();
             //builder.RegisterType<PictureService>().As<IPictureService>().InstancePerLifetimeScope();
 
             //builder.RegisterType<MessageTemplateService>().As<IMessageTemplateService>().InstancePerLifetimeScope();

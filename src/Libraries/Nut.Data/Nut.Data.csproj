@@ -79,6 +79,7 @@
     <Compile Include="Mapping\Localization\LocalizedPropertyMap.cs" />
     <Compile Include="Mapping\Logging\ActivityLogMap.cs" />
     <Compile Include="Mapping\Logging\ActivityLogTypeMap.cs" />
+    <Compile Include="Mapping\Media\DownloadMap.cs" />
     <Compile Include="Mapping\NopEntityTypeConfiguration.cs" />
     <Compile Include="Mapping\Security\PermissionRecordMap.cs" />
     <Compile Include="Mapping\Seo\UrlRecordMap.cs" />
@@ -89,9 +90,9 @@
     <Compile Include="Mapping\Users\UserMap.cs" />
     <Compile Include="Mapping\Users\UserRoleMap.cs" />
     <Compile Include="Mapping\Users\DepartmentMap.cs" />
-    <Compile Include="Migrations\201601140529390_2016011401.cs" />
-    <Compile Include="Migrations\201601140529390_2016011401.Designer.cs">
-      <DependentUpon>201601140529390_2016011401.cs</DependentUpon>
+    <Compile Include="Migrations\201601140818087_2016011403.cs" />
+    <Compile Include="Migrations\201601140818087_2016011403.Designer.cs">
+      <DependentUpon>201601140818087_2016011403.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NutObjectContext.cs" />
@@ -111,8 +112,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601140529390_2016011401.resx">
-      <DependentUpon>201601140529390_2016011401.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601140818087_2016011403.resx">
+      <DependentUpon>201601140818087_2016011403.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
