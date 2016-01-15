@@ -54,3 +54,5 @@ E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\System.Web.WebPages.Deployment.x
 E:\Nut.NET\src\Libraries\Nut.Services\obj\Debug\Nut.Services.csprojResolveAssemblyReference.cache
 E:\Nut.NET\src\Libraries\Nut.Services\obj\Debug\Nut.Services.dll
 E:\Nut.NET\src\Libraries\Nut.Services\obj\Debug\Nut.Services.pdb
+E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\ImageResizer.dll
+E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\ImageResizer.xml

@@ -133,3 +133,5 @@ E:\Nut.NET\src\Presentation\Nut.Web.Framework\bin\Debug\zh-Hans\System.Web.WebPa
 E:\Nut.NET\src\Presentation\Nut.Web.Framework\obj\Debug\Nut.Web.Framework.csprojResolveAssemblyReference.cache
 E:\Nut.NET\src\Presentation\Nut.Web.Framework\obj\Debug\Nut.Web.Framework.dll
 E:\Nut.NET\src\Presentation\Nut.Web.Framework\obj\Debug\Nut.Web.Framework.pdb
+E:\Nut.NET\src\Presentation\Nut.Web.Framework\bin\Debug\ImageResizer.dll
+E:\Nut.NET\src\Presentation\Nut.Web.Framework\bin\Debug\ImageResizer.xml

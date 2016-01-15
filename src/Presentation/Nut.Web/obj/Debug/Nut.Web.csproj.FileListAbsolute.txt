@@ -174,3 +174,5 @@ E:\Nut.NET\src\Presentation\Nut.Web\bin\zh-Hans\System.Web.Mvc.resources.dll
 E:\Nut.NET\src\Presentation\Nut.Web\obj\Debug\Nut.Web.csprojResolveAssemblyReference.cache
 E:\Nut.NET\src\Presentation\Nut.Web\obj\Debug\Nut.Web.dll
 E:\Nut.NET\src\Presentation\Nut.Web\obj\Debug\Nut.Web.pdb
+E:\Nut.NET\src\Presentation\Nut.Web\bin\ImageResizer.dll
+E:\Nut.NET\src\Presentation\Nut.Web\bin\ImageResizer.xml
