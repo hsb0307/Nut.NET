@@ -13,6 +13,7 @@ namespace Nut.Admin.Models.App {
     public class AppVersionModel :BaseNutEntityModel{
 
         [NutResourceDisplayName("Admin.AppVersions.Fields.VersionNum")]
+        [UIHint("Picture")]
         public System.Int32 VersionNum { get; set; }
         [NutResourceDisplayName("Admin.AppVersions.Fields.Version")]
         public System.String Version { get; set; }

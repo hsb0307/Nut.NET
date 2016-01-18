@@ -466,3 +466,138 @@
 2016-01-15 15:57:43,554 [12] Nut.Services.Localization.LocalizationService - Resource string (admin.appversions.fields.version.required) is not found. Language ID = 1
 2016-01-15 15:57:43,554 [12] Nut.Services.Localization.LocalizationService - Resource string (admin.appversions.fields.downloadurl.required) is not found. Language ID = 1
 2016-01-15 15:57:43,617 [12] Nut.Services.Localization.LocalizationService - Resource string (admin.newcate) is not found. Language ID = 1
+2016-01-15 16:09:54,244 [28] Nut.Web.Framework.Logging.LoggingModule - Application started
+2016-01-15 16:09:58,533 [25] Nut.Services.Localization.LocalizationService - Resource string (account.login.unsuccessful) is not found. Language ID = 1
+2016-01-15 16:09:58,596 [25] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-15 16:09:58,654 [25] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-15 16:09:58,679 [25] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-15 16:09:58,729 [25] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-15 16:10:02,125 [21] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-15 16:10:02,148 [21] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-15 16:10:02,171 [21] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.rememberme) is not found. Language ID = 1
+2016-01-15 16:10:05,909 [25] Nut.Services.Localization.LocalizationService - Resource string (admin.newcate) is not found. Language ID = 1
+2016-01-15 16:10:09,568 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.newcate) is not found. Language ID = 1
+2016-01-15 16:10:12,586 [27] Nut.Services.Localization.LocalizationService - Resource string (admin.newcate) is not found. Language ID = 1
+2016-01-15 16:10:15,200 [21] Nut.Services.Localization.LocalizationService - Resource string (admin.department.notparentdepartment) is not found. Language ID = 1
+2016-01-15 16:10:15,231 [21] Nut.Services.Localization.LocalizationService - Resource string (admin.common.choose) is not found. Language ID = 1
+2016-01-15 16:10:15,250 [21] Nut.Web.Framework.Logging.LoggingModule - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Administration/Views/Shared/Create.cshtml
+~/Administration/Views/Department/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Department/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Areas/Admin/Views/Department/Create.cshtml
+~/Areas/Admin/Views/Shared/Create.cshtml
+~/Themes/DefaultClean/Views/Department/Create.cshtml
+~/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Views/Department/Create.cshtml
+~/Views/Shared/Create.cshtml
+2016-01-15 16:10:15,272 [21] Nut.Web.Framework.Logging.LoggingModule - The view 'Create' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Administration/Views/Shared/Create.cshtml
+~/Administration/Views/Department/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Department/Create.cshtml
+~/Areas/Admin/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Areas/Admin/Views/Department/Create.cshtml
+~/Areas/Admin/Views/Shared/Create.cshtml
+~/Themes/DefaultClean/Views/Department/Create.cshtml
+~/Themes/DefaultClean/Views/Shared/Create.cshtml
+~/Views/Department/Create.cshtml
+~/Views/Shared/Create.cshtml
+2016-01-15 16:15:27,685 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2016-01-15 16:15:28,967 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.department.notparentdepartment) is not found. Language ID = 1
+2016-01-15 16:15:28,998 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.choose) is not found. Language ID = 1
+2016-01-15 16:15:31,264 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:15:31,295 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,310 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:15:31,310 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,326 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:15:31,357 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:15:31,373 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,389 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:15:31,389 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,404 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:15:31,435 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:15:31,451 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,451 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:15:31,467 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,467 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:15:31,498 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:15:31,514 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,514 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:15:31,529 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,529 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:15:31,561 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:15:31,561 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,576 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:15:31,592 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,592 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:15:31,607 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:15:31,639 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,654 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:15:31,670 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,701 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:15:31,717 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:15:31,732 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,764 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:15:31,779 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:31,795 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:15:32,295 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:15:32,326 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:32,342 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:15:32,342 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:15:32,357 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:15:34,654 [15] Nut.Services.Localization.LocalizationService - Resource string (admin.newcate) is not found. Language ID = 1
+2016-01-15 16:16:56,800 [8] Nut.Web.Framework.Logging.LoggingModule - Application started
+2016-01-15 16:17:40,068 [9] Nut.Web.Framework.Logging.LoggingModule - Application started
+2016-01-15 16:17:53,992 [14] Nut.Services.Localization.LocalizationService - Resource string (account.login.unsuccessful) is not found. Language ID = 1
+2016-01-15 16:17:54,038 [14] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-15 16:17:54,085 [14] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-15 16:17:54,117 [14] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-15 16:17:54,148 [14] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-15 16:18:04,738 [25] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-15 16:18:04,754 [25] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-15 16:18:04,770 [25] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.rememberme) is not found. Language ID = 1
+2016-01-15 16:18:09,473 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.newcate) is not found. Language ID = 1
+2016-01-15 16:18:14,114 [21] Nut.Services.Localization.LocalizationService - Resource string (admin.newcate) is not found. Language ID = 1
+2016-01-15 16:18:16,239 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.department.notparentdepartment) is not found. Language ID = 1
+2016-01-15 16:18:16,255 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.choose) is not found. Language ID = 1
+2016-01-15 16:18:16,348 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:18:16,380 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,395 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:18:16,395 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,426 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:18:16,458 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:18:16,473 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,473 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:18:16,489 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,489 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:18:16,520 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:18:16,520 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,536 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:18:16,536 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,551 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:18:16,614 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:18:16,614 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,645 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:18:16,661 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,676 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:18:16,708 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:18:16,739 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,755 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:18:16,770 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,786 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:18:16,801 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:18:16,833 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,833 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:18:16,848 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,848 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:18:16,880 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:18:16,911 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,958 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:18:16,973 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:16,989 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:18:17,333 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.name.required) is not found. Language ID = 1
+2016-01-15 16:18:17,348 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:17,364 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.code.required) is not found. Language ID = 1
+2016-01-15 16:18:17,380 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.common.lengthvalidation) is not found. Language ID = 1
+2016-01-15 16:18:17,395 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.departments.fields.storeid.required) is not found. Language ID = 1
+2016-01-15 16:18:17,473 [26] Nut.Services.Localization.LocalizationService - Resource string (admin.newcate) is not found. Language ID = 1

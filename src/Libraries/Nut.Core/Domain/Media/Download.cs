@@ -10,7 +10,7 @@ namespace Nut.Core.Domain.Media {
         /// Gets or sets the download unique identifier.
         /// </summary>
         public Guid DownloadGuid { get; set; }
-
+        
         /// <summary>
         /// Gets or sets a value indicating whether [use download URL].
         /// </summary>

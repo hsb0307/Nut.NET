@@ -42,6 +42,10 @@
       <HintPath>..\..\packages\EntityFramework.SqlServerCompact.6.1.3\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -103,19 +107,19 @@
     <Compile Include="SqlServerDataProvider.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Nut.Core\Nut.Core.csproj">
-      <Project>{c1b336c9-e5b7-42c0-9e05-16e4d778abc2}</Project>
-      <Name>Nut.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201601150745063_20160115001.resx">
       <DependentUpon>201601150745063_20160115001.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nut.Core\Nut.Core.csproj">
+      <Project>{c1b336c9-e5b7-42c0-9e05-16e4d778abc2}</Project>
+      <Name>Nut.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

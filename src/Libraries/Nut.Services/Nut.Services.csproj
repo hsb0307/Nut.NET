@@ -34,8 +34,9 @@
       <HintPath>..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ImageResizer">
-      <HintPath>..\..\packages\ImageResizer.3.4.3\lib\ImageResizer.dll</HintPath>
+    <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ImageResizer.4.0.4\lib\net45\ImageResizer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -127,9 +128,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="app.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

@@ -56,3 +56,8 @@ E:\Nut.NET\src\Libraries\Nut.Services\obj\Debug\Nut.Services.dll
 E:\Nut.NET\src\Libraries\Nut.Services\obj\Debug\Nut.Services.pdb
 E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\ImageResizer.dll
 E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\ImageResizer.xml
+E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\zh-Hans\System.Web.Razor.resources.dll
+E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\zh-Hans\System.Web.WebPages.resources.dll
+E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll

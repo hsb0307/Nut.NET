@@ -26,3 +26,4 @@ E:\Nut.NET\src\Tests\Nut.Core.Tests\bin\Debug\Nut.Tests.dll
 E:\Nut.NET\src\Tests\Nut.Core.Tests\bin\Debug\Rhino.Mocks.dll
 E:\Nut.NET\src\Tests\Nut.Core.Tests\bin\Debug\Nut.Tests.pdb
 E:\Nut.NET\src\Tests\Nut.Core.Tests\bin\Debug\Rhino.Mocks.xml
+E:\Nut.NET\src\Tests\Nut.Core.Tests\bin\Debug\Nut.Core.Tests.dll.config
