@@ -23,6 +23,8 @@ namespace Nut.Data
                     return new SqlServerDataProvider();
                 case "sqlce":
                     return new SqlCeDataProvider();
+                case "mysql":
+                    return new MySqlDataProvider();
                 default:
                     throw new NutException(string.Format("Not supported dataprovider name: {0}", providerName));
             }

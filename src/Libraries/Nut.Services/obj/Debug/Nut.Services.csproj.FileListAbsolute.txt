@@ -61,3 +61,4 @@ E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\zh-Hans\System.Web.Razor.resourc
 E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\zh-Hans\System.Web.WebPages.Razor.resources.dll
 E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\zh-Hans\System.Web.WebPages.resources.dll
 E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\Nut.NET\src\Libraries\Nut.Services\bin\Debug\MySql.Data.dll

@@ -176,3 +176,5 @@ E:\Nut.NET\src\Presentation\Nut.Web\obj\Debug\Nut.Web.dll
 E:\Nut.NET\src\Presentation\Nut.Web\obj\Debug\Nut.Web.pdb
 E:\Nut.NET\src\Presentation\Nut.Web\bin\ImageResizer.dll
 E:\Nut.NET\src\Presentation\Nut.Web\bin\ImageResizer.xml
+E:\Nut.NET\src\Presentation\Nut.Web\bin\MySql.Data.dll
+E:\Nut.NET\src\Presentation\Nut.Web\bin\MySql.Data.Entity.EF6.dll

@@ -1,14 +1,13 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Transactions;
 
-namespace Nut.Data.Initializers
-{
-    public class CreateTablesIfNotExist<TContext> : IDatabaseInitializer<TContext> where TContext : DbContext
-    {
+namespace Nut.Data.Initializers {
+    public class CreateTablesIfNotExist<TContext> : IDatabaseInitializer<TContext> where TContext : DbContext {
         private readonly string[] _tablesToValidate;
         private readonly string[] _customCommands;
 
@@ -17,29 +16,22 @@ namespace Nut.Data.Initializers
         /// </summary>
         /// <param name="tablesToValidate">A list of existing table names to validate; null to don't validate table names</param>
         /// <param name="customCommands">A list of custom commands to execute</param>
-        public CreateTablesIfNotExist(string[] tablesToValidate, string [] customCommands)
-        {
+        public CreateTablesIfNotExist(string[] tablesToValidate, string[] customCommands) {
             this._tablesToValidate = tablesToValidate;
             this._customCommands = customCommands;
         }
-        public void InitializeDatabase(TContext context)
-        {
+        public void InitializeDatabase(TContext context) {
             bool dbExists;
-            using (new TransactionScope(TransactionScopeOption.Suppress))
-            {
+            using (new TransactionScope(TransactionScopeOption.Suppress)) {
                 dbExists = context.Database.Exists();
             }
-            if (dbExists)
-            {
+            if (dbExists) {
                 bool createTables;
-                if (_tablesToValidate != null && _tablesToValidate.Length > 0)
-                {
+                if (_tablesToValidate != null && _tablesToValidate.Length > 0) {
                     //we have some table names to validate
                     var existingTableNames = new List<string>(context.Database.SqlQuery<string>("SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_type = 'BASE TABLE'"));
                     createTables = !existingTableNames.Intersect(_tablesToValidate, StringComparer.InvariantCultureIgnoreCase).Any();
-                }
-                else
-                {
+                } else {
                     //check whether tables are already created
                     int numberOfTables = 0;
                     foreach (var t1 in context.Database.SqlQuery<int>("SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE table_type = 'BASE TABLE' "))
@@ -48,24 +40,30 @@ namespace Nut.Data.Initializers
                     createTables = numberOfTables == 0;
                 }
 
-                if (createTables)
-                {
+                if (createTables) {
                     //create all tables
                     var dbCreationScript = ((IObjectContextAdapter)context).ObjectContext.CreateDatabaseScript();
+
+                    //Need to fix some of the script for MySql
+                    if (context.Database.Connection.GetType() == typeof(MySqlConnection)) {
+                        //MySql doesn't support varbinary(MAX) so it generates the script with varbinary only without
+                        //a size specified, so change to longblob...could probably do this in the mapping for these properties instead
+                        dbCreationScript = dbCreationScript.Replace("`PictureBinary` varbinary,", "`PictureBinary` LONGBLOB,");
+                        dbCreationScript = dbCreationScript.Replace("`DownloadBinary` varbinary,", "`DownloadBinary` LONGBLOB,");
+                    }
+
                     context.Database.ExecuteSqlCommand(dbCreationScript);
 
                     //Seed(context);
                     context.SaveChanges();
 
-                    if (_customCommands != null && _customCommands.Length > 0)
-                    {
+                    if (_customCommands != null && _customCommands.Length > 0) {
                         foreach (var command in _customCommands)
                             context.Database.ExecuteSqlCommand(command);
                     }
                 }
-            }
-            else
-            {
+
+            } else {
                 throw new ApplicationException("No database instance");
             }
         }

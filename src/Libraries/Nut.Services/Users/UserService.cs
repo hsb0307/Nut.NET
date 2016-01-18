@@ -100,7 +100,8 @@ namespace Nut.Services.Users {
 
             query = query.Where(c => !c.Deleted);
             if (UserRoleIds != null && UserRoleIds.Length > 0)
-                query = query.Where(c => c.UserRoles.Select(cr => cr.Id).Intersect(UserRoleIds).Any());
+                //query = query.Where(c => c.UserRoles.Select(cr => cr.Id).Intersect(UserRoleIds).Any());
+                query = query.Where(c => c.UserRoles.Where(p => UserRoleIds.Contains(p.Id)).Any());
             if (!String.IsNullOrWhiteSpace(email))
                 query = query.Where(c => c.Email.Contains(email));
             if (!String.IsNullOrWhiteSpace(username))

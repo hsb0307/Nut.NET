@@ -2,6 +2,9 @@
   <LocaleResource Name="AdminEmail">
     <Value>Admin user email</Value>
   </LocaleResource>
+  <LocaleResource Name="AdminUsername">
+    <Value>Admin user name</Value>
+  </LocaleResource>
   <LocaleResource Name="AdminEmailRequired">
     <Value>Enter admin email</Value>
   </LocaleResource>
@@ -121,6 +124,9 @@
   </LocaleResource>
   <LocaleResource Name="SqlStandard">
     <Value>Use SQL Server (or SQL Express) database</Value>
+  </LocaleResource>
+  <LocaleResource Name="MySqlStandard">
+    <Value>Use My Sql database</Value>
   </LocaleResource>
   <LocaleResource Name="StoreInformation">
     <Value>Store information</Value>

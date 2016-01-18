@@ -8,8 +8,8 @@ namespace Nut.Data.Mapping.Customers
         {
             this.ToTable("User");
             this.HasKey(c => c.Id);
-            this.Property(u => u.Username).HasMaxLength(1000);
-            this.Property(u => u.Email).HasMaxLength(1000);
+            this.Property(u => u.Username).HasMaxLength(1000).HasColumnType("varchar");
+            this.Property(u => u.Email).HasMaxLength(1000).HasColumnType("varchar");
 
             this.Ignore(u => u.PasswordFormat);
 

@@ -1,2 +1,2 @@
-DataProvider: sqlserver
-DataConnectionString: Data Source=.;Initial Catalog=NutNet;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=sa
+DataProvider: mysql
+DataConnectionString: database=nutnet;server=192.168.0.203;user id=root;password=admin;pooling=False;characterset=utf8;port=3306

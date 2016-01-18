@@ -1,0 +1,10 @@
+2016-01-18 12:04:57,417 [7] Nut.Web.Framework.Logging.LoggingModule - An error occurred while preparing the command definition. See the inner exception for details.
+2016-01-18 12:04:57,469 [7] Nut.Web.Framework.Logging.LoggingModule - An error occurred while preparing the command definition. See the inner exception for details.
+2016-01-18 12:41:49,739 [27] Nut.Web.Framework.Logging.LoggingModule - An error occurred while preparing the command definition. See the inner exception for details.
+2016-01-18 12:41:49,817 [27] Nut.Web.Framework.Logging.LoggingModule - An error occurred while preparing the command definition. See the inner exception for details.
+2016-01-18 13:10:33,160 [7] Nut.Web.Framework.Logging.LoggingModule - An error occurred while preparing the command definition. See the inner exception for details.
+2016-01-18 13:10:33,191 [7] Nut.Web.Framework.Logging.LoggingModule - An error occurred while preparing the command definition. See the inner exception for details.
+2016-01-18 13:18:16,582 [8] Nut.Web.Framework.Logging.LoggingModule - A potentially dangerous Request.Form value was detected from the client (Description="<!DOCTYPE html>
+<ht...").
+2016-01-18 13:18:16,627 [8] Nut.Web.Framework.Logging.LoggingModule - A potentially dangerous Request.Form value was detected from the client (Description="<!DOCTYPE html>
+<ht...").

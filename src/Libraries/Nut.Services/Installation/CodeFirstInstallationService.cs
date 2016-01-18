@@ -117,7 +117,7 @@ namespace Nut.Services.Installation {
             _departmentRepository.Insert(departments);
         }
 
-        protected virtual void InstallCustomersAndUsers(string defaultUserEmail, string defaultUserPassword) {
+        protected virtual void InstallUsersAndRoles(string defaultUsername, string defaultUserPassword) {
             var crAdministrators = new UserRole {
                 Name = "Administrators",
                 Active = true,
@@ -145,8 +145,8 @@ namespace Nut.Services.Installation {
             //admin user
             var adminUser = new User {
                 UserGuid = Guid.NewGuid(),
-                Email = defaultUserEmail,
-                Username = defaultUserEmail,
+                Email = "",
+                Username = defaultUsername,
                 Password = defaultUserPassword,
                 PasswordFormat = PasswordFormat.Clear,
                 PasswordSalt = "",
@@ -305,7 +305,7 @@ namespace Nut.Services.Installation {
             InstallStores();
             InstallLanguages();
             InstallDepartments();
-            InstallCustomersAndUsers(defaultUsername, defaultUserPassword);
+            InstallUsersAndRoles(defaultUsername, defaultUserPassword);
             InstallSettings();
 
             InstallLocaleResources();

@@ -2,6 +2,9 @@
   <LocaleResource Name="AdminEmail">
     <Value>管理员邮箱</Value>
   </LocaleResource>
+  <LocaleResource Name="AdminUsername">
+    <Value>管理员用户名</Value>
+  </LocaleResource>
   <LocaleResource Name="AdminEmailRequired">
     <Value>请输入管理员邮箱</Value>
   </LocaleResource>
@@ -121,6 +124,9 @@
   </LocaleResource>
   <LocaleResource Name="SqlStandard">
     <Value>使用SQL Server(或SQL Express)数据库</Value>
+  </LocaleResource>
+  <LocaleResource Name="MySqlStandard">
+    <Value>使用My Sql数据库</Value>
   </LocaleResource>
   <LocaleResource Name="StoreInformation">
     <Value>商店信息</Value>
