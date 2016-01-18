@@ -542,9 +542,6 @@
     <Content Include="Views\User\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\EditorTemplates\RichEditor.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Common\LanguageSelector.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -564,6 +561,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Department\_CreateOrUpdate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\EditorTemplates\UEditor.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

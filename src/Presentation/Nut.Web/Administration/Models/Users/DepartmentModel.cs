@@ -41,7 +41,8 @@ namespace Nut.Admin.Models.Users {
         public System.Boolean Deleted { get; set; }
 
         [NutResourceDisplayName("Admin.Users.Departments.Fields.Description")]
-        //[AllowHtml]
+        [UIHint("UEditor")]
+        [AllowHtml]
         public System.String Description { get; set; }
 
         private IList<SelectListItem> _availableDepartments;

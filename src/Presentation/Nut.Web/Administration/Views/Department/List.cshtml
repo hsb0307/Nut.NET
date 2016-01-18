@@ -5,7 +5,6 @@
     //page title
     ViewBag.Title = T("Admin.Users.Departments").Text;
 }
-
 <h3>
     <!-- Breadcrumb right aligned-->
     <ol class="breadcrumb pull-right">
@@ -27,7 +26,6 @@
 <!-- START table-responsive-->
 <div class="table-responsive b0">
     <div id="Departments-grid"></div>
-
 </div>
 <!-- END table-responsive -->
 <script>
@@ -109,24 +107,16 @@
                 field: "Breadcrumb",
                 title: "@T("Admin.Users.Departments.Fields.Name")",
                 template: '<a href="Edit/#=Id#">#=Breadcrumb#</a>'
-            },
-                 {
-                     field: "DisplayOrder",
-                     title: "@T("Admin.Users.Departments.Fields.DisplayOrder")"
-                 },
-                {
-                    field: "Description",
-                    title: "@T("Admin.Users.Departments.Fields.Description")"
-                },
-
-                {
-                    field: "Id",
-                    title: "@T("Admin.Common.Edit")",
-                    width: 150,
-                    template: '<a class="btn btn-sm btn-default" href="Edit/#=Id#">@T("Admin.Common.Edit")</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-sm btn-default" href="javascript:void(0);" onclick="deleteDepartment(#=Id#)">@T("Admin.Common.Delete")</a>'
-                }]
+            },{
+                field: "DisplayOrder",
+                title: "@T("Admin.Users.Departments.Fields.DisplayOrder")"
+            },  {
+                field: "Id",
+                title: "@T("Admin.Common.Edit")",
+                width: 150,
+                template: '<a class="btn btn-sm btn-default" href="Edit/#=Id#">@T("Admin.Common.Edit")</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-sm btn-default" href="javascript:void(0);" onclick="deleteDepartment(#=Id#)">@T("Admin.Common.Delete")</a>'
+            }]
         });
     });
 </script>
-
 
