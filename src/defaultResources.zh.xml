@@ -1,0 +1,1285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language Name="简体中文">
+  <LocaleResource Name="ActivityLog.AddNewCategory">
+    <Value>添加新的分类('{0}')</Value>
+  </LocaleResource>
+  <LocaleResource Name="ActivityLog.AddNewUser">
+    <Value>添加新的用户(编号：{0})</Value>
+  </LocaleResource>
+  <LocaleResource Name="ActivityLog.AddNewUserRole">
+    <Value>添加新的用户角色('{0}')</Value>
+  </LocaleResource>
+  <LocaleResource Name="ActivityLog.AddNewSetting">
+    <Value>添加新的设置('{0}')</Value>
+  </LocaleResource>
+  <LocaleResource Name="ActivityLog.DeleteUser">
+    <Value>删除用户(ID = {0})</Value>
+  </LocaleResource>
+  <LocaleResource Name="ActivityLog.DeleteUserRole">
+    <Value>删除用户角色('{0}')</Value>
+  </LocaleResource>
+  <LocaleResource Name="ActivityLog.DeleteSetting">
+    <Value>删除设置('{0}')</Value>
+  </LocaleResource>
+  <LocaleResource Name="ActivityLog.EditUser">
+    <Value>编辑用户(ID = {0})</Value>
+  </LocaleResource>
+  <LocaleResource Name="ActivityLog.EditUserRole">
+    <Value>编辑用户角色('{0}')</Value>
+  </LocaleResource>
+  <LocaleResource Name="ActivityLog.EditSettings">
+    <Value>编辑设置</Value>
+  </LocaleResource>
+  <LocaleResource Name="ActivityLog.PublicStore.Login">
+    <Value>登录</Value>
+  </LocaleResource>
+  <LocaleResource Name="ActivityLog.PublicStore.Logout">
+    <Value>注销</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Admin">
+    <Value>后台管理</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.AccessDenied.Description">
+    <Value>您没有权限执行该操作.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.AccessDenied.Title">
+    <Value>拒绝访问.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Admin.Common.AddNew">
+    <Value>添加</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.All">
+    <Value>所有</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.AreYouSure">
+    <Value>确认该操作?</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Cancel">
+    <Value>取消</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Change">
+    <Value>修改</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Check">
+    <Value>选中</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Clear">
+    <Value>清除</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Success">
+    <Value>成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Error">
+    <Value>失败</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.ConfigurationNotRequired">
+    <Value>不需要配置</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.CsvFile">
+    <Value>CSV文件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Delete">
+    <Value>删除</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Delete.Selected">
+    <Value>删除所选</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.DeleteConfirmation">
+    <Value>确认删除？</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.DeleteText">
+    <Value>你将于删除</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.DeleteConfirmationParam">
+    <Value>确认删除"{0}"？</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Edit">
+    <Value>编辑</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.ExcelFile">
+    <Value>Excel文件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.ExportToCsv">
+    <Value>导出到CSV</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.ExportToExcel">
+    <Value>导出到Excel</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.ExportToExcel.All">
+    <Value>导出到Excel(全部)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.ExportToExcel.Selected">
+    <Value>导出到Excel(所选)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.ExportToXml">
+    <Value>导出到XML</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.ExportToXml.All">
+    <Value>导出到XML(全部)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.ExportToXml.Selected">
+    <Value>导出到XML(所选)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Go">
+    <Value>转到</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Hide">
+    <Value>隐藏</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.ImportFromCsv">
+    <Value>从CSV导入</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.ImportFromExcel">
+    <Value>从Excel导入</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.List">
+    <Value>列表</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.LoseUnsavedChanges">
+    <Value>确认放弃修改？</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.No">
+    <Value>否</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.NoCancel">
+    <Value>取消</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Preview">
+    <Value>预览</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Save">
+    <Value>保存</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.SaveContinue">
+    <Value>保存并继续编辑</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Search">
+    <Value>搜索</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Select">
+    <Value>请选择</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.SEO">
+    <Value>搜索引擎优化</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Show">
+    <Value>显示</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Standard">
+    <Value>标准</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Treeview">
+    <Value>树结构视图</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Update">
+    <Value>更新</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.UploadFile">
+    <Value>请选择上传文件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.View">
+    <Value>查看</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Welcome">
+    <Value>欢迎</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.WrongEmail">
+    <Value>电子邮箱错误</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Yes">
+    <Value>是</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration">
+    <Value>站点配置</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ACL">
+    <Value>访问控制</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ACL.Permission">
+    <Value>名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ACL.Updated">
+    <Value>修改访问控制成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog">
+    <Value>活动日志</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog">
+    <Value>活动日志</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.ActivityLogType">
+    <Value>日志类型</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.ActivityLogType.Hint">
+    <Value>日志类型</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.User">
+    <Value>用户</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.ActivityLogTypeColumn">
+    <Value>日志类型</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.Comment">
+    <Value>内容</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.CreatedOn">
+    <Value>创建日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.CreatedOnFrom">
+    <Value>开始日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.CreatedOnFrom.Hint">
+    <Value>开始日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.CreatedOnTo">
+    <Value>结束日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.CreatedOnTo.Hint">
+    <Value>结束日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.Customer">
+    <Value>客户</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.CustomerEmail">
+    <Value>电子邮箱</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLog.Fields.CustomerEmail.Hint">
+    <Value>电子邮箱</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLogType">
+    <Value>日志类型</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLogType.Fields.Enabled">
+    <Value>已启用</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLogType.Fields.Name">
+    <Value>名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ActivityLog.ActivityLogType.Updated">
+    <Value>修改日志类型成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ExternalAuthenticationMethods">
+    <Value>外部授权</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ExternalAuthenticationMethods.BackToList">
+    <Value>返回外部授权列表</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ExternalAuthenticationMethods.Configure">
+    <Value>配置</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ExternalAuthenticationMethods.Fields.DisplayOrder">
+    <Value>显示顺序</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ExternalAuthenticationMethods.Fields.FriendlyName">
+    <Value>友好名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ExternalAuthenticationMethods.Fields.IsActive">
+    <Value>已启用</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.ExternalAuthenticationMethods.Fields.SystemName">
+    <Value>系统名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages">
+    <Value>语言管理</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Added">
+    <Value>添加语言成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.AddNew">
+    <Value>添加新的语言</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.BackToList">
+    <Value>返回语言列表</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Deleted">
+    <Value>删除语言成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.EditLanguageDetails">
+    <Value>编辑语言</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Export">
+    <Value>导出资源</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.AvailableStores">
+    <Value>站点</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.AvailableStores.Hint">
+    <Value>选择要显示此语言的站点</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.DefaultCurrency">
+    <Value>默认货币</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.DefaultCurrency.Hint">
+    <Value>语言对应的货币</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.DisplayOrder">
+    <Value>显示顺序</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.DisplayOrder.Hint">
+    <Value>显示顺序</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.FlagImageFileName">
+    <Value>国旗图像文件名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.FlagImageFileName.Hint">
+    <Value>语言国旗图像文件名称，可以在\images\flags找到</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.LanguageCulture">
+    <Value>语言文化</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.LanguageCulture.Hint">
+    <Value>语言文化</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.LanguageCulture.Validation">
+    <Value>请选择有效语言文化</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.LimitedToStores">
+    <Value>站点限制</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.LimitedToStores.Hint">
+    <Value>选择要显示此语言是否在特定的站点中启用</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.Name">
+    <Value>名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.Name.Hint">
+    <Value>名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.Name.Required">
+    <Value>请输入名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.Published">
+    <Value>已发布</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.Published.Hint">
+    <Value>已发布</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.Rtl">
+    <Value>从右到左</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.Rtl.Hint">
+    <Value>启用从右到左的语言支持，使用中的主题也应支持RTL（要求有相应的CSS文件）。此选项只影响到站点前台</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.UniqueSeoCode">
+    <Value>唯一SEO代码</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.UniqueSeoCode.Hint">
+    <Value>当网店在使用多语言时，由2个字母组成的唯一SEO代码能为你生成类似网址 http://www.yourStore.com/en/，"多语言SEO友好网址"选项也应该启用</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.UniqueSeoCode.Length">
+    <Value>唯一SEO代码应该为2个字母</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Fields.UniqueSeoCode.Required">
+    <Value>请输入唯一SEO代码</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Import">
+    <Value>导入资源</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Imported">
+    <Value>导入资源成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Info">
+    <Value>信息</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Localization">
+    <Value>本地化内容</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Resources">
+    <Value>语言包</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Resources.Description">
+    <Value>要查找资源字符串(名称或值)，您可以使用过滤器(漏斗形图标)来过滤资源字符串</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Resources.Fields.LanguageName">
+    <Value>语言</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Resources.Fields.Name">
+    <Value>名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Resources.Fields.Name.Required">
+    <Value>请输入名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Resources.Fields.Value">
+    <Value>值</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Resources.Fields.Value.Required">
+    <Value>请输入值</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Resources.NameAlreadyExists">
+    <Value>改资源字符串已存在：{0}</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Resources.View">
+    <Value>查看资源</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Select">
+    <Value>选择语言</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Stores">
+    <Value>站点</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.Updated">
+    <Value>修改语言成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.XmlFile">
+    <Value>Xml文件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.XmlFile.Note1">
+    <Value>注意：它可以长达数分钟</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Languages.XmlFile.Note2">
+    <Value>注意：不要点击两次</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins">
+    <Value>插件管理</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Description">
+    <Value>手动安装插件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Description.Step1">
+    <Value>在 nopCommerce目录的 plugins文件夹中上传插件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Description.Step2">
+    <Value>重启应用程序(或点击重载插件列表按扭)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Description.Step3">
+    <Value>滚动插件列表来找到最近安装的插件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Description.Step4">
+    <Value>单击安装链接来安装插件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Description.Step5">
+    <Value>注意：如果将nopcommerce设置为中等信任,它们将删除你的\Plugins\bin\directory目录下的文件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.EditDetails">
+    <Value>编辑插件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.Author">
+    <Value>作者</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.AvailableStores">
+    <Value>商店</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.AvailableStores.Hint">
+    <Value>选择的存储为，将使用该插件。</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.Configure">
+    <Value>配置</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.DisplayOrder">
+    <Value>显示顺序</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.DisplayOrder.Hint">
+    <Value>显示顺序</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.FriendlyName">
+    <Value>友好名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.FriendlyName.Hint">
+    <Value>友好名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.FriendlyName.Required">
+    <Value>请输入友好名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.Group">
+    <Value>集合</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.Install">
+    <Value>安装</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.Install.Progress">
+    <Value>正在安装...</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.Installation">
+    <Value>安装</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.Installed">
+    <Value>已安装</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.IsEnabled">
+    <Value>已启用</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.IsEnabled.Hint">
+    <Value>已启用</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.LimitedToStores">
+    <Value>向商店有限公司</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.LimitedToStores.Hint">
+    <Value>确定该插件只在某些商店是否可用。</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.Logo">
+    <Value>Logo标记</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.SystemName">
+    <Value>系统名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.Uninstall">
+    <Value>卸载</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.Uninstall.Progress">
+    <Value>正在卸载...</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Fields.Version">
+    <Value>版本</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Info">
+    <Value>插件信息</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Installed">
+    <Value>插件安装成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Misc.BackToList">
+    <Value>返回插件列表</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Misc.Configure">
+    <Value>配置</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.ReloadList">
+    <Value>重载插件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Stores">
+    <Value>商店</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Plugins.Uninstalled">
+    <Value>插件已卸载</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings">
+    <Value>设置管理</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.AllSettings">
+    <Value>所有设置(高级)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.AllSettings.Description">
+    <Value>要查找设置(名称或值)，您可以使用过滤器(漏斗形图标)来过滤资源字符串</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.AllSettings.Fields.Name">
+    <Value>名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.AllSettings.Fields.Name.Required">
+    <Value>请输入名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.AllSettings.Fields.StoreName">
+    <Value>站点</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.AllSettings.Fields.StoreName.AllStores">
+    <Value>所有站点</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.AllSettings.Fields.Value">
+    <Value>值</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Admin.Configuration.Stores">
+    <Value>站点</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Added">
+    <Value>已成功添加新站点</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.AddNew">
+    <Value>添加新站点</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.BackToList">
+    <Value>回到站点列表</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Deleted">
+    <Value>已成功删除此站点</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.EditStoreDetails">
+    <Value>编辑站点信息</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.DisplayOrder">
+    <Value>显示顺序</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.DisplayOrder.Hint">
+    <Value>此站点的显示优先级，1代表最先</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.Hosts">
+    <Value>HOST值</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.Hosts.Hint">
+    <Value>"用英文逗号分开的可能的HTTP_POST值，比如 ""yourstore.com,www.yourstore.com""。此属性只有在多店中用来匹配当前店铺。"</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.Name">
+    <Value>站点名</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.Name.Hint">
+    <Value>输入站点名字，比如Your Store</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.Name.Required">
+    <Value>请输入站点名</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.SecureUrl">
+    <Value>安全链接</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.SecureUrl.Hint">
+    <Value>站点的安全链接值，比如https://www.yourstore.com/ 或 http://sharedssl.yourstore.com/。如果你想让nopCommerce自动探测安全链接，请留空此项</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.SslEnabled">
+    <Value>启用SSL</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.SslEnabled.Hint">
+    <Value>如果你的站点使用SSL，请勾选此项</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.SslEnabled.Hint2">
+    <Value>警告：在你安装好SSL之前请不要启用此项</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.Url">
+    <Value>站点URL</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.Url.Hint">
+    <Value>站点的URL，比如http://www.yourstore.com/</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Fields.Url.Required">
+    <Value>请输入站点URL</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Stores.Updated">
+    <Value>站点信息已经成功更新</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Admin.Configuration.Updated">
+    <Value>修改设置成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Dashboard">
+    <Value>后台首页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Dashboard.StoreStatistics">
+    <Value>商城统计</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Admin.Download.DownloadUploadedFile">
+    <Value>下载上传文件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Download.DownloadURL">
+    <Value>下载地址</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Download.DownloadURLSaved">
+    <Value>保存成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Download.RemoveDownload">
+    <Value>移除下载</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Download.SaveDownloadURL">
+    <Value>保存</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Download.UploadFile">
+    <Value>上传文件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Download.UseDownloadURL">
+    <Value>使用下载链接</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Admin.Header.ClearCache">
+    <Value>清除缓存</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Header.LoggedInAs">
+    <Value>登录为：{0}</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Header.Logout">
+    <Value>注销?</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Header.PublicStore">
+    <Value>返回前台</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Header.RestartApplication">
+    <Value>重启程序</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Header.RestartApplication.Progress">
+    <Value>程序重启中...</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Help">
+    <Value>帮助中心</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Help.Forums">
+    <Value>社区论坛</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Help.SupportServices">
+    <Value>高级支持服务</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Help.Topics">
+    <Value>帮助文档</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Admin.Home">
+    <Value>后台首页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.PageTitle">
+    <Value>Nut .NET 管理</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Picture.RemovePicture">
+    <Value>删除图片</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Plugins">
+    <Value>插件管理</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Plugins.Saved">
+    <Value>插件更新成功</Value>
+  </LocaleResource>
+ 
+  <LocaleResource Name="Admin.System">
+    <Value>系统信息</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log">
+    <Value>系统日志</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.BackToList">
+    <Value>返回系统日志列表</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Cleared">
+    <Value>清除系统日志成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.ClearLog">
+    <Value>清除日志</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Deleted">
+    <Value>删除系统日志成功</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.DeleteSelected">
+    <Value>删除所选</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.CreatedOn">
+    <Value>创建日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.CreatedOn.Hint">
+    <Value>创建日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.Customer">
+    <Value>客户</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.Customer.Hint">
+    <Value>客户</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.FullMessage">
+    <Value>完整信息</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.FullMessage.Hint">
+    <Value>完整信息</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.IPAddress">
+    <Value>IP地址</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.IPAddress.Hint">
+    <Value>IP地址</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.LogLevel">
+    <Value>日志级别</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.LogLevel.Hint">
+    <Value>日志级别</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.PageURL">
+    <Value>页面链接</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.PageURL.Hint">
+    <Value>页面链接</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.ReferrerURL">
+    <Value>引用链接</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.ReferrerURL.Hint">
+    <Value>引用链接</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.ShortMessage">
+    <Value>简短说明</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.Fields.ShortMessage.Hint">
+    <Value>简短说明</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.List.CreatedOnFrom">
+    <Value>开始日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.List.CreatedOnFrom.Hint">
+    <Value>开始日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.List.CreatedOnTo">
+    <Value>结束日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.List.CreatedOnTo.Hint">
+    <Value>结束日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.List.LogLevel">
+    <Value>日志级别</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.List.LogLevel.Hint">
+    <Value>日志级别</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.List.Message">
+    <Value>关键字</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.List.Message.Hint">
+    <Value>关键字</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.Log.ViewLogDetails">
+    <Value>详情</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Admin.System.ScheduleTasks">
+    <Value>计划任务</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.Enabled">
+    <Value>已启用</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.LastEnd">
+    <Value>最后结束日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.LastStart">
+    <Value>最后开始日期</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.LastSuccess">
+    <Value>最后成功日志</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.Name">
+    <Value>名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.Name.Required">
+    <Value>请输入名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.RestartApplication">
+    <Value>修改后需要重启商城生效</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.RunNow">
+    <Value>立即运行</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.RunNow.Done">
+    <Value>调度任务运行</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.RunNow.Progress">
+    <Value>运行计划任务</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.Seconds">
+    <Value>间隔时间(秒)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.Seconds.Positive">
+    <Value>秒必需是正数</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.ScheduleTasks.StopOnError">
+    <Value>发生错误时停止</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SeNames">
+    <Value>友好页面名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SeNames.DeleteSelected">
+    <Value>删除所选</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SeNames.EntityId">
+    <Value>编号</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SeNames.EntityName">
+    <Value>名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SeNames.IsActive">
+    <Value>已启用</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SeNames.Language">
+    <Value>语言</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SeNames.Language.Standard">
+    <Value>标准</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SeNames.Name">
+    <Value>名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SeNames.Name.Hint">
+    <Value>名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo">
+    <Value>版本信息</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.ASPNETInfo">
+    <Value>ASP.NET版本</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.ASPNETInfo.Hint">
+    <Value>ASP.NET版本</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.HTTPHOST">
+    <Value>HTTP_HOST</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.HTTPHOST.Hint">
+    <Value>HTTP_HOST用于多店解决方案，用来决定哪个商城是当前商城</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.IsFullTrust">
+    <Value>完全信任级别</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.IsFullTrust.Hint">
+    <Value>完全信任级别</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.LoadedAssemblies">
+    <Value>已加载的程序集</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.LoadedAssemblies.Hint">
+    <Value>已加载的程序集</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.NopVersion">
+    <Value>Nut .NET 版本</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.NopVersion.Hint">
+    <Value>Nut .NET 版本</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.OperatingSystem">
+    <Value>操作系统</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.OperatingSystem.Hint">
+    <Value>操作系统</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.ServerLocalTime">
+    <Value>服务器本地时间</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.ServerLocalTime.Hint">
+    <Value>服务器本地时间</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.ServerTimeZone">
+    <Value>服务器时区</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.ServerTimeZone.Hint">
+    <Value>服务器时区</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.ServerVariables">
+    <Value>服务器变量</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.ServerVariables.Hint">
+    <Value>服务器变量的列表</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.UTCTime">
+    <Value>格林威治标准时间(GMT/UTC)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.System.SystemInfo.UTCTime.Hint">
+    <Value>格林威治标准时间(GMT/UTC)</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Admin.System.Warnings">
+    <Value>系统警告</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Admin.Users">
+    <Value>用户</Value>
+  </LocaleResource>
+  <LocaleResource Name="admin.users.addnew">
+    <Value>用户添加</Value>
+  </LocaleResource>
+  <LocaleResource Name="admin.users.backtolist ">
+    <Value>返回列表</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.ChangePassword">
+    <Value>修改密码</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments">
+    <Value>部门</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments.AddNew">
+    <Value>部门添加</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments.BackToList">
+    <Value>返回列表</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments.Edit">
+    <Value>部门编辑</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Department.NotParentDepartment">
+    <Value>无</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments.Fields.Id">
+    <Value>编号</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments.Fields.Code">
+    <Value>代码</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments.Fields.Deleted">
+    <Value>删除</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments.Fields.Description">
+    <Value>说明</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments.Fields.DisplayOrder">
+    <Value>排序号</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments.Fields.Name">
+    <Value>姓名</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments.Fields.ParentId">
+    <Value>上级编号</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Departments.Fields.StoreId">
+    <Value>站点编号</Value>
+  </LocaleResource>
+  <LocaleResource Name="admin.users.edit ">
+    <Value>用户编辑</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.Active">
+    <Value>激活</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.AdminComment">
+    <Value>备注</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.CreatedOnUtc">
+    <Value>创建时间</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.Deleted">
+    <Value>删除</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.DepartmentId">
+    <Value>部门</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.Email">
+    <Value>Email</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.IsSystemAccount">
+    <Value>是否为系统用户</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.LastActivityDateUtc">
+    <Value>最近一次访问时间</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.LastIpAddress">
+    <Value>最近一次IP地址</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.LastLoginDateUtc">
+    <Value>最近一次登录时间</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.Password">
+    <Value>密码</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.PasswordFormatId">
+    <Value>密码格式</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.PasswordSalt">
+    <Value>密码</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Fields.Username">
+    <Value>用户名</Value>
+  </LocaleResource>
+  <LocaleResource Name="admin.users.fields.departmentsname">
+    <Value>部门名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Logout">
+    <Value>注销</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.OnlineUsers">
+    <Value>在线用户</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.OnlineUsers.Fields.IPAddress">
+    <Value>IP地址</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.OnlineUsers.Fields.LastActivityDate">
+    <Value>最近一次访问时间</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.OnlineUsers.Fields.UserInfo">
+    <Value>用户信息</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.UserRoles">
+    <Value>角色</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.UserRoles.AddNew">
+    <Value>角色添加</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.UserRoles.BackToList">
+    <Value>返回列表</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.UserRoles.Edit">
+    <Value>角色编辑</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.UserRoles.Fields.Id">
+    <Value>编号</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.UserRoles.Fields.Active">
+    <Value>激活</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.UserRoles.Fields.IsSystemRole">
+    <Value>是否为系统角色</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.UserRoles.Fields.Name">
+    <Value>名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.UserRoles.Fields.SystemName">
+    <Value>系统名称</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Users.List.Departments">
+    <Value>部门</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Users.List.SearchEmail">
+    <Value>Email</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Users.List.SearchUsername">
+    <Value>用户名</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Users.Users.List.UserRoles">
+    <Value>用户角色</Value>
+  </LocaleResource>
+  <LocaleResource Name="Catalog.OrderBy">
+    <Value>排序</Value>
+  </LocaleResource>
+  <LocaleResource Name="Catalog.PageSize">
+    <Value>分页大小</Value>
+  </LocaleResource>
+  <LocaleResource Name="Catalog.PageSize.PerPage">
+    <Value>每页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Catalog.ViewMode">
+    <Value>显示为</Value>
+  </LocaleResource>
+  <LocaleResource Name="Catalog.ViewMode.Grid">
+    <Value>表格</Value>
+  </LocaleResource>
+  <LocaleResource Name="Catalog.ViewMode.List">
+    <Value>列表</Value>
+  </LocaleResource>
+  
+
+  <LocaleResource Name="EUCookieLaw.CannotBrowse">
+    <Value>只有允许Cookies你才能浏览这个网站</Value>
+  </LocaleResource>
+  <LocaleResource Name="EUCookieLaw.Description">
+    <Value>在2011年5月26日，网站的Cookies规则改变了。我们使用一个或多个cookies对于这个网站的部分操作和已经设置的，是至关重要的。你可以删除和阻止所有这个网站的cookies,但是网站的部分不会工作。想了解更多关于这个网站上cookie的使用和如何删除cookies,看我们的隐私政策</Value>
+  </LocaleResource>
+  <LocaleResource Name="EUCookieLaw.Description2">
+    <Value>Cookies帮助我们提供我们的服务。如果要使用我们的服务,您需同意我们使用cookie。</Value>
+  </LocaleResource>
+  <LocaleResource Name="EUCookieLaw.LearnMore">
+    <Value>了解更多</Value>
+  </LocaleResource>
+  <LocaleResource Name="EUCookieLaw.Title">
+    <Value>Cookie设置</Value>
+  </LocaleResource>
+  <LocaleResource Name="Filtering.FilterResults">
+    <Value>从结果中筛选</Value>
+  </LocaleResource>
+  <LocaleResource Name="Filtering.PriceRangeFilter">
+    <Value>价格过滤</Value>
+  </LocaleResource>
+  <LocaleResource Name="Filtering.PriceRangeFilter.Over">
+    <Value>{0} 以上</Value>
+  </LocaleResource>
+  <LocaleResource Name="Filtering.PriceRangeFilter.Remove">
+    <Value>移除过滤</Value>
+  </LocaleResource>
+  <LocaleResource Name="Filtering.PriceRangeFilter.Under">
+    <Value>{0} 以下</Value>
+  </LocaleResource>
+  <LocaleResource Name="Filtering.SpecificationFilter">
+    <Value>属性过滤</Value>
+  </LocaleResource>
+  <LocaleResource Name="Filtering.SpecificationFilter.CurrentlyFilteredBy">
+    <Value>当前过滤</Value>
+  </LocaleResource>
+  <LocaleResource Name="Filtering.SpecificationFilter.Remove">
+    <Value>删除过滤器</Value>
+  </LocaleResource>
+  
+  
+
+  
+  
+  <LocaleResource Name="Menu">
+    <Value>菜单</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Pager.CurrentPage">
+    <Value>页码 {0} of {1} (共{2})</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.First">
+    <Value>首页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.FirstPageTitle">
+    <Value>首页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.Last">
+    <Value>尾页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.LastPageTitle">
+    <Value>尾页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.Next">
+    <Value>下一页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.NextPageTitle">
+    <Value>下一页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.PageLinkTitle">
+    <Value>页码 {0}</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.Previous">
+    <Value>上一页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.PreviousPageTitle">
+    <Value>上一页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.CurrentPage">
+    <Value>页码 {0} of {1} (共{2})</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.First">
+    <Value>首页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.FirstPageTitle">
+    <Value>首页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.Last">
+    <Value>尾页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.LastPageTitle">
+    <Value>尾页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.Next">
+    <Value>下一页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.NextPageTitle">
+    <Value>下一页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.PageLinkTitle">
+    <Value>页码 {0}</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.Previous">
+    <Value>上一页</Value>
+  </LocaleResource>
+  <LocaleResource Name="Pager.PreviousPageTitle">
+    <Value>上一页</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Permission.AccessAdminPanel">
+    <Value>访问管理区域</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.AccessWebService">
+    <Value>P插件.访问Web服务</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.ManageACL">
+    <Value>管理区域.管理ACl</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.AllowCustomerImpersonation">
+    <Value>管理区域.允许客户模拟</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.HtmlEditor.ManagePictures">
+    <Value>管理区域.HTML编辑器.管理图片</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.ManageActivityLog">
+    <Value>管理区域.管理活动日志</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.ManageLanguages">
+    <Value>管理区域.管理语言</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.ManageMaintenance">
+    <Value>管理区域.管理维护</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.ManagePlugins">
+    <Value>管理区域.管理插件</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.ManageScheduleTasks">
+    <Value>管理区域.管理计划任务</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.ManageSettings">
+    <Value>管理区域.管理设置</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.ManageStores">
+    <Value>管理区域.管理站点</Value>
+  </LocaleResource>
+  <LocaleResource Name="Permission.ManageUser">
+    <Value>管理区域.管理用户</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="StoreClosed">
+    <Value>站点关闭</Value>
+  </LocaleResource>
+  <LocaleResource Name="StoreClosed.Hint">
+    <Value>站点关闭</Value>
+  </LocaleResource>
+  <LocaleResource Name="StoreTheme">
+    <Value>站点主题</Value>
+  </LocaleResource>
+  
+</Language>

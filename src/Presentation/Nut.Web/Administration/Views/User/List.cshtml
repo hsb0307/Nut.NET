@@ -77,12 +77,12 @@
 <script>
     function deleteUser(id){
         swal({
-            title : "Are you sure?",
-            text : "You will not be Delete User!",
-            type : "warning",
+            title : "@T("Admin.Common.AreYouSure")",
+            text : "@("Admin.Common.DeleteText")@("Admin.Users")",
+            type : "@("Admin.System.Warnings")",
             showCancelButton : true,
             confirmButtonColor : "#DD6B55",
-            confirmButtonText : "Yes, delete it!",
+            confirmButtonText : "@T("Admin.Common.Delete")",
             closeOnConfirm : false
         },
         function () {
@@ -94,11 +94,11 @@
                 success: function (d) {
                     var da=eval('(' + d + ')');
                     if(da.success==true){
-                        swal("Deleted!", da.message, "success");
+                        swal("@T("Admin.Common.Delete")", da.message, "@T("Admin.Common.Success")");
                         location.href = "/admin/User/list";
                     }
                     else{
-                        swal("Deleted!", da.message, "error");
+                        swal("@T("Admin.Common.Delete")!", da.message, "@T("Admin.Common.Error")");
                     }
                 }
             })

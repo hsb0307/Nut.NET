@@ -2,6 +2,7 @@ function setLocation(url) {
     window.location.href = url;
 }
 
+
 function tabstrip_on_tab_select(e) {
     //we use this function to store selected tab index into HML input
     //this way we can persist selected tab between HTTP requests

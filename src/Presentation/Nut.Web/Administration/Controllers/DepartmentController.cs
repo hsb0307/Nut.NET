@@ -58,7 +58,7 @@ namespace Nut.Admin.Controllers
             
 
             var stores = _storeService.GetAllStores();
-            model.AvailableStores.Add(new SelectListItem { Text = _localizationService.GetResource("Admin.Common.Choose"), Value = "0" });
+            model.AvailableStores.Add(new SelectListItem { Text = _localizationService.GetResource("Admin.Common.Select"), Value = "0" });
             foreach (var d in stores) {
                 model.AvailableStores.Add(new SelectListItem {
                     Value = d.Id.ToString(),

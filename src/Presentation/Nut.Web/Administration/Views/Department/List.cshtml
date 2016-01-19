@@ -31,12 +31,12 @@
 <script>
     function deleteDepartment(id){
         swal({
-            title : "Are you sure?",
-            text : "You will not be Delete Department!",
-            type : "warning",
+            title : "@T("Admin.Common.AreYouSure")",
+            text : "@("Admin.Common.DeleteText")@("Admin.Users")",
+            type : "@("dmin.System.Warnings")",
             showCancelButton : true,
             confirmButtonColor : "#DD6B55",
-            confirmButtonText : "Yes, delete it!",
+            confirmButtonText : "@T("Admin.Common.Delete")",
             closeOnConfirm : false
         },
         function () {
