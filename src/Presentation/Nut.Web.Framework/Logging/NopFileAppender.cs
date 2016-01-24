@@ -3,7 +3,7 @@ using log4net.Appender;
 using log4net.Util;
 
 namespace Nut.Web.Framework.Logging {
-    public class NopFileAppender : RollingFileAppender {
+    public class NutFileAppender : RollingFileAppender {
         /// <summary>
         /// Dictionary of already known suffixes (based on previous attempts) for a given filename.
         /// </summary>
@@ -52,7 +52,7 @@ namespace Nut.Web.Framework.Logging {
                     } catch {
                         newSuffix = _suffixes[completeFilename] + i;
 
-                        LogLog.Error(typeof(NopFileAppender), string.Format("NopFileAppender: Failed to open [{0}]. Attempting [{1}-{2}] instead.", fileName, fileName, newSuffix));
+                        LogLog.Error(typeof(NutFileAppender), string.Format("NopFileAppender: Failed to open [{0}]. Attempting [{1}-{2}] instead.", fileName, fileName, newSuffix));
                     }
                 }
 
