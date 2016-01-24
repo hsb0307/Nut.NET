@@ -52,7 +52,7 @@ namespace Nut.Web.Framework.Logging {
                     } catch {
                         newSuffix = _suffixes[completeFilename] + i;
 
-                        LogLog.Error(typeof(NutFileAppender), string.Format("NopFileAppender: Failed to open [{0}]. Attempting [{1}-{2}] instead.", fileName, fileName, newSuffix));
+                        LogLog.Error(typeof(NutFileAppender), string.Format("NutFileAppender: Failed to open [{0}]. Attempting [{1}-{2}] instead.", fileName, fileName, newSuffix));
                     }
                 }
 

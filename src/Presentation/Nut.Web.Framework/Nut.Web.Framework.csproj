@@ -168,7 +168,7 @@
     <Compile Include="Logging\Log4netFactory.cs" />
     <Compile Include="Logging\Log4netLogger.cs" />
     <Compile Include="Logging\LoggingModule.cs" />
-    <Compile Include="Logging\NopFileAppender.cs" />
+    <Compile Include="Logging\NutFileAppender.cs" />
     <Compile Include="Menu\IAdminMenuPlugin.cs" />
     <Compile Include="Menu\SiteMapNode.cs" />
     <Compile Include="Menu\XmlSiteMap.cs" />
