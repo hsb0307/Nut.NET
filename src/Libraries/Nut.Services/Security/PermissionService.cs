@@ -9,13 +9,11 @@ using Nut.Core.Domain.Security;
 using Nut.Services.Users;
 using Nut.Services.Localization;
 
-namespace Nut.Services.Security
-{
+namespace Nut.Services.Security {
     /// <summary>
     /// Permission service
     /// </summary>
-    public partial class PermissionService : IPermissionService
-    {
+    public partial class PermissionService : IPermissionService {
         #region Constants
         /// <summary>
         /// Key for caching
@@ -60,8 +58,7 @@ namespace Nut.Services.Security
              ILocalizationService localizationService,
             ILanguageService languageService,
             ICacheManager cacheManager,
-            ISignals signals)
-        {
+            ISignals signals) {
             this._permissionRecordRepository = permissionRecordRepository;
             this._userService = userService;
             this._workContext = workContext;
@@ -81,14 +78,12 @@ namespace Nut.Services.Security
         /// <param name="permissionRecordSystemName">Permission record system name</param>
         /// <param name="customerRole">Customer role</param>
         /// <returns>true - authorized; otherwise, false</returns>
-        protected virtual bool Authorize(string permissionRecordSystemName, UserRole userRole)
-        {
+        protected virtual bool Authorize(string permissionRecordSystemName, UserRole userRole) {
             if (String.IsNullOrEmpty(permissionRecordSystemName))
                 return false;
-            
+
             string key = string.Format(PERMISSIONS_ALLOWED_KEY, userRole.Id, permissionRecordSystemName);
-            return _cacheManager.Get(key, ctx =>
-            {
+            return _cacheManager.Get(key, ctx => {
                 ctx.Monitor(_signals.When(PERMISSIONS_PATTERN_KEY));
 
                 foreach (var permission1 in userRole.PermissionRecords)
@@ -107,8 +102,7 @@ namespace Nut.Services.Security
         /// Delete a permission
         /// </summary>
         /// <param name="permission">Permission</param>
-        public virtual void DeletePermissionRecord(PermissionRecord permission)
-        {
+        public virtual void DeletePermissionRecord(PermissionRecord permission) {
             if (permission == null)
                 throw new ArgumentNullException("permission");
 
@@ -122,8 +116,7 @@ namespace Nut.Services.Security
         /// </summary>
         /// <param name="permissionId">Permission identifier</param>
         /// <returns>Permission</returns>
-        public virtual PermissionRecord GetPermissionRecordById(int permissionId)
-        {
+        public virtual PermissionRecord GetPermissionRecordById(int permissionId) {
             if (permissionId == 0)
                 return null;
 
@@ -135,13 +128,12 @@ namespace Nut.Services.Security
         /// </summary>
         /// <param name="systemName">Permission system name</param>
         /// <returns>Permission</returns>
-        public virtual PermissionRecord GetPermissionRecordBySystemName(string systemName)
-        {
+        public virtual PermissionRecord GetPermissionRecordBySystemName(string systemName) {
             if (String.IsNullOrWhiteSpace(systemName))
                 return null;
 
             var query = from pr in _permissionRecordRepository.Table
-                        where  pr.SystemName == systemName
+                        where pr.SystemName == systemName
                         orderby pr.Id
                         select pr;
 
@@ -153,8 +145,7 @@ namespace Nut.Services.Security
         /// Gets all permissions
         /// </summary>
         /// <returns>Permissions</returns>
-        public virtual IList<PermissionRecord> GetAllPermissionRecords()
-        {
+        public virtual IList<PermissionRecord> GetAllPermissionRecords() {
             var query = from pr in _permissionRecordRepository.Table
                         orderby pr.Name
                         select pr;
@@ -166,8 +157,7 @@ namespace Nut.Services.Security
         /// Inserts a permission
         /// </summary>
         /// <param name="permission">Permission</param>
-        public virtual void InsertPermissionRecord(PermissionRecord permission)
-        {
+        public virtual void InsertPermissionRecord(PermissionRecord permission) {
             if (permission == null)
                 throw new ArgumentNullException("permission");
 
@@ -180,8 +170,7 @@ namespace Nut.Services.Security
         /// Updates the permission
         /// </summary>
         /// <param name="permission">Permission</param>
-        public virtual void UpdatePermissionRecord(PermissionRecord permission)
-        {
+        public virtual void UpdatePermissionRecord(PermissionRecord permission) {
             if (permission == null)
                 throw new ArgumentNullException("permission");
 
@@ -194,18 +183,14 @@ namespace Nut.Services.Security
         /// Install permissions
         /// </summary>
         /// <param name="permissionProvider">Permission provider</param>
-        public virtual void InstallPermissions(IPermissionProvider permissionProvider)
-        {
+        public virtual void InstallPermissions(IPermissionProvider permissionProvider) {
             //install new permissions
             var permissions = permissionProvider.GetPermissions();
-            foreach (var permission in permissions)
-            {
+            foreach (var permission in permissions) {
                 var permission1 = GetPermissionRecordBySystemName(permission.SystemName);
-                if (permission1 == null)
-                {
+                if (permission1 == null) {
                     //new permission (install it)
-                    permission1 = new PermissionRecord
-                    {
+                    permission1 = new PermissionRecord {
                         Name = permission.Name,
                         SystemName = permission.SystemName,
                         Category = permission.Category,
@@ -214,14 +199,11 @@ namespace Nut.Services.Security
 
                     //default customer role mappings
                     var defaultPermissions = permissionProvider.GetDefaultPermissions();
-                    foreach (var defaultPermission in defaultPermissions)
-                    {
+                    foreach (var defaultPermission in defaultPermissions) {
                         var userRole = _userService.GetUserRoleBySystemName(defaultPermission.CustomerRoleSystemName);
-                        if (userRole == null)
-                        {
+                        if (userRole == null) {
                             //new role (save it)
-                            userRole = new UserRole
-                            {
+                            userRole = new UserRole {
                                 Name = defaultPermission.CustomerRoleSystemName,
                                 Active = true,
                                 SystemName = defaultPermission.CustomerRoleSystemName
@@ -236,8 +218,7 @@ namespace Nut.Services.Security
                         var mappingExists = (from p in userRole.PermissionRecords
                                              where p.SystemName == permission1.SystemName
                                              select p).Any();
-                        if (defaultMappingProvided && !mappingExists)
-                        {
+                        if (defaultMappingProvided && !mappingExists) {
                             permission1.UserRoles.Add(userRole);
                         }
                     }
@@ -255,14 +236,11 @@ namespace Nut.Services.Security
         /// Uninstall permissions
         /// </summary>
         /// <param name="permissionProvider">Permission provider</param>
-        public virtual void UninstallPermissions(IPermissionProvider permissionProvider)
-        {
+        public virtual void UninstallPermissions(IPermissionProvider permissionProvider) {
             var permissions = permissionProvider.GetPermissions();
-            foreach (var permission in permissions)
-            {
+            foreach (var permission in permissions) {
                 var permission1 = GetPermissionRecordBySystemName(permission.SystemName);
-                if (permission1 != null)
-                {
+                if (permission1 != null) {
                     DeletePermissionRecord(permission1);
 
                     //delete permission locales
@@ -271,14 +249,32 @@ namespace Nut.Services.Security
             }
 
         }
-        
+
+        public bool Authorize(IEnumerable<PermissionRecord> permissions) {
+            return Authorize(permissions, _workContext.CurrentUser);
+        }
+
+        /// <summary>
+        /// Authorizes the specified permissions.
+        /// </summary>
+        /// <param name="permissions">The permissions.</param>
+        /// <param name="user">The user.</param>
+        /// <returns></returns>
+        public bool Authorize(IEnumerable<PermissionRecord> permissions, User user) {
+            foreach (var permission in permissions)
+                if (Authorize(permission, user))
+                    //yes, we have such permission
+                    return true;
+
+            //no permission found
+            return false;
+        }
         /// <summary>
         /// Authorize permission
         /// </summary>
         /// <param name="permission">Permission record</param>
         /// <returns>true - authorized; otherwise, false</returns>
-        public virtual bool Authorize(PermissionRecord permission)
-        {
+        public virtual bool Authorize(PermissionRecord permission) {
             return Authorize(permission, _workContext.CurrentUser);
         }
 
@@ -288,22 +284,12 @@ namespace Nut.Services.Security
         /// <param name="permission">Permission record</param>
         /// <param name="customer">Customer</param>
         /// <returns>true - authorized; otherwise, false</returns>
-        public virtual bool Authorize(PermissionRecord permission, User user)
-        {
+        public virtual bool Authorize(PermissionRecord permission, User user) {
             if (permission == null)
                 return false;
 
             if (user == null)
                 return false;
-
-            //old implementation of Authorize method
-            //var customerRoles = customer.CustomerRoles.Where(cr => cr.Active);
-            //foreach (var role in customerRoles)
-            //    foreach (var permission1 in role.PermissionRecords)
-            //        if (permission1.SystemName.Equals(permission.SystemName, StringComparison.InvariantCultureIgnoreCase))
-            //            return true;
-
-            //return false;
 
             return Authorize(permission.SystemName, user);
         }
@@ -313,8 +299,7 @@ namespace Nut.Services.Security
         /// </summary>
         /// <param name="permissionRecordSystemName">Permission record system name</param>
         /// <returns>true - authorized; otherwise, false</returns>
-        public virtual bool Authorize(string permissionRecordSystemName)
-        {
+        public virtual bool Authorize(string permissionRecordSystemName) {
             return Authorize(permissionRecordSystemName, _workContext.CurrentUser);
         }
 
@@ -324,8 +309,7 @@ namespace Nut.Services.Security
         /// <param name="permissionRecordSystemName">Permission record system name</param>
         /// <param name="customer">Customer</param>
         /// <returns>true - authorized; otherwise, false</returns>
-        public virtual bool Authorize(string permissionRecordSystemName, User user)
-        {
+        public virtual bool Authorize(string permissionRecordSystemName, User user) {
             if (String.IsNullOrEmpty(permissionRecordSystemName))
                 return false;
 
@@ -334,7 +318,7 @@ namespace Nut.Services.Security
                 if (Authorize(permissionRecordSystemName, role))
                     //yes, we have such permission
                     return true;
-            
+
             //no permission found
             return false;
         }

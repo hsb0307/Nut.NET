@@ -60,6 +60,21 @@ namespace Nut.Services.Security
         void UninstallPermissions(IPermissionProvider permissionProvider);
 
         /// <summary>
+        /// Authorizes the specified permissions.
+        /// </summary>
+        /// <param name="permissions">The permissions.</param>
+        /// <returns></returns>
+        bool Authorize(IEnumerable<PermissionRecord> permissions);
+
+        /// <summary>
+        /// Authorizes the specified permissions.
+        /// </summary>
+        /// <param name="permissions">The permissions.</param>
+        /// <param name="user">The user.</param>
+        /// <returns></returns>
+        bool Authorize(IEnumerable<PermissionRecord> permissions,User user);
+
+        /// <summary>
         /// Authorize permission
         /// </summary>
         /// <param name="permission">Permission record</param>
