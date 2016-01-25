@@ -103,36 +103,28 @@ Description:
     });
     
     function Delete<%= SourceTable.Name %>(id) {
-            
-       swal({
-            title : "Are you sure?",
-            text : "You will not be Delete <%= SourceTable.Name %>!",
-            type : "warning",
-            showCancelButton : true,
-            confirmButtonColor : "#DD6B55",
-            confirmButtonText : "Yes, delete it!",
-            closeOnConfirm : false
-        },
-        function () {
+       if (confirm('@T("Common.DeleteConfirmation")')) {
             $.ajax({
                 type: "POST",
-                dataType: "text",
-                url: '@(Url.Action("Delete", "<%= SourceTable.Name %>"))',
-                data: { "id": id },
-                success: function (d) {
-                    var da=eval('(' + d + ')');
-                    if(da.success==true){
-                        swal("Deleted!", da.message, "success");
-                        window.document.location.reload();
-                    }
-                    else{
-                        swal("Deleted!", da.message, "error");
-                    }
+                dataType: "json",
+                url: '@(Url.Action("Delete", "<%= SourceTable.Name %>""))',
+                data: { "id": id }
+            })
+            .done(function (data, status, xhr) {
+                if (data.success) {
+                    alert(data.message);
+                    window.document.location.reload();
+                } else {
+                    alert(data.message);
                 }
             })
+            .fail(function (xhr, status, error) {
+                alert('@T("Common.Error")');
+            })
+            .always(function () {
 
-        });
-            
+            });
+        }     
     }
 </script>
 

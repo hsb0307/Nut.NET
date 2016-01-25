@@ -31,34 +31,29 @@
 <!-- END table-responsive -->
 <script>
     function deleteDepartment(id){
-        swal({
-            title : "@T("Admin.Common.AreYouSure")",
-            text : "@("Admin.Common.DeleteText")@("Admin.Users")",
-            type : "@("dmin.System.Warnings")",
-            showCancelButton : true,
-            confirmButtonColor : "#DD6B55",
-            confirmButtonText : "@T("Admin.Common.Delete")",
-            closeOnConfirm : false
-        },
-        function () {
+
+        if(confirm('@T("Common.DeleteConfirmation")')){
             $.ajax({
                 type: "POST",
-                dataType: "text",
+                dataType: "json",
                 url: '@(Url.Action("Delete", "Department"))',
-                data: { "id": id },
-                success: function (d) {
-                    var da=eval('(' + d + ')');
-                    if(da.success==true){
-                        swal("Deleted!", da.message, "success");
-                        location.href = "/admin/Department/list";
-                    }
-                    else{
-                        swal("Deleted!", da.message, "error");
-                    }
+                data: { "id": id }
+            })
+            .done(function(data, status, xhr){
+                if(data.success){
+                    alert(data.message);
+                    window.document.location.reload();
+                }else{
+                    alert(data.message);
                 }
             })
+            .fail(function(xhr, status, error){
+                alert('@T("Common.Error")');
+            })
+            .always(function(){
 
-        });
+            });
+        }
     }
 
     $(function () {

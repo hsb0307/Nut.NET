@@ -6,7 +6,6 @@
     //page title
     ViewBag.Title = T("Admin.Users").Text;
 }
-
 <h3>
     <!-- Breadcrumb right aligned-->
     <ol class="breadcrumb pull-right">
@@ -22,7 +21,6 @@
     @*<span class="text-sm hidden-xs">this is online Users.</span>*@
     <!-- Breadcrumb below title-->
 </h3>
-
 <div class="table-responsive">
     <table class="table">
         <tr>
@@ -32,8 +30,8 @@
             <td>
                 @foreach (var customerRole in Model.AvailableUserRoles) {
                     <input type="checkbox" name="SearchCustomerRoleIds" value="@customerRole.Id"
-                           @if (Model.SearchUserRoleIds != null && Model.SearchUserRoleIds.Contains(customerRole.Id)) { <text> checked="checked" </text>     } />@customerRole.Name @MvcHtmlString.Create("&nbsp;&nbsp;")
-                    
+                           @if (Model.SearchUserRoleIds != null && Model.SearchUserRoleIds.Contains(customerRole.Id)) { <text> checked="checked" </text>         } />@customerRole.Name @MvcHtmlString.Create("&nbsp;&nbsp;")
+
                 }
             </td>
             <td>
@@ -49,7 +47,6 @@
             </td>
             <td>
                 @Html.EditorFor(model => model.SearchUsername)
-
             </td>
             <td>
                 @Html.NopLabelFor(model => model.SearchDepartmentId):
@@ -57,7 +54,6 @@
             <td>
                 @Html.DropDownListFor(model => model.SearchDepartmentId, Model.AvailableDepartments)
             </td>
-
         </tr>
         <tr>
             <td colspan="4">
@@ -67,43 +63,35 @@
         </tr>
     </table>
 </div>
-
 <!-- START table-responsive-->
 <div class="table-responsive b0">
     <div id="users-grid"></div>
-
 </div>
 <!-- END table-responsive -->
 <script>
     function deleteUser(id){
-        swal({
-            title : "@T("Admin.Common.AreYouSure")",
-            text : "@("Admin.Common.DeleteText")@("Admin.Users")",
-            type : "@("Admin.System.Warnings")",
-            showCancelButton : true,
-            confirmButtonColor : "#DD6B55",
-            confirmButtonText : "@T("Admin.Common.Delete")",
-            closeOnConfirm : false
-        },
-        function () {
+        if(confirm('@T("Common.DeleteConfirmation")')){
             $.ajax({
                 type: "POST",
-                dataType: "text",
+                dataType: "json",
                 url: '@(Url.Action("Delete", "User"))',
-                data: { "id": id },
-                success: function (d) {
-                    var da=eval('(' + d + ')');
-                    if(da.success==true){
-                        swal("@T("Admin.Common.Delete")", da.message, "@T("Admin.Common.Success")");
-                        location.href = "/admin/User/list";
-                    }
-                    else{
-                        swal("@T("Admin.Common.Delete")!", da.message, "@T("Admin.Common.Error")");
-                    }
+                data: { "id": id }
+            })
+            .done(function(data, status, xhr){
+                if(data.success){
+                    alert(data.message);
+                    window.document.location.reload();
+                }else{
+                    alert(data.message);
                 }
             })
+            .fail(function(xhr, status, error){
+                alert('@T("Common.Error")');
+            })
+            .always(function(){
 
-        });
+            });
+        }
     }
 
     $(function () {
@@ -175,7 +163,6 @@
         });
     });
 </script>
-
 <script type="text/javascript">
 
     var selectedIds = [];

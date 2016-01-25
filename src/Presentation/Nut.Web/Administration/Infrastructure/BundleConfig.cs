@@ -83,13 +83,6 @@ namespace Nut.Web.Infrastructure {
               "~/Scripts/kendo/2014.1.318/kendo.web.min.js"
            ));
 
-            bundles.Add(new StyleBundle("~/bundles/SweetAlertCss").Include(
-                "~/Vendor/sweetalert/dist/sweetalert.css"
-            ));
-            bundles.Add(new ScriptBundle("~/bundles/SweetAlert").Include(
-                "~/Vendor/sweetalert/dist/sweetalert.min.js"
-            ));
-
             bundles.Add(new StyleBundle("~/bundles/JqueryGritterCss").Include(
                 "~/Vendor/gritter/jquery.gritter.css"
             ));
