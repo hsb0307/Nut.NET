@@ -2571,3 +2571,21 @@
 2016-01-25 14:40:02,584 [24] Nut.Services.Localization.LocalizationService - Resource string (activitylog.deleteuserrole) is not found. Language ID = 1
 2016-01-25 14:40:02,598 [24] Nut.Services.Localization.LocalizationService - Resource string (admin.users.userroles.deleted) is not found. Language ID = 1
 2016-01-25 14:40:04,097 [33] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
+2016-01-25 14:50:31,926 [1] Nut.Web.Framework.Logging.LoggingModule - Application started
+2016-01-25 14:50:34,900 [6] Nut.Services.Localization.LocalizationService - Resource string (account.login.unsuccessful) is not found. Language ID = 1
+2016-01-25 14:50:34,918 [6] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-25 14:50:34,954 [6] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-25 14:50:34,967 [6] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-25 14:50:34,997 [6] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-25 14:50:37,779 [7] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-25 14:50:37,791 [7] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-25 14:50:37,800 [7] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.rememberme) is not found. Language ID = 1
+2016-01-25 14:50:41,209 [7] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
+2016-01-25 14:50:44,836 [8] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
+2016-01-25 14:50:47,137 [7] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
+2016-01-25 14:50:52,871 [9] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
+2016-01-25 14:51:14,203 [9] Nut.Admin.Controllers.SecurityController - Access denied to user # '' on /Admin/Language/List
+2016-01-25 14:51:14,250 [9] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
+2016-01-25 14:51:17,925 [9] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
+2016-01-25 14:51:22,325 [10] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
+2016-01-25 14:51:26,102 [6] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
