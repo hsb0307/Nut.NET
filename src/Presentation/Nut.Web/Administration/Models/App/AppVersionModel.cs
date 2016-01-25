@@ -13,7 +13,6 @@ namespace Nut.Admin.Models.App {
     public class AppVersionModel :BaseNutEntityModel{
 
         [NutResourceDisplayName("Admin.AppVersions.Fields.VersionNum")]
-        [UIHint("Picture")]
         public System.Int32 VersionNum { get; set; }
         [NutResourceDisplayName("Admin.AppVersions.Fields.Version")]
         public System.String Version { get; set; }
@@ -27,6 +26,7 @@ namespace Nut.Admin.Models.App {
         [NutResourceDisplayName("Admin.AppVersions.Fields.Deleted")]
         public System.Boolean Deleted { get; set; }
         [NutResourceDisplayName("Admin.AppVersions.Fields.CreateON")]
+        [UIHint("Date")]
         public System.DateTime CreateON { get; set; }
     }
 }
