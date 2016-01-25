@@ -1,0 +1,47 @@
+﻿@using Nut.Web.Framework.UI;
+@{
+    //success messages
+    var successMessages = new List<string>();
+    if (TempData[string.Format("nut.notifications.{0}", NotifyType.Success)] != null) {
+        successMessages.AddRange(TempData[string.Format("nut.notifications.{0}", NotifyType.Success)] as IList<string>);
+    }
+    if (ViewData[string.Format("nut.notifications.{0}", NotifyType.Success)] != null) {
+        successMessages.AddRange(ViewData[string.Format("nut.notifications.{0}", NotifyType.Success)] as IList<string>);
+    }
+
+
+    //error messages
+    var errorMessages = new List<string>();
+    if (TempData[string.Format("nut.notifications.{0}", NotifyType.Error)] != null) {
+        errorMessages.AddRange(TempData[string.Format("nut.notifications.{0}", NotifyType.Error)] as IList<string>);
+    }
+    if (ViewData[string.Format("nut.notifications.{0}", NotifyType.Error)] != null) {
+        errorMessages.AddRange(ViewData[string.Format("nut.notifications.{0}", NotifyType.Error)] as IList<string>);
+    }
+}
+@foreach (var message in successMessages) {
+    @*<div class="messageBox messageBoxSuccess">
+            @message
+        </div>*@
+    <script type="text/javascript">
+        $.gritter.add({
+            title: '@T("Common.Notification")',
+            text: '@message',
+            time: 6000,
+            class_name: 'gritter-success gritter-light'
+        });
+    </script>
+}
+@foreach (var message in errorMessages) {
+    @*<div class="messageBox messageBoxError">
+            @message
+        </div>*@
+    <script type="text/javascript">
+        $.gritter.add({
+            title: '@T("Common.Notification")',
+            text: '@message',
+            time: 6000,
+            class_name: 'gritter-error  gritter-light'
+        });
+    </script>
+}

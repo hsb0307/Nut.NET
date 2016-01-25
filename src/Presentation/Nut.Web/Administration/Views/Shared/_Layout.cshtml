@@ -22,11 +22,13 @@
     @Styles.Render("~/bundles/whirl")
     @Styles.Render("~/bundles/kendocss")
     @Styles.Render("~/bundles/SweetAlertCss")
+    @Styles.Render("~/bundles/JqueryGritterCss")
     @Html.NutCssFiles(this.Url, ResourceLocation.Head)
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/kendo")
+    @Scripts.Render("~/bundles/JqueryGritter")
     @Html.NutScripts(this.Url, ResourceLocation.Head)
     <!-- =============== PAGE VENDOR STYLES =============== -->
     @if (IsSectionDefined("Styles")) {@RenderSection("Styles", required: false)}
@@ -52,6 +54,7 @@
         </aside>
         <!-- Main section-->
         <section>
+            @Html.Partial("_Notifications")
             <!-- Page content-->
             <div class="content-wrapper">
                 @RenderBody()

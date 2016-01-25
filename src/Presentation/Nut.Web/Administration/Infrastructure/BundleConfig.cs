@@ -86,10 +86,19 @@ namespace Nut.Web.Infrastructure {
             bundles.Add(new StyleBundle("~/bundles/SweetAlertCss").Include(
                 "~/Vendor/sweetalert/dist/sweetalert.css"
             ));
-            bundles.Add(new StyleBundle("~/bundles/SweetAlert").Include(
+            bundles.Add(new ScriptBundle("~/bundles/SweetAlert").Include(
                 "~/Vendor/sweetalert/dist/sweetalert.min.js"
             ));
 
+            bundles.Add(new StyleBundle("~/bundles/JqueryGritterCss").Include(
+                "~/Vendor/gritter/jquery.gritter.css"
+            ));
+
+            bundles.Add(new ScriptBundle("~/bundles/JqueryGritter").Include(
+                "~/Vendor/gritter/jquery.gritter.min.js"
+            ));
+
+            
         }
 
         public int Priority {
