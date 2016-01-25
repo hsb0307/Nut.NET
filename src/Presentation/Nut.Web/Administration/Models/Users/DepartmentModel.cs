@@ -29,7 +29,7 @@ namespace Nut.Admin.Models.Users {
         public System.String ParentName { get; set; }
 
         [NutResourceDisplayName("Admin.Users.Departments.Fields.DisplayOrder")]
-        //[AllowHtml]
+        [AllowHtml]
         public System.Int32 DisplayOrder { get; set; }
 
         [NutResourceDisplayName("Admin.Users.Departments.Fields.StoreId")]

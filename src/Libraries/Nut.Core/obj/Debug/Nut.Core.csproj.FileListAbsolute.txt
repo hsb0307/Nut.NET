@@ -43,10 +43,10 @@ E:\Nut.NET\src\Libraries\Nut.Core\bin\Debug\System.Web.WebPages.Deployment.xml
 E:\Nut.NET\src\Libraries\Nut.Core\bin\Debug\System.Web.WebPages.Razor.xml
 E:\Nut.NET\src\Libraries\Nut.Core\obj\Debug\Nut.Core.dll
 E:\Nut.NET\src\Libraries\Nut.Core\obj\Debug\Nut.Core.pdb
-E:\Nut.NET\src\Libraries\Nut.Core\obj\Debug\Nut.Core.csprojResolveAssemblyReference.cache
 E:\Nut.NET\src\Libraries\Nut.Core\bin\Debug\zh-Hans\System.Web.Helpers.resources.dll
 E:\Nut.NET\src\Libraries\Nut.Core\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
 E:\Nut.NET\src\Libraries\Nut.Core\bin\Debug\zh-Hans\System.Web.Razor.resources.dll
 E:\Nut.NET\src\Libraries\Nut.Core\bin\Debug\zh-Hans\System.Web.WebPages.resources.dll
 E:\Nut.NET\src\Libraries\Nut.Core\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\Nut.NET\src\Libraries\Nut.Core\bin\Debug\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\Nut.NET\src\Libraries\Nut.Core\obj\Debug\Nut.Core.csprojResolveAssemblyReference.cache

@@ -89,6 +89,7 @@ namespace Nut.Web.Infrastructure {
             bundles.Add(new StyleBundle("~/bundles/SweetAlert").Include(
                 "~/Vendor/sweetalert/dist/sweetalert.min.js"
             ));
+
         }
 
         public int Priority {

@@ -1,0 +1,10 @@
+2016-01-22 10:30:33,086 [11] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Shared\EditorTemplates\Pictures.cshtml(19): error CS0103: The name 'fileupload' does not exist in the current context
+2016-01-22 10:30:33,102 [11] Nut.Web.Framework.Logging.LoggingModule - E:\Nut.NET\src\Presentation\Nut.Web\Administration\Views\Shared\EditorTemplates\Pictures.cshtml(19): error CS0103: The name 'fileupload' does not exist in the current context
+2016-01-22 11:50:33,359 [10] Nut.Web.Framework.Logging.LoggingModule - Object reference not set to an instance of an object.
+2016-01-22 11:50:33,374 [10] Nut.Web.Framework.Logging.LoggingModule - Object reference not set to an instance of an object.
+2016-01-22 11:51:31,874 [19] Nut.Web.Framework.Logging.LoggingModule - Object reference not set to an instance of an object.
+2016-01-22 11:51:31,922 [19] Nut.Web.Framework.Logging.LoggingModule - Object reference not set to an instance of an object.
+2016-01-22 11:52:33,260 [21] Nut.Web.Framework.Logging.LoggingModule - Object reference not set to an instance of an object.
+2016-01-22 11:52:33,273 [21] Nut.Web.Framework.Logging.LoggingModule - Object reference not set to an instance of an object.
+2016-01-22 11:52:56,065 [24] Nut.Web.Framework.Logging.LoggingModule - Object reference not set to an instance of an object.
+2016-01-22 11:52:56,077 [24] Nut.Web.Framework.Logging.LoggingModule - Object reference not set to an instance of an object.

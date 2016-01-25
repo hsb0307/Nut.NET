@@ -636,7 +636,9 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Config\log4net.config" />
+    <Content Include="Config\log4net.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Common\PageNotFound.cshtml" />
     <Content Include="Views\Install\Index.cshtml" />

@@ -11,6 +11,7 @@ namespace Nut.Data.Mapping.Media
             this.Property(p => p.PictureBinary).IsMaxLength();
             this.Property(p => p.MimeType).IsRequired().HasMaxLength(40);
             this.Property(p => p.SeoFilename).HasMaxLength(300);
+            this.Property(p => p.SessionId).HasMaxLength(32);
         }
     }
 }

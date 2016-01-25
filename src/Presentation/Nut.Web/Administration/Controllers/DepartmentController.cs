@@ -109,7 +109,7 @@ namespace Nut.Admin.Controllers
                 return AccessDeniedView();
 
             var model = new DepartmentModel();
-            model.DisplayOrder = 1;
+            model.DisplayOrder = 0;
             model.Deleted = false;
             PrepareDepartmentModel(model, null);
             return View(model);

@@ -2,13 +2,11 @@ using System.Collections.Generic;
 using Nut.Core;
 using Nut.Core.Domain.Media;
 
-namespace Nut.Services.Media
-{
+namespace Nut.Services.Media {
     /// <summary>
     /// Picture service interface
     /// </summary>
-    public partial interface IPictureService
-    {
+    public partial interface IPictureService {
         /// <summary>
         /// Gets the loaded picture binary depending on picture storage settings
         /// </summary>
@@ -30,7 +28,7 @@ namespace Nut.Services.Media
         /// <param name="defaultPictureType">Default picture type</param>
         /// <param name="storeLocation">Store location URL; null to use determine the current store location automatically</param>
         /// <returns>Picture URL</returns>
-        string GetDefaultPictureUrl(int targetSize = 0, 
+        string GetDefaultPictureUrl(int targetSize = 0,
             PictureType defaultPictureType = PictureType.Entity,
             string storeLocation = null);
 
@@ -43,10 +41,10 @@ namespace Nut.Services.Media
         /// <param name="storeLocation">Store location URL; null to use determine the current store location automatically</param>
         /// <param name="defaultPictureType">Default picture type</param>
         /// <returns>Picture URL</returns>
-        string GetPictureUrl(int pictureId, 
+        string GetPictureUrl(int pictureId,
             int targetSize = 0,
-            bool showDefaultPicture = true, 
-            string storeLocation = null, 
+            bool showDefaultPicture = true,
+            string storeLocation = null,
             PictureType defaultPictureType = PictureType.Entity);
 
         /// <summary>
@@ -58,10 +56,10 @@ namespace Nut.Services.Media
         /// <param name="storeLocation">Store location URL; null to use determine the current store location automatically</param>
         /// <param name="defaultPictureType">Default picture type</param>
         /// <returns>Picture URL</returns>
-        string GetPictureUrl(Picture picture, 
+        string GetPictureUrl(Picture picture,
             int targetSize = 0,
-            bool showDefaultPicture = true, 
-            string storeLocation = null, 
+            bool showDefaultPicture = true,
+            string storeLocation = null,
             PictureType defaultPictureType = PictureType.Entity);
 
         /// <summary>
@@ -87,43 +85,46 @@ namespace Nut.Services.Media
         void DeletePicture(Picture picture);
 
         /// <summary>
-        /// Gets a collection of pictures
+        /// Gets the pictures.
         /// </summary>
-        /// <param name="pageIndex">Current page</param>
-        /// <param name="pageSize">Items on each page</param>
-        /// <returns>Paged list of pictures</returns>
-        IPagedList<Picture> GetPictures(int pageIndex = 0, int pageSize = int.MaxValue);
+        /// <param name="sessionId">The session identifier.</param>
+        /// <param name="pageIndex">Index of the page.</param>
+        /// <param name="pageSize">Size of the page.</param>
+        /// <returns></returns>
+        IPagedList<Picture> GetPictures(string sessionId = "", int pageIndex = 0, int pageSize = int.MaxValue);
 
 
         /// <summary>
-        /// Inserts a picture
+        /// Inserts the picture.
         /// </summary>
-        /// <param name="pictureBinary">The picture binary</param>
-        /// <param name="mimeType">The picture MIME type</param>
-        /// <param name="seoFilename">The SEO filename</param>
-        /// <param name="altAttribute">"alt" attribute for "img" HTML element</param>
-        /// <param name="titleAttribute">"title" attribute for "img" HTML element</param>
-        /// <param name="isNew">A value indicating whether the picture is new</param>
-        /// <param name="validateBinary">A value indicating whether to validated provided picture binary</param>
-        /// <returns>Picture</returns>
-        Picture InsertPicture(byte[] pictureBinary, string mimeType, string seoFilename, 
+        /// <param name="pictureBinary">The picture binary.</param>
+        /// <param name="mimeType">Type of the MIME.</param>
+        /// <param name="seoFilename">The seo filename.</param>
+        /// <param name="sessionId">The session identifier.</param>
+        /// <param name="altAttribute">The alt attribute.</param>
+        /// <param name="titleAttribute">The title attribute.</param>
+        /// <param name="isNew">if set to <c>true</c> [is new].</param>
+        /// <param name="validateBinary">if set to <c>true</c> [validate binary].</param>
+        /// <returns></returns>
+        Picture InsertPicture(byte[] pictureBinary, string mimeType, string seoFilename, string sessionId = "",
             string altAttribute = null, string titleAttribute = null,
             bool isNew = true, bool validateBinary = true);
 
         /// <summary>
-        /// Updates the picture
+        /// Updates the picture.
         /// </summary>
-        /// <param name="pictureId">The picture identifier</param>
-        /// <param name="pictureBinary">The picture binary</param>
-        /// <param name="mimeType">The picture MIME type</param>
-        /// <param name="seoFilename">The SEO filename</param>
-        /// <param name="altAttribute">"alt" attribute for "img" HTML element</param>
-        /// <param name="titleAttribute">"title" attribute for "img" HTML element</param>
-        /// <param name="isNew">A value indicating whether the picture is new</param>
-        /// <param name="validateBinary">A value indicating whether to validated provided picture binary</param>
-        /// <returns>Picture</returns>
+        /// <param name="pictureId">The picture identifier.</param>
+        /// <param name="pictureBinary">The picture binary.</param>
+        /// <param name="mimeType">Type of the MIME.</param>
+        /// <param name="seoFilename">The seo filename.</param>
+        /// <param name="sessionId">The session identifier.</param>
+        /// <param name="altAttribute">The alt attribute.</param>
+        /// <param name="titleAttribute">The title attribute.</param>
+        /// <param name="isNew">if set to <c>true</c> [is new].</param>
+        /// <param name="validateBinary">if set to <c>true</c> [validate binary].</param>
+        /// <returns></returns>
         Picture UpdatePicture(int pictureId, byte[] pictureBinary, string mimeType,
-            string seoFilename, string altAttribute = null, string titleAttribute = null,
+            string seoFilename, string sessionId = "", string altAttribute = null, string titleAttribute = null,
             bool isNew = true, bool validateBinary = true);
 
         /// <summary>

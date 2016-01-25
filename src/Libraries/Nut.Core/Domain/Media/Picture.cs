@@ -31,6 +31,11 @@ namespace Nut.Core.Domain.Media
         public string TitleAttribute { get; set; }
 
         /// <summary>
+        /// Gets or sets the session identifier.
+        /// </summary>
+        public string SessionId { get; set; }
+
+        /// <summary>
         /// Gets or sets a value indicating whether the picture is new
         /// </summary>
         public bool IsNew { get; set; }

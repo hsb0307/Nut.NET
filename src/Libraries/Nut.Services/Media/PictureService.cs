@@ -408,6 +408,7 @@ namespace Nut.Services.Media {
                     pictureBinary,
                     picture.MimeType,
                     picture.SeoFilename,
+                    picture.SessionId,
                     picture.AltAttribute,
                     picture.TitleAttribute,
                     false,
@@ -519,10 +520,14 @@ namespace Nut.Services.Media {
         /// <param name="pageIndex">Current page</param>
         /// <param name="pageSize">Items on each page</param>
         /// <returns>Paged list of pictures</returns>
-        public virtual IPagedList<Picture> GetPictures(int pageIndex = 0, int pageSize = int.MaxValue) {
-            var query = from p in _pictureRepository.Table
-                        orderby p.Id descending
-                        select p;
+        public virtual IPagedList<Picture> GetPictures(string sessionId = "", int pageIndex = 0, int pageSize = int.MaxValue) {
+            var query = _pictureRepository.Table;
+
+            if (!string.IsNullOrEmpty(sessionId))
+                query = query.Where(r => r.SessionId == sessionId);
+
+            query = query.OrderByDescending(d => d.Id);
+
             var pics = new PagedList<Picture>(query, pageIndex, pageSize);
             return pics;
         }
@@ -538,7 +543,7 @@ namespace Nut.Services.Media {
         /// <param name="isNew">A value indicating whether the picture is new</param>
         /// <param name="validateBinary">A value indicating whether to validated provided picture binary</param>
         /// <returns>Picture</returns>
-        public virtual Picture InsertPicture(byte[] pictureBinary, string mimeType, string seoFilename,
+        public virtual Picture InsertPicture(byte[] pictureBinary, string mimeType, string seoFilename, string sessionId = "",
             string altAttribute = null, string titleAttribute = null,
             bool isNew = true, bool validateBinary = true) {
             mimeType = CommonHelper.EnsureNotNull(mimeType);
@@ -556,6 +561,7 @@ namespace Nut.Services.Media {
                 AltAttribute = altAttribute,
                 TitleAttribute = titleAttribute,
                 IsNew = isNew,
+                SessionId = sessionId
             };
             _pictureRepository.Insert(picture);
 
@@ -578,7 +584,7 @@ namespace Nut.Services.Media {
         /// <param name="validateBinary">A value indicating whether to validated provided picture binary</param>
         /// <returns>Picture</returns>
         public virtual Picture UpdatePicture(int pictureId, byte[] pictureBinary, string mimeType,
-            string seoFilename, string altAttribute = null, string titleAttribute = null,
+            string seoFilename, string sessionId = "", string altAttribute = null, string titleAttribute = null,
             bool isNew = true, bool validateBinary = true) {
             mimeType = CommonHelper.EnsureNotNull(mimeType);
             mimeType = CommonHelper.EnsureMaximumLength(mimeType, 20);
@@ -602,6 +608,7 @@ namespace Nut.Services.Media {
             picture.AltAttribute = altAttribute;
             picture.TitleAttribute = titleAttribute;
             picture.IsNew = isNew;
+            picture.SessionId = sessionId;
 
             _pictureRepository.Update(picture);
 
@@ -629,6 +636,7 @@ namespace Nut.Services.Media {
                     LoadPictureBinary(picture),
                     picture.MimeType,
                     seoFilename,
+                    picture.SessionId,
                     picture.AltAttribute,
                     picture.TitleAttribute,
                     true,
@@ -682,7 +690,7 @@ namespace Nut.Services.Media {
                     _dbContext.ProxyCreationEnabled = false;
 
                     while (true) {
-                        var pictures = this.GetPictures(pageIndex, pageSize);
+                        var pictures = this.GetPictures(pageIndex: pageIndex, pageSize: pageSize);
                         pageIndex++;
 
                         //all pictures converted?
