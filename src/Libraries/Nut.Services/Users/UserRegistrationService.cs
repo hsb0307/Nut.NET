@@ -5,6 +5,7 @@ using Nut.Core.Domain.Users;
 using Nut.Services.Localization;
 using Nut.Services.Security;
 using Nut.Services.Stores;
+using System.Collections.Generic;
 
 namespace Nut.Services.Users {
     public class UserRegistrationService : IUserRegistrationService {
@@ -13,6 +14,7 @@ namespace Nut.Services.Users {
         private readonly IUserService _userService;
         private readonly IEncryptionService _encryptionService;
         private readonly ILocalizationService _localizationService;
+        private readonly IEnumerable<IUserEventHandler> _userEventHandlers;
         private readonly IStoreService _storeService;
 
         #endregion
@@ -32,10 +34,12 @@ namespace Nut.Services.Users {
         public UserRegistrationService(IUserService userService,
             IEncryptionService encryptionService,
             ILocalizationService localizationService,
+            IEnumerable<IUserEventHandler> userEventHandlers,
             IStoreService storeService) {
             this._userService = userService;
             this._encryptionService = encryptionService;
             this._localizationService = localizationService;
+            this._userEventHandlers = userEventHandlers;
             this._storeService = storeService;
         }
 
@@ -165,6 +169,11 @@ namespace Nut.Services.Users {
                 }
                 user.PasswordFormat = request.NewPasswordFormat;
                 _userService.UpdateUser(user);
+
+                var userContext = new UserContext { User = user, Cancel = false };
+                foreach (var userEventHandler in _userEventHandlers) {
+                    userEventHandler.ChangePassword(userContext);
+                }
             }
 
             return result;

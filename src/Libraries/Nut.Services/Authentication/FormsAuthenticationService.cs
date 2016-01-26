@@ -1,8 +1,10 @@
 using System;
 using System.Web;
 using System.Web.Security;
+using System.Collections.Generic;
 using Nut.Core.Domain.Users;
 using Nut.Services.Users;
+
 
 namespace Nut.Services.Authentication {
     /// <summary>
@@ -12,6 +14,7 @@ namespace Nut.Services.Authentication {
         private readonly HttpContextBase _httpContext;
         private readonly IUserService _userService;
         private readonly TimeSpan _expirationTimeSpan;
+        private readonly IEnumerable<IAuthenticationEventHandler> _authenticationEventHandlers;
 
         private User _cachedUser;
 
@@ -22,9 +25,12 @@ namespace Nut.Services.Authentication {
         /// <param name="customerService">Customer service</param>
         /// <param name="customerSettings">Customer settings</param>
         public FormsAuthenticationService(HttpContextBase httpContext,
-            IUserService userService) {
+            IUserService userService,
+           IEnumerable<IAuthenticationEventHandler> authenticationEventHandlers) {
             this._httpContext = httpContext;
             this._userService = userService;
+            this._authenticationEventHandlers = authenticationEventHandlers;
+
             this._expirationTimeSpan = FormsAuthentication.Timeout;
         }
 
@@ -55,10 +61,19 @@ namespace Nut.Services.Authentication {
 
             _httpContext.Response.Cookies.Add(cookie);
             _cachedUser = user;
+
+            var userContext = new UserContext { User = user };
+            foreach(var authenticationEventHandler in _authenticationEventHandlers) {
+                authenticationEventHandler.SignIn(userContext);
+            }
+
         }
 
         public virtual void SignOut() {
             _cachedUser = null;
+            foreach (var authenticationEventHandler in _authenticationEventHandlers) {
+                authenticationEventHandler.SignOut();
+            }
             FormsAuthentication.SignOut();
         }
 

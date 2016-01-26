@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
 using Nut.Core;
 using Nut.Core.Caching;
@@ -42,6 +41,7 @@ namespace Nut.Services.Users {
 
         private readonly IRepository<User> _userRepository;
         private readonly IRepository<UserRole> _userRoleRepository;
+        private readonly IEnumerable<IUserEventHandler> _userEventHandlers;
         private readonly IDataProvider _dataProvider;
         private readonly IDbContext _dbContext;
         private readonly ICacheManager _cacheManager;
@@ -54,11 +54,13 @@ namespace Nut.Services.Users {
         public UserService(ICacheManager cacheManager,
             IRepository<User> userRepository,
             IRepository<UserRole> userRoleRepository,
+            IEnumerable<IUserEventHandler> userEventHandlers,
             ISignals signals,
             IDataProvider dataProvider,
             IDbContext dbContext) {
             this._cacheManager = cacheManager;
             this._userRepository = userRepository;
+            this._userEventHandlers = userEventHandlers;
             this._userRoleRepository = userRoleRepository;
             this._signals = signals;
 
@@ -278,24 +280,33 @@ namespace Nut.Services.Users {
         /// <summary>
         /// Insert a User
         /// </summary>
-        /// <param name="User">User</param>
-        public virtual void InsertUser(User User) {
-            if (User == null)
+        /// <param name="user">User</param>
+        public virtual void InsertUser(User user) {
+            if (user == null)
                 throw new ArgumentNullException("User");
 
-            _userRepository.Insert(User);
+            var userContext = new UserContext { User = user, Cancel = false };
+            foreach(var userEventHandler in _userEventHandlers) {
+                userEventHandler.Creating(userContext);
+            }
 
+            _userRepository.Insert(user);
+
+
+            foreach (var userEventHandler in _userEventHandlers) {
+                userEventHandler.Created(userContext);
+            }
         }
 
         /// <summary>
         /// Updates the User
         /// </summary>
-        /// <param name="User">User</param>
-        public virtual void UpdateUser(User User) {
-            if (User == null)
+        /// <param name="user">User</param>
+        public virtual void UpdateUser(User user) {
+            if (user == null)
                 throw new ArgumentNullException("User");
 
-            _userRepository.Update(User);
+            _userRepository.Update(user);
         }
 
 

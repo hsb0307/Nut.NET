@@ -34,6 +34,7 @@ namespace Nut.Services.Security {
         private readonly IRepository<PermissionRecord> _permissionRecordRepository;
         private readonly IUserService _userService;
         private readonly IWorkContext _workContext;
+        private readonly IEnumerable<IPermissionEventHandler> _permissionEventHandlers;
         private readonly ILocalizationService _localizationService;
         private readonly ILanguageService _languageService;
         private readonly ICacheManager _cacheManager;
@@ -55,13 +56,15 @@ namespace Nut.Services.Security {
         public PermissionService(IRepository<PermissionRecord> permissionRecordRepository,
             IUserService userService,
             IWorkContext workContext,
-             ILocalizationService localizationService,
+            IEnumerable<IPermissionEventHandler> permissionEventHandlers,
+            ILocalizationService localizationService,
             ILanguageService languageService,
             ICacheManager cacheManager,
             ISignals signals) {
             this._permissionRecordRepository = permissionRecordRepository;
             this._userService = userService;
             this._workContext = workContext;
+            this._permissionEventHandlers = permissionEventHandlers;
             this._localizationService = localizationService;
             this._languageService = languageService;
             this._cacheManager = cacheManager;
@@ -312,6 +315,10 @@ namespace Nut.Services.Security {
         public virtual bool Authorize(string permissionRecordSystemName, User user) {
             if (String.IsNullOrEmpty(permissionRecordSystemName))
                 return false;
+
+            var permissionContext = new PermissionContext { User = user, PermissionRecordSystemName = permissionRecordSystemName };
+            foreach (var permissionEventHandler in _permissionEventHandlers)
+                permissionEventHandler.Authorize(permissionContext);
 
             var userRoles = user.UserRoles.Where(cr => cr.Active);
             foreach (var role in userRoles)
