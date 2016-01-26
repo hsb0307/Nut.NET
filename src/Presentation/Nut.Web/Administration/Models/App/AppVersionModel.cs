@@ -21,7 +21,7 @@ namespace Nut.Admin.Models.App {
         [NutResourceDisplayName("Admin.AppVersions.Fields.Description")]
         public System.String Description { get; set; }
         [NutResourceDisplayName("Admin.AppVersions.Fields.DownloadURL")]
-        [UIHint("Download")]
+        [UIHint("Pictures")]
         public System.Int32 DownloadId { get; set; }
         [NutResourceDisplayName("Admin.AppVersions.Fields.Deleted")]
         public System.Boolean Deleted { get; set; }

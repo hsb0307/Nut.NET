@@ -96,8 +96,7 @@
                 width: 50
             }, {
                 field: "Code",
-                title: "@T("Admin.Users.Departments.Fields.Code")",
-                width: 150
+                title: "@T("Admin.Users.Departments.Fields.Code")"
             }, {
                 field: "Breadcrumb",
                 title: "@T("Admin.Users.Departments.Fields.Name")",
@@ -108,8 +107,8 @@
             },  {
                 field: "Id",
                 title: "@T("Admin.Common.Edit")",
-                width: 150,
-                template: '<a class="btn btn-sm btn-default" href="Edit/#=Id#">@T("Admin.Common.Edit")</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-sm btn-default" href="javascript:void(0);" onclick="deleteDepartment(#=Id#)">@T("Admin.Common.Delete")</a>'
+                width: 160,
+                template: '<a class="btn btn-sm btn-default" href="Edit/#=Id#">@T("Admin.Common.Edit")</a>&nbsp;<a class="btn btn-sm btn-default" href="javascript:void(0);" onclick="deleteDepartment(#=Id#)">@T("Admin.Common.Delete")</a>'
             }]
         });
     });

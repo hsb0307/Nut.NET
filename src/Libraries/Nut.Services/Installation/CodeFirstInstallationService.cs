@@ -192,7 +192,7 @@ namespace Nut.Services.Installation {
                 {
                     Name = "Delete guests",
                     Seconds = 600,
-                    Type = "Nut.Services.Customers.DeleteGuestsTask, Nut.Services",
+                    Type = "Nut.Services.Users.DeleteGuestsTask, Nut.Services",
                     Enabled = true,
                     StopOnError = false,
                 },

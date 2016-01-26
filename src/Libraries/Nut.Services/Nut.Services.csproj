@@ -108,6 +108,7 @@
     <Compile Include="Tasks\TaskThread.cs" />
     <Compile Include="Users\ChangePasswordRequest.cs" />
     <Compile Include="Users\ChangePasswordResult.cs" />
+    <Compile Include="Users\DeleteGuestsTask.cs" />
     <Compile Include="Users\DeleteNotificationsTask.cs" />
     <Compile Include="Users\DepartmentExtensions.cs" />
     <Compile Include="Users\DepartmentService.cs" />

@@ -72,6 +72,9 @@
             request: {
                 endpoint: '@(Url.Content("~/Admin/Picture/AsyncUpload"))'
             },
+            validation: {
+                allowedExtensions: ['jpeg', 'jpg', 'png', 'gif']
+            },
             template: "@(clientId)-qq-template",
             multiple: false
         }).on("complete", function(event, id, name, responseJSON, xhr) {
