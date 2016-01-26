@@ -2589,3 +2589,14 @@
 2016-01-25 14:51:17,925 [9] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
 2016-01-25 14:51:22,325 [10] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
 2016-01-25 14:51:26,102 [6] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
+2016-01-25 17:00:53,290 [121] Nut.Services.Localization.LocalizationService - Resource string (account.login.unsuccessful) is not found. Language ID = 1
+2016-01-25 17:00:53,305 [121] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-25 17:00:53,305 [121] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-25 17:00:53,321 [121] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-25 17:00:53,321 [121] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-25 17:01:07,965 [122] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.username) is not found. Language ID = 1
+2016-01-25 17:01:07,981 [122] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.password) is not found. Language ID = 1
+2016-01-25 17:01:07,981 [122] Nut.Services.Localization.LocalizationService - Resource string (account.login.fields.rememberme) is not found. Language ID = 1
+2016-01-25 17:01:08,122 [121] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
+2016-01-25 17:01:18,172 [121] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1
+2016-01-25 17:04:26,395 [126] Nut.Services.Localization.LocalizationService - Resource string (admin.app.appversions) is not found. Language ID = 1

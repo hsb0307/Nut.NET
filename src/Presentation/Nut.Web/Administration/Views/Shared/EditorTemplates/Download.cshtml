@@ -68,7 +68,7 @@
     @T("Admin.Download.DownloadURL"):
     <input type="text" name="downloadurl@(randomNumber)" id="downloadurl@(randomNumber)"
            @if (download != null && !String.IsNullOrEmpty(download.DownloadUrl)) { <text> value="@(download.DownloadUrl)" </text>             } />
-    <input type="button" id="saveDownloadUrl@(randomNumber)" class="k-button" value="@T("Admin.Download.SaveDownloadURL")" />
+    <input type="button" id="saveDownloadUrl@(randomNumber)" class="btn btn-default" value="@T("Admin.Download.SaveDownloadURL")" />
     <div id="pnlDownloadURLResult@(randomNumber)" style="display:none;">@T("Admin.Download.DownloadURLSaved")</div>
 </p>
 <p id="pnlDownloadFile@(randomNumber)">
@@ -90,7 +90,7 @@
             <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
                 <span>@T("Common.FileUploader.DropFiles")</span>
             </div>
-            <div class="qq-upload-button-selector qq-upload-button">
+            <div class="qq-upload-button-selector qq-upload-button btn btn-default">
                 <div>@T("Common.FileUploader.Upload")</div>
             </div>
             <span class="qq-drop-processing-selector qq-drop-processing">
@@ -152,9 +152,9 @@
             <td>
                 <div>
                     @if (download != null) {
-                        <span id="@(clientId + "remove")" class="k-button">@T("Admin.Download.RemoveDownload")</span>
+                        <span id="@(clientId + "remove")" class="btn btn-default">@T("Admin.Download.RemoveDownload")</span>
                     } else {
-                        <span id="@(clientId + "remove")" class="k-button" style="display:none;">@T("Admin.Download.RemoveDownload")</span>
+                        <span id="@(clientId + "remove")" class="btn btn-default" style="display:none;">@T("Admin.Download.RemoveDownload")</span>
                     }
                 </div>
             </td>

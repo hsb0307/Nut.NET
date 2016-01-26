@@ -19,9 +19,9 @@
     <img src="@(pictureService.GetPictureUrl(Model, 100, true))" />
 </div>
 @if (picture != null) {
-    <span id="@(clientId + "remove")" class="k-button">@T("Admin.Picture.RemovePicture")</span>
+    <span id="@(clientId + "remove")" class="btn btn-default">@T("Admin.Picture.RemovePicture")</span>
 } else {
-    <span id="@(clientId + "remove")" class="k-button" style="display:none;">@T("Admin.Picture.RemovePicture")</span>
+    <span id="@(clientId + "remove")" class="btn btn-default" style="display:none;">@T("Admin.Picture.RemovePicture")</span>
 }
 <br />
 @*fine uploader container*@
@@ -39,7 +39,7 @@
         <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
             <span>@T("Common.FileUploader.DropFiles")</span>
         </div>
-        <div class="qq-upload-button-selector qq-upload-button">
+        <div class="qq-upload-button-selector qq-upload-button btn btn-default">
             <div>@T("Common.FileUploader.Upload")</div>
         </div>
         <span class="qq-drop-processing-selector qq-drop-processing">
