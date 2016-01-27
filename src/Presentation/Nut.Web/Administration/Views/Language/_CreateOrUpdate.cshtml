@@ -22,7 +22,7 @@
                     Text = string.Format("{0}. {1}", x.EnglishName, x.IetfLanguageTag)
                 });
         }
-        @Html.DropDownListFor(model => model.LanguageCulture, cultures)
+        @Html.DropDownListFor(model => model.LanguageCulture, cultures, new { @class = "form-control m-b" })
         @Html.ValidationMessageFor(model => model.LanguageCulture, "", new { @class = "text-danger" })
     </div>
 </div>
@@ -38,7 +38,7 @@
 <div class="form-group">
     @Html.LabelFor(model => model.FlagImageFileName, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
-        @Html.EditorFor(model => model.FlagImageFileName)
+        @Html.EditorFor(model => model.FlagImageFileName, new { htmlAttributes = new { @class = "form-control" } })
         @Html.ValidationMessageFor(model => model.FlagImageFileName, "", new { @class = "text-danger" })
         <br />
         <script type="text/javascript">
