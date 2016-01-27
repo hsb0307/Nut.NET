@@ -73,7 +73,7 @@ namespace Nut.Web.Framework.Controllers {
                 LogException(message);
 
             return Json(new Notification {
-                Success = true,
+                Success = false,
                 Message = message,
                 Data = data
             },
