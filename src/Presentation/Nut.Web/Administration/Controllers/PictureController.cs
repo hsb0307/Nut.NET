@@ -83,11 +83,6 @@ namespace Nut.Admin.Controllers {
             var picture = _pictureService.InsertPicture(fileBinary, contentType, fileName, sessionId);
             //when returning JSON the mime-type must be set to text/plain
             //otherwise some browsers will pop-up a "Save As" dialog
-
-            //return "{ \"files\":[{\"name\":\"" + picture.SeoFilename
-            //    + "\",\"size\":" + fileBinary.Length + ",\"type\":\"" + contentType + "\",\"url\":\"" + _pictureService.GetPictureUrl(picture, 100)
-            //    + "\",\"thumbnailUrl\":\"" + _pictureService.GetPictureUrl(picture, 100) + "\",\"deleteType\":\"GET\",\"deleteUrl\":\"/Admin/Picture/AsyncDelete?id=" + picture.Id + "\"}]}";
-
             return Json(new {
                 success = true, pictureId = picture.Id,
                 imageUrl = _pictureService.GetPictureUrl(picture, 100)
