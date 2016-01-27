@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using Nut.Core;
 using Nut.Core.Infrastructure;
+using Nut.Services.Localization;
 using Nut.Core.Logging;
 
 namespace Nut.Web.Framework.Controllers {
@@ -33,7 +34,8 @@ namespace Nut.Web.Framework.Controllers {
         /// </summary>
         /// <returns>Access denied view</returns>
         protected ActionResult AccessDeniedView() {
-            return ErrorNotification("AccessDenied");
+            var localizationService = EngineContext.Current.Resolve<ILocalizationService>();
+            return ErrorNotification(localizationService.GetResource("Admin.AccessDenied.Description"));
         }
 
         /// <summary>
@@ -44,7 +46,7 @@ namespace Nut.Web.Framework.Controllers {
         /// <returns></returns>
         protected ActionResult SuccessNotification(string message, object data) {
 
-            return Json(new Notification {
+            return Json(new ApiNotification {
                 Success = true,
                 Message = message,
                 Data = data
@@ -72,7 +74,7 @@ namespace Nut.Web.Framework.Controllers {
             if (logException)
                 LogException(message);
 
-            return Json(new Notification {
+            return Json(new ApiNotification {
                 Success = false,
                 Message = message,
                 Data = data
@@ -80,9 +82,9 @@ namespace Nut.Web.Framework.Controllers {
                 "text/plain", JsonRequestBehavior.AllowGet);
         }
 
-        public class Notification {
+        public class ApiNotification {
             /// <summary>
-            /// Gets or sets a value indicating whether this <see cref="Notification"/> is success.
+            /// Gets or sets a value indicating whether this <see cref="ApiNotification"/> is success.
             /// </summary>
             public bool Success { get; set; }
 
