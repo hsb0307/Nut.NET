@@ -6,7 +6,7 @@ using Nut.Web.Framework;
 using Nut.Web.Framework.Localization;
 using Nut.Web.Framework.Mvc;
 
-namespace Nop.Admin.Models.Plugins
+namespace Nut.Admin.Models.Plugins
 {
     public partial class PluginModel : BaseNutModel, ILocalizedModel<PluginLocalizedModel>
     {

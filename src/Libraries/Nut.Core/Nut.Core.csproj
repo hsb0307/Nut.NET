@@ -105,6 +105,7 @@
     <Compile Include="Domain\App\AppVersion.cs" />
     <Compile Include="Domain\Common\AdminAreaSettings.cs" />
     <Compile Include="Domain\Common\GenericAttribute.cs" />
+    <Compile Include="Domain\Common\WebAPISettings.cs" />
     <Compile Include="Domain\Configuration\Setting.cs" />
     <Compile Include="Domain\Localization\ILocalizedEntity.cs" />
     <Compile Include="Domain\Localization\ILocalizedEnum.cs" />

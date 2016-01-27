@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Nop.Admin.Models.Plugins;
+using Nut.Admin.Models.Plugins;
 using Nut.Admin.Models.App;
 using Nut.Admin.Models.Localization;
 using Nut.Admin.Models.Logging;

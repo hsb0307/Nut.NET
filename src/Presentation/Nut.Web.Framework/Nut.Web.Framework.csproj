@@ -134,6 +134,7 @@
     <Compile Include="Caching\DefaultCacheManager.cs" />
     <Compile Include="Caching\DefaultParallelCacheContext.cs" />
     <Compile Include="Controllers\AdminAuthorizeAttribute.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BasePluginController.cs" />
     <Compile Include="Controllers\FormValueRequiredAttribute.cs" />

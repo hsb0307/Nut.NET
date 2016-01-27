@@ -10,7 +10,7 @@ namespace Nut.Web.Validators.User
     {
         public LoginValidator(ILocalizationService localizationService)
         {
-            
+            RuleFor(x => x.Username).NotEmpty().WithMessage(localizationService.GetResource("Account.Login.Fields.Username.Required"));
         }
     }
 }

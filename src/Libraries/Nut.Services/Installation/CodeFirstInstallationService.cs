@@ -182,6 +182,10 @@ namespace Nut.Services.Installation {
                 MaximumImageSize = 1280,
                 MultipleThumbDirectories = false
             });
+
+            settingService.SaveSetting(new WebAPISettings {
+                UserEncryptionKey = "123456"
+            });
         }
 
         protected virtual void InstallScheduleTasks() {

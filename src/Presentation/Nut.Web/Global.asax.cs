@@ -37,7 +37,7 @@ namespace Nut.Web
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                new[] { "Nop.Web.Controllers" }
+                new[] { "Nut.Web.Controllers" }
             );
         }
 

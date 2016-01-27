@@ -1,4 +1,4 @@
-﻿using Nop.Admin.Models.Plugins;
+﻿using Nut.Admin.Models.Plugins;
 using Nut.Admin.Extensions;
 using Nut.Core;
 using Nut.Core.Plugins;

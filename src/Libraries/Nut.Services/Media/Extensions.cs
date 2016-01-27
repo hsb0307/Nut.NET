@@ -2,10 +2,8 @@
 using System.IO;
 using System.Linq;
 using System.Web;
-using Nut.Core.Domain.Media;
 
-
-namespace Nop.Services.Media
+namespace Nut.Services.Media
 {
     /// <summary>
     /// Extensions

@@ -3,7 +3,7 @@ using AutoMapper;
 using Nut.Admin.Models.Users;
 using Nut.Core.Domain.Users;
 using Nut.Core.Plugins;
-using Nop.Admin.Models.Plugins;
+using Nut.Admin.Models.Plugins;
 using Nut.Core.Domain.Stores;
 using Nut.Admin.Models.Stores;
 using Nut.Core.Domain.Localization;
