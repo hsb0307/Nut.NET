@@ -41,6 +41,8 @@ using Nut.Web.Framework.Logging;
 using Nut.Core.Events;
 using Nut.Web.Framework.Events;
 using Nut.Web.Framework.Caching;
+using Nut.Core.Message;
+using Nut.Services.Message;
 
 namespace Nut.Web.Framework {
     public class DependencyRegistrar : IDependencyRegistrar {
@@ -166,6 +168,10 @@ namespace Nut.Web.Framework {
 
             builder.RegisterType<DownloadService>().As<IDownloadService>().InstancePerLifetimeScope();
             builder.RegisterType<PictureService>().As<IPictureService>().InstancePerLifetimeScope();
+
+            builder.RegisterType<DefaultMessageService>().As<IMessageService>().InstancePerLifetimeScope();
+            builder.RegisterType<MessageChannelManager>().As<IMessageChannelManager>().InstancePerLifetimeScope();
+            builder.RegisterType<NullMessageChannelSelector>().As<IMessageChannelSelector>().InstancePerLifetimeScope();
 
             //builder.RegisterType<MessageTemplateService>().As<IMessageTemplateService>().InstancePerLifetimeScope();
             //builder.RegisterType<QueuedEmailService>().As<IQueuedEmailService>().InstancePerLifetimeScope();

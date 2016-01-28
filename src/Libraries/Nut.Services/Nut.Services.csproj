@@ -85,6 +85,9 @@
     <Compile Include="Media\IPictureService.cs" />
     <Compile Include="Media\PictureService.cs" />
     <Compile Include="Media\ResizeType.cs" />
+    <Compile Include="Message\DefaultMessageService.cs" />
+    <Compile Include="Message\MessageChannelManager.cs" />
+    <Compile Include="Message\NullMessageChannelSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\EncryptionService.cs" />
     <Compile Include="Security\IEncryptionService.cs" />

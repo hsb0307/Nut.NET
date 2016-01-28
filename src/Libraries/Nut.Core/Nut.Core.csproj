@@ -178,6 +178,10 @@
     <Compile Include="Logging\LoggingExtensions.cs" />
     <Compile Include="Logging\NullLogger.cs" />
     <Compile Include="Logging\NullLoggerFactory.cs" />
+    <Compile Include="Message\IMessageChannel.cs" />
+    <Compile Include="Message\IMessageChannelManager.cs" />
+    <Compile Include="Message\IMessageChannelSelector.cs" />
+    <Compile Include="Message\IMessageService.cs" />
     <Compile Include="NutVersion.cs" />
     <Compile Include="NutException.cs" />
     <Compile Include="PagedList.cs" />
