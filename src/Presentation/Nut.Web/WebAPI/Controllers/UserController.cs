@@ -55,9 +55,9 @@ namespace Nut.WebAPI.Controllers {
                         //activity log
                         _activityLogService.InsertActivity("PublicStore.Login", _localizationService.GetResource("ActivityLog.PublicStore.Login"), user);
                         //user ticket
-                        var UserTicket = _encryptionService.CreatePasswordHash(user.UserGuid.ToString(), _webAPISettings.UserEncryptionKey);
+                        var userTicket = _encryptionService.EncryptText(user.UserGuid.ToString(), _webAPISettings.UserEncryptionKey);
 
-                        return SuccessNotification(_localizationService.GetResource("Account.Login.Success"), UserTicket);
+                        return SuccessNotification(_localizationService.GetResource("Account.Login.Success"), Server.UrlEncode(userTicket));
                     }
                 case UserLoginResults.CustomerNotExist:
                     message = _localizationService.GetResource("Account.Login.WrongCredentials.CustomerNotExist");

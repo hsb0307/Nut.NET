@@ -4,6 +4,11 @@ using Nut.Core;
 using Nut.Core.Infrastructure;
 using Nut.Services.Localization;
 using Nut.Core.Logging;
+using Nut.Core.Domain.Users;
+using Nut.Services.Security;
+using Nut.Services.Configuration;
+using Nut.Core.Domain.Common;
+using Nut.Services.Users;
 
 namespace Nut.Web.Framework.Controllers {
     public abstract partial class BaseApiController : Controller {
@@ -37,6 +42,33 @@ namespace Nut.Web.Framework.Controllers {
             var localizationService = EngineContext.Current.Resolve<ILocalizationService>();
             return ErrorNotification(localizationService.GetResource("Admin.AccessDenied.Description"));
         }
+
+        /// <summary>
+        /// APIs the user access.
+        /// </summary>
+        /// <param name="userTicket">The user ticket.</param>
+        /// <returns></returns>
+        public virtual User ApiUserAccess(string userTicket) {
+
+            if (string.IsNullOrEmpty(userTicket))
+                return null;
+
+            //userTicket = Server.UrlDecode(userTicket);
+
+            var encryptionService = EngineContext.Current.Resolve<IEncryptionService>();
+            var settingService = EngineContext.Current.Resolve<ISettingService>();
+            var userService = EngineContext.Current.Resolve<IUserService>();
+
+            var webAPISettings = settingService.LoadSetting<WebAPISettings>();
+
+            var userGuid = encryptionService.DecryptText(userTicket, webAPISettings.UserEncryptionKey);
+
+            if (string.IsNullOrEmpty(userGuid))
+                return null;
+            var user = userService.GetUserByGuid(Guid.Parse(userGuid));
+            return user;
+        }
+
 
         /// <summary>
         /// Successes the notification.

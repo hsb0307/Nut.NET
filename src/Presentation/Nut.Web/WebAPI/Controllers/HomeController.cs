@@ -6,7 +6,12 @@ namespace Nut.WebAPI.Controllers {
 
         [HttpGet]
         // GET: Home
-        public ActionResult Index() {
+        public ActionResult Index(string userTicket) {
+            var user = ApiUserAccess(userTicket);
+
+            if (user == null)
+                return ErrorNotification("验证失败");
+
             return SuccessNotification("获取成功", new {
                 pictureId = 1,
                 imageUrl = "url"
