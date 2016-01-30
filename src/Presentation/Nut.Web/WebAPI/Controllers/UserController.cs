@@ -9,6 +9,7 @@ using Nut.Core.Domain.Users;
 using System.Web.Security;
 using Nut.Services.Security;
 using Nut.Core.Domain.Common;
+using Nut.Services.App;
 
 namespace Nut.WebAPI.Controllers {
     public class UserController : BaseApiController {
@@ -16,6 +17,7 @@ namespace Nut.WebAPI.Controllers {
         private readonly IUserRegistrationService _userRegistrationService;
         private readonly IActivityLogService _activityLogService;
         private readonly IUserService _userService;
+        private readonly IJPushUserService _jPushUserService;
         private readonly ILocalizationService _localizationService;
         private readonly IEncryptionService _encryptionService;
         private readonly WebAPISettings _webAPISettings;
@@ -23,6 +25,7 @@ namespace Nut.WebAPI.Controllers {
         public UserController(IUserRegistrationService userRegistrationService,
             IActivityLogService activityLogService,
             IUserService userService,
+            IJPushUserService jPushUserService,
             IAuthenticationService authenticationService,
             ILocalizationService localizationService,
             IEncryptionService encryptionService,
@@ -30,13 +33,14 @@ namespace Nut.WebAPI.Controllers {
             this._userRegistrationService = userRegistrationService;
             this._activityLogService = activityLogService;
             this._userService = userService;
+            this._jPushUserService = jPushUserService;
             this._localizationService = localizationService;
             this._encryptionService = encryptionService;
             this._webAPISettings = webAPISettings;
         }
 
         // GET: User
-        public ActionResult Login(string username, string password) {
+        public ActionResult Login(string username, string password, string registerId) {
 
             if (string.IsNullOrEmpty(username))
                 return ErrorNotification(_localizationService.GetResource("Account.Login.Fields.Username.Required"));
@@ -54,6 +58,17 @@ namespace Nut.WebAPI.Controllers {
                         var user = _userService.GetUserByUsername(username);
                         //activity log
                         _activityLogService.InsertActivity("PublicStore.Login", _localizationService.GetResource("ActivityLog.PublicStore.Login"), user);
+                        //JPush register ID
+                        if (!string.IsNullOrEmpty(registerId)) {
+                            _jPushUserService.Delete(registerId);
+
+                            _jPushUserService.Insert(new Core.Domain.App.JPushUser() {
+                                CreatedOn = DateTime.Now,
+                                RegisterId = registerId,
+                                User = user,
+                                UserId = user.Id
+                            });
+                        }
                         //user ticket
                         var userTicket = _encryptionService.EncryptText(user.UserGuid.ToString(), _webAPISettings.UserEncryptionKey);
 

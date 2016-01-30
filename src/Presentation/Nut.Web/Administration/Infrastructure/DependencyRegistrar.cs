@@ -14,7 +14,7 @@ namespace Nut.Admin.Infrastructure {
         }
 
         public int Order {
-            get { return 2; }
+            get { return 3; }
         }
     }
 }

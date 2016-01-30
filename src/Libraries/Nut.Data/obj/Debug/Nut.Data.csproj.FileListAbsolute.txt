@@ -58,8 +58,6 @@ E:\Nut.NET\src\Libraries\Nut.Data\bin\Debug\System.Web.WebPages.Deployment.xml
 E:\Nut.NET\src\Libraries\Nut.Data\obj\Debug\Nut.Data.csprojResolveAssemblyReference.cache
 E:\Nut.NET\src\Libraries\Nut.Data\obj\Debug\Nut.Data.dll
 E:\Nut.NET\src\Libraries\Nut.Data\obj\Debug\Nut.Data.pdb
-E:\Nut.NET\src\Libraries\Nut.Data\obj\Debug\Nut.Data.Migrations._20160115001.resources
-E:\Nut.NET\src\Libraries\Nut.Data\obj\Debug\Nut.Data.csproj.GenerateResource.Cache
 E:\Nut.NET\src\Libraries\Nut.Data\bin\Debug\MySql.Data.dll
 E:\Nut.NET\src\Libraries\Nut.Data\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
 E:\Nut.NET\src\Libraries\Nut.Data\bin\Debug\zh-Hans\System.Web.Razor.resources.dll

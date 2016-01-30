@@ -80,6 +80,7 @@
     <Compile Include="Initializers\DropCreateCeDatabaseIfModelChanges.cs" />
     <Compile Include="Initializers\SqlCeInitializer.cs" />
     <Compile Include="Mapping\App\APPVersionMap.cs" />
+    <Compile Include="Mapping\App\JPushUserMap.cs" />
     <Compile Include="Mapping\Common\GenericAttributeMap.cs" />
     <Compile Include="Mapping\Configuration\SettingMap.cs" />
     <Compile Include="Mapping\Localization\LanguageMap.cs" />
@@ -99,10 +100,6 @@
     <Compile Include="Mapping\Users\UserMap.cs" />
     <Compile Include="Mapping\Users\UserRoleMap.cs" />
     <Compile Include="Mapping\Users\DepartmentMap.cs" />
-    <Compile Include="Migrations\201601150745063_20160115001.cs" />
-    <Compile Include="Migrations\201601150745063_20160115001.Designer.cs">
-      <DependentUpon>201601150745063_20160115001.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MySqlConnectionFactory.cs" />
     <Compile Include="MySqlDataProvider.cs" />
@@ -115,11 +112,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601150745063_20160115001.resx">
-      <DependentUpon>201601150745063_20160115001.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nut.Core\Nut.Core.csproj">

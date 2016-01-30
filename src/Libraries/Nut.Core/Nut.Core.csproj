@@ -103,6 +103,7 @@
     <Compile Include="Data\IDataProvider.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Domain\App\AppVersion.cs" />
+    <Compile Include="Domain\App\JPushUser.cs" />
     <Compile Include="Domain\Common\AdminAreaSettings.cs" />
     <Compile Include="Domain\Common\GenericAttribute.cs" />
     <Compile Include="Domain\Common\WebAPISettings.cs" />

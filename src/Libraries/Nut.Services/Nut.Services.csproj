@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="App\AppVersionService.cs" />
     <Compile Include="App\IAppVersionService .cs" />
+    <Compile Include="App\IJPushUserService.cs" />
+    <Compile Include="App\JPushUserService.cs" />
     <Compile Include="Authentication\FormsAuthenticationService.cs" />
     <Compile Include="Authentication\IAuthenticationEventHandler.cs" />
     <Compile Include="Authentication\IAuthenticationService.cs" />

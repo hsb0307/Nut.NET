@@ -184,7 +184,7 @@ namespace Nut.Services.Installation {
             });
 
             settingService.SaveSetting(new WebAPISettings {
-                UserEncryptionKey = "123456"
+                UserEncryptionKey = "1234567890123456"
             });
         }
 
