@@ -201,6 +201,7 @@ namespace Nut.Services.Localization {
         /// <param name="languageId">Language identifier</param>
         /// <returns>Locale string resources</returns>
         public virtual Dictionary<string, KeyValuePair<int, string>> GetAllResourceValues(int languageId) {
+
             string key = string.Format(LOCALSTRINGRESOURCES_ALL_KEY, languageId);
             return _cacheManager.Get(key, ctx => {
                 ctx.Monitor(_signals.When(LOCALSTRINGRESOURCES_PATTERN_KEY));
@@ -259,7 +260,6 @@ namespace Nut.Services.Localization {
                 //gradual loading
                 string key = string.Format(LOCALSTRINGRESOURCES_BY_RESOURCENAME_KEY, languageId, resourceKey);
                 string lsr = _cacheManager.Get(key, ctx => {
-
                     ctx.Monitor(_signals.When(LOCALSTRINGRESOURCES_PATTERN_KEY));
                     var query = from l in _lsrRepository.Table
                                 where l.ResourceName == resourceKey

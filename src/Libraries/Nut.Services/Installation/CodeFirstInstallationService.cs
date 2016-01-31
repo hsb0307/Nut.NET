@@ -177,6 +177,17 @@ namespace Nut.Services.Installation {
                 GridPageSizes = "10, 15, 20, 50, 100"
             });
 
+            settingService.SaveSetting(new LocalizationSettings {
+                DefaultAdminLanguageId = _languageRepository.Table.Single(l => l.Name == "English").Id,
+                UseImagesForLanguageSelection = false,
+                SeoFriendlyUrlsForLanguagesEnabled = false,
+                AutomaticallyDetectLanguage = false,
+                LoadAllLocaleRecordsOnStartup = true,
+                LoadAllLocalizedPropertiesOnStartup = true,
+                LoadAllUrlRecordsOnStartup = false,
+                IgnoreRtlPropertyForAdminArea = false,
+            });
+
             settingService.SaveSetting(new MediaSettings {
                 DefaultImageQuality = 80,
                 MaximumImageSize = 1280,
